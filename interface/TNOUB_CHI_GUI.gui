@@ -1,0 +1,1603 @@
+guiTypes = {  
+	# 
+	containerWindowType = {
+		name = "TNOUB_CHI_Hiding_Our_Interests_GUI"
+		size = { width = 510 height = 650 }
+		position = { x = 0 y = 0 }
+
+		#Map
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_map"
+			position = { x = 0 y = 20 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_map"
+		}
+		
+		#Information
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_info"
+			position = { x = 16 y = 8 }
+			quadTextureSprite = "GFX_ParliamentMechanic_InfoButton"
+			pdx_tooltip = CHI_Hiding_Our_Interests_GUI_desc
+			scale = 0.7
+		}
+
+		#Lines
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangsu_line"
+			position = { x = 435 y = 185 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_jiangsu_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangxi_line"
+			position = { x = 305 y = 300 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_jiangxi_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_changde_line"
+			position = { x = 220 y = 270 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_changde_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_shijiazhuang_line"
+			position = { x = 295 y = 60 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_shijiazhuang_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_wuhan_line"
+			position = { x = 310 y = 240 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_wuhan_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_chongqing_line"
+			position = { x = 180 y = 260 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_chongqing_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_yunnan_line"
+			position = { x = 0 y = 410 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_yunnan_line"
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_fujian_line"
+			position = { x = 410 y = 340 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_fujian_line"
+		}
+
+		#Railways
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangsu_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangsu_unbuild"
+			position = { x = 362 y = 177 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangsu_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangsu_build"
+			position = { x = 362 y = 177 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangxi_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangxi_unbuild"
+			position = { x = 357 y = 247 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangxi_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_jiangxi_build"
+			position = { x = 357 y = 247 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_changde_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_changde_unbuild"
+			position = { x = 287 y = 247 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_changde_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_changde_build"
+			position = { x = 287 y = 247 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_shijiazhuang_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_shijiazhuang_unbuild"
+			position = { x = 357 y = 67 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_wuhan_shijiazhuang_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_wuhan_shijiazhuang_build"
+			position = { x = 357 y = 67 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_changde_chongqing_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_changde_chongqing_unbuild"
+			position = { x = 187 y = 267 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_changde_chongqing_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_changde_chongqing_build"
+			position = { x = 187 y = 267 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_chongqing_yunnan_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_chongqing_yunnan_unbuild"
+			position = { x = 72 y = 267 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_chongqing_yunnan_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_chongqing_yunnan_build"
+			position = { x = 72 y = 267 }
+		}
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_jiangxi_fujian_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_jiangxi_fujian_unbuild"
+			position = { x = 367 y = 307 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_railway_jiangxi_fujian_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_railway_jiangxi_fujian_build"
+			position = { x = 367 y = 307 }
+		}
+
+		#Points
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangsu_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 420 y = 170 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangsu_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 420 y = 170 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangxi_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 360 y = 300 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_jiangxi_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 360 y = 300 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_changde_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 280 y = 270 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_changde_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 280 y = 270 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_shijiazhuang_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 355 y = 60 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_shijiazhuang_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 355 y = 60 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_wuhan_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 350 y = 240 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_wuhan_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 350 y = 240 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_chongqing_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 180 y = 260 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_chongqing_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 180 y = 260 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_yunnan_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 65 y = 410 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_yunnan_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 65 y = 410 }
+		}
+        iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_fujian_point_unbuild"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_unbuild"
+			position = { x = 410 y = 340 }
+		}
+        buttonType = {
+			name = "CHI_Hiding_Our_Interests_GUI_fujian_point_build"
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_point_build"
+			position = { x = 410 y = 340 }
+		}
+
+		#Flame
+		iconType = {
+			name = "CHI_Hiding_Our_Interests_GUI_flame"
+			position = { x = 0 y = 510 }
+			quadTextureSprite = "GFX_CHI_Hiding_Our_Interests_GUI_flame"
+		}
+
+		#Point Name
+		InstantTextBoxType = {
+			name = "CHI_Hiding_Our_Interests_GUI_point_name"
+			position = { x = 10 y = 515 }
+			font = "aldrich_36_outline"
+			text = CHI_Hiding_Our_Interests_GUI_point_name
+			#maxWidth = 480
+		}
+
+		#Variables
+		InstantTextBoxType = {
+			name = "CHI_Hiding_Our_Interests_GUI_point_max"
+			position = { x = 50 y = 550 }
+			font = "aldrich_24_outline"
+			text = CHI_Hiding_Our_Interests_GUI_point_max
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_Hiding_Our_Interests_GUI_point_available"
+			position = { x = 50 y = 600 }
+			font = "aldrich_24_outline"
+			text = CHI_Hiding_Our_Interests_GUI_point_available
+			pdx_tooltip = CHI_Hiding_Our_Interests_GUI_point_available_desc_tt
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_Hiding_Our_Interests_GUI_point_condition"
+			position = { x = 300 y = 550 }
+			font = "aldrich_24_outline"
+			text = CHI_Hiding_Our_Interests_GUI_point_condition
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_Hiding_Our_Interests_GUI_point_secrecy"
+			position = { x = 300 y = 600 }
+			font = "aldrich_24_outline"
+			text = CHI_Hiding_Our_Interests_GUI_point_secrecy
+			maxWidth = 400
+		}
+
+    }
+
+	#Military Modernisation GUI
+	#containerWindowType = {
+	#	name = "TNO_CHI_Edu_GUI"
+	#	size = { width = 500 height = 500 }
+	#	position = { x = 0 y = 0 }
+	#			
+	#	instantTextboxType = {
+	#		name = "CHI_Edu_GUI_desc"
+	#		position = { x = 10 y = 0 }
+	#		font = "aldrich_18_outline"
+	#		text = CHI_GUI_Edu_tt
+	#		maxWidth = 481
+	#		maxHeight = 300
+	#		format = left
+	#	}
+#
+	#	instantTextboxType = {
+	#		name = "CHI_GUI_Edu_Modernisation"
+	#		position = { x = 10 y = 200 }
+	#		font = "aldrich_32_outline"
+	#		text = CHI_GUI_Edu_Modernisation_tt
+	#		maxWidth = 500
+	#		maxHeight = 30
+	#		format = center
+	#	}	
+	#	iconType = {
+	#		name = "CHI_Edu_GUI_Modernisation"
+	#		quadTextureSprite = "GFX_CHI_Modernisation_GUI"
+	#		position = { x = 25 y = 270 }
+	#	}
+	#	iconType = {
+	#		name = "CHI_Edu_GUI_frame"
+	#		spriteType = "GFX_CHI_Modernisation_GUI_frame"
+	#		position = { x = 25 y = 271 }
+	#		pdx_tooltip = CHI_GUI_Edu_Modernisation_desc_tt
+	#		pdx_tooltip_delayed = CHI_GUI_Edu_Modernisation_desc_delay_tt
+	#	}
+#
+	#	instantTextboxType = {
+	#		name = "CHI_GUI_Edu_Efficiency"
+	#		position = { x = 10 y = 330 }
+	#		font = "aldrich_18_outline"
+	#		text = CHI_GUI_Edu_Efficiency_tt
+	#		maxWidth = 480
+	#		maxHeight = 70
+	#		format = left
+	#	}		
+	#}
+
+	#Edu->Military
+	containerWindowType = {
+		name = "TNO_CHI_Military_GUI"
+		size = { width = 500 height = 300 }
+		position = { x = 0 y = 0 }
+				
+		#instantTextboxType = {
+		#	name = "CHI_Military_GUI_desc"
+		#	position = { x = 10 y = 0 }
+		#	font = "aldrich_18_outline"
+		#	text = CHI_GUI_Military_tt
+		#	maxWidth = 481
+		#	maxHeight = 300
+		#	format = left
+		#}
+
+		instantTextboxType = {
+			name = "CHI_GUI_Military_Modernisation"
+			position = { x = 10 y = 20 }
+			font = "aldrich_32_outline"
+			text = CHI_GUI_Military_Modernisation_tt
+			maxWidth = 500
+			maxHeight = 30
+			format = center
+		}	
+		iconType = {
+			name = "CHI_Military_GUI_Modernisation"
+			quadTextureSprite = "GFX_CHI_Modernisation_GUI"
+			position = { x = 25 y = 90 }
+		}
+		iconType = {
+			name = "CHI_Military_GUI_frame"
+			spriteType = "GFX_CHI_Modernisation_GUI_frame"
+			position = { x = 25 y = 91 }
+			pdx_tooltip = CHI_GUI_Military_Modernisation_desc_tt
+			pdx_tooltip_delayed = CHI_GUI_Military_Modernisation_desc_delay_tt
+		}
+
+		instantTextboxType = {
+			name = "CHI_GUI_Military_Efficiency"
+			position = { x = 10 y = 150 }
+			font = "aldrich_18_outline"
+			text = CHI_GUI_Military_Efficiency_tt
+			maxWidth = 480
+			maxHeight = 70
+			format = left
+		}		
+	}
+
+	#Oil crisis GUI
+	containerWindowType = {
+		name = "TNOUB_CHI_Oil_Crisis_GUI"
+		size = { width = 482 height = 403 }
+		position = { x = 0 y = 0 }
+
+		#底面
+		iconType = {
+			name = "CHI_Oil_Crisis_GUI_bg"
+			position = { x = 10 y = 0 }
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_bg"
+		}
+		iconType = { #天平
+			name = "CHI_Oil_Crisis_GUI_balance"
+			position = { x = 110 y = 170 }
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_balance"
+		}
+		iconType = { #信息
+			name = "CHI_Oil_Crisis_GUI_Info"
+			spriteType = "GFX_Burgundy_GUI_Info_Button"
+			position = { x = 394 y = -65 }
+			pdx_tooltip = CHI_Oil_Crisis_GUI_Info_tt
+			pdx_tooltip_delayed = CHI_Oil_Crisis_GUI_Info_tt_delayed
+		}
+
+		#texts
+		InstantTextBoxType = { #政府声望
+			name = "CHI_Oil_Crisis_GUI_government_prestige"
+			position = { x = 55 y = 250 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = "CHI_Oil_Crisis_GUI_government_prestige"
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #政府声望数值
+			name = "CHI_Oil_Crisis_GUI_government_prestige_var"
+			position = { x = 55 y = 260 }
+			format = centre
+			font = "aldrich_48_outline"
+			text = "CHI_Oil_Crisis_GUI_government_prestige_var"
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #政府声望描述
+			name = "CHI_Oil_Crisis_GUI_government_prestige_info"
+			position = { x = 55 y = 300 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = "CHI_Oil_Crisis_GUI_government_prestige_info"
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = { #农业现状
+			name = "CHI_Oil_Crisis_GUI_agriculture_info"
+			position = { x = -100 y = 130 }
+			format = centre
+			font = "aldrich_22_outline"
+			text = "CHI_Oil_Crisis_GUI_agriculture_info"
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #工业现状
+			name = "CHI_Oil_Crisis_GUI_industry_info"
+			position = { x = 200 y = 130 }
+			format = centre
+			font = "aldrich_22_outline"
+			text = "CHI_Oil_Crisis_GUI_industry_info"
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #当前选择
+			name = "CHI_Oil_Crisis_GUI_current_selection_info"
+			position = { x = 55 y = 45 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = "CHI_Oil_Crisis_GUI_current_selection_info"
+			maxWidth = 400
+		}
+
+		buttonType = { #选择农业按钮
+			name = "CHI_Oil_Crisis_GUI_agriculture_button"
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_agriculture_button"
+			position = { x = 15 y = 0 }
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_agriculture_button_tt"
+			pdx_tooltip_delayed = "CHI_Oil_Crisis_GUI_agriculture_button_tt_delayed"
+			clicksound = click_ok
+		}
+		buttonType = { #选择工业按钮
+			name = "CHI_Oil_Crisis_GUI_industry_button"
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_industry_button"
+			position = { x = 365 y = 0 }
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_industry_button_tt"
+			pdx_tooltip_delayed = "CHI_Oil_Crisis_GUI_industry_button_tt_delayed"
+			clicksound = click_ok
+		}
+
+		iconType = {
+			name = "CHI_Oil_Crisis_GUI_agriculture_progressbar"
+			position = { x = 40 y = 170 }
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_progressbar"
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_agriculture_progressbar_tt"
+			pdx_tooltip_delayed = "CHI_Oil_Crisis_GUI_agriculture_progressbar_tt_delayed"
+		}
+		iconType = {
+			name = "CHI_Oil_Crisis_GUI_industry_progressbar"
+			position = { x = 430 y = 170 }
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_progressbar"
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_industry_progressbar_tt"
+			pdx_tooltip_delayed = "CHI_Oil_Crisis_GUI_industry_progressbar_tt_delayed"
+		}
+
+		iconType = {
+			name = "CHI_Oil_Crisis_GUI_agriculture_progressbar_checkbox"
+			position = { x = 41 y = 295	}
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_Checkbox"
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_agriculture_progressbar_checkbox_tt"
+		}
+		iconType = {
+			name = "CHI_Oil_Crisis_GUI_industry_progressbar_checkbox"
+			position = { x = 431 y = 295 }
+			spriteType = "GFX_CHI_Oil_Crisis_GUI_Checkbox"
+			pdx_tooltip = "CHI_Oil_Crisis_GUI_industry_progressbar_checkbox_tt"
+		}
+	}
+
+
+	#NorthwestWar GUI
+	containerWindowType = {
+		name = "TNOUB_CHI_Northwest_War_GUI"
+		size = { width = 510 height = 860 }
+		position = { x = 0 y = 0 }
+
+		#底面
+		iconType = {
+			name = "CHI_Northwest_War_GUI_base_bg"
+			position = { x = 10 y = -10 } #x=Left/Right y=Up/Down（我擦我为什么连这个都要注释    总之多注释总是没错的，加油！:D
+			spriteType = "GFX_CHI_Northwest_War_GUI_base_bg"
+		}
+		#秒表底面
+		iconType = {
+			name = "CHI_Northwest_War_GUI_clock_bg"
+			position = { x = 55 y = 335 }
+			quadTextureSprite = "GFX_CHI_Northwest_War_GUI_clock_bg"
+			pdx_tooltip = CHI_Northwest_War_GUI_clock_desc_tt
+			pdx_tooltip_delayed = CHI_Northwest_War_GUI_clock_desc_delay_tt
+		}
+		#秒表转动
+		iconType = {
+			name = "CHI_Northwest_War_GUI_clock1"
+			position = { x = 142 y = 381 }
+			quadTextureSprite = "GFX_CHI_Northwest_War_GUI_clock1"
+		}
+		#进度条
+		iconType = {
+			name = "CHI_Northwest_War_GUI_progressbar"
+			position = { x = 20 y = 725 }
+			spriteType = "GFX_CHI_Northwest_War_GUI_progressbar"
+		}
+		#info
+		iconType = {
+			name = "CHI_Northwest_War_GUI_progress_info"
+			spriteType = "GFX_ParliamentMechanic_InfoButton"
+			position = { x = 22 y = 640 }
+			scale = 0.7
+			pdx_tooltip = CHI_NorthwestWar_GUI_progressbar_desc_tt
+		}
+		
+
+		#介绍
+		InstantTextBoxType = { #主体介绍
+			name = "CHI_Northwest_War_GUI_info1"
+			position = { x = 95 y = 40 }
+			font = "aldrich_18_outline"
+			text = [ROOT.GetCHINorthwestWarGUIinfo1]
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #剩余天数
+			name = "CHI_Northwest_War_GUI_info2"
+			position = { x = 144 y = 280 }
+			font = "aldrich_18_outline"
+			text = CHI_Northwest_War_GUI_info2
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #补给效率
+			name = "CHI_Northwest_War_GUI_info3"
+			position = { x = 20 y = 678 }
+			font = "aldrich_18_outline"
+			text = CHI_Northwest_War_GUI_info3
+			maxWidth = 400
+		}
+		InstantTextBoxType = { #志愿军数量以及已送出装备
+			name = "CHI_Northwest_War_GUI_info4"
+			position = { x = 20 y = 775 }
+			font = "aldrich_18_outline"
+			text = CHI_Northwest_War_GUI_info4
+			maxWidth = 400
+		}
+		
+		#时间耗尽
+		iconType = {
+			name = "CHI_Northwest_War_GUI_time_running_out"
+			position = { x = 10 y = -10 }
+			quadTextureSprite = "GFX_CHI_Northwest_War_GUI_time_running_out"
+		}
+	}
+	
+	#The Ministry Chinese Affairs
+	containerWindowType = {
+		name = "TNOUB_CHI_Table_GUI_AccessButton"
+		size = { width = 220 height = 128 }
+		position = { x = 0 y = 289 }
+
+		buttonType = {
+			name = "TNOUB_CHI_Table_GUI_OpenButton"
+			quadTextureSprite = "GFX_CHI_Open_Table_GUI"
+			scale = 0.72
+			position = { x = 238 y = 34 }
+			pdx_tooltip = scripted_gui_open_tt_CHI_Table
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		iconType = {
+			name = "gui_alert"
+			spriteType = "GFX_gui_alert"
+			position = { x = 189 y = -18 }
+		}
+	}
+
+	extendedScrollbarType = { #红色卷动条
+		name = "right_vertical_slider_tnoub_tablegui_red"
+		position = { x =-5 y = 0 }
+		size = { width = 18 height = 18 }
+		startValue = 0
+		orientation = upper_right
+		origo = upper_right
+		smooth_scrolling = 0.25
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_scrollbar_vertical_bg_tnoub_tablegui_red"
+		}
+
+		slider = {
+			name = "Slider"
+			quadTextureSprite = "GFX_scroll_drager_tnoub_tablegui_red"
+			position = { x = -2 y = -2 }
+		}
+
+		track = {
+			name = "Track"
+			quadTextureSprite = "GFX_scroll_track_tnoub_tablegui_red"
+			position = { x = 3 y = 0 }
+			alwaystransparent = yes
+		}
+
+		decreaseButton = {
+			name = "Decrease"
+			quadTextureSprite = "GFX_scroll_up_tnoub_tablegui_red"
+			position = { x = 1 y = 3 }
+		}
+
+		increaseButton = {
+			name = "Increase"
+			quadTextureSprite = "GFX_scroll_down_tnoub_tablegui_red"
+			position = { x=-17 y = -19}
+		}
+	}
+
+	containerWindowType = { #用于例举的实例
+		name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_entry_cn
+		size = { width = 287 height = 24 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "CHI_Table_GUI_faction_cn_background"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_entry_bg_blue"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "CHI_Table_GUI_faction_country_flag"
+			quadTextureSprite = "GFX_flag_small"
+			position = { x = 1 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "CHI_Table_GUI_faction_cn_diplo_countrylist_flag_overlay"
+			quadTextureSprite = "GFX_endgame_flag_overlay"
+			position = { x = 3 y = 3 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "CHI_Table_GUI_faction_cn_member_name"
+			position = { x = 26 y = 4 }
+			font = "aldrich_16_outline"
+			text = "[?THIS.GetName]"
+			maxWidth = 195
+			maxHeight = 24
+			fixedsize = yes
+			format = left
+		}
+	}
+	containerWindowType = {
+		name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_entry_jp
+		size = { width = 287 height = 24 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "CHI_Table_GUI_faction_cn_background"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_entry_bg_red"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name = "CHI_Table_GUI_faction_country_flag"
+			quadTextureSprite ="GFX_flag_small"
+			position = { x = 1 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "CHI_Table_GUI_faction_cn_diplo_countrylist_flag_overlay"
+			quadTextureSprite = "GFX_endgame_flag_overlay"
+			position = { x = 3 y = 3 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "CHI_Table_GUI_faction_cn_member_name"
+			position = { x = 26 y = 4 }
+			font = "aldrich_16_outline"
+			text = "[?THIS.GetName]"
+			maxWidth = 195
+			maxHeight = 24
+			fixedsize = yes
+			format = left
+		}
+	}
+
+	containerWindowType = { #Table GUI
+		name = "TNOUB_CHI_The_Ministry_Chinese_Affairs_Table_GUI"
+		size = { width = 1220 height = 836 }
+		position = { x = 540 y = 80 }
+		moveable = yes
+		clipping = yes
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_bg"
+		}
+
+		iconType = { #实力对比进度条
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_VS_progressbar"
+			position = { x = 225 y = 562 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_VS_progressbar"
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_bg"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_bg"
+			position = { x = 10 y = 10 }
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_info_icon"
+			spriteType = "GFX_ParliamentMechanic_InfoButton"
+			position = { x = 15 y = 15 }
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_info_icon_tt"
+		}
+
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_close_button"
+			spriteType = "GFX_Kartenhaus_CloseButton"
+			position = { x = 1154 y = 15 }
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_close_button_tt_delayed"
+			clicksound = click_close
+		}
+
+		##开启选国家界面按钮
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button"
+			position = { x = 504 y = 328 }
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button_tt_delayed"
+			clicksound = GEACPS_info_GUI_open
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button_Glow"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selection_button_Glow"
+			position = { x = 504 y = 328 }
+		}
+
+		#texts
+		##杂项
+		InstantTextBoxType = { #呼卢喝雉
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_Title"
+			position = { x = 500 y = -15 }
+			font = "vt323_72_WT_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_Title
+			maxWidth = 500
+		}
+
+		InstantTextBoxType = { #"当前，共荣圈各国的焦点正处在..."
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_info1"
+			position = { x = 416 y = 250 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_info1
+			maxWidth = 400
+		}
+
+		#博弈进程
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo1"
+			position = { x = 191 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo1
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo2"
+			position = { x = 276 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo2
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo3"
+			position = { x = 364 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo3
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo4"
+			position = { x = 452 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo4
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo5"
+			position = { x = 540 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo5
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo6"
+			position = { x = 626 y = 116 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_countryinfo6
+			maxWidth = 400
+		}
+
+		##介绍以及点数
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_info"
+			position = { x = 414 y = 335 }#327
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_info"
+			position = { x = 414 y = 371 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_info"
+			position = { x = 414 y = 407 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_info"
+			position = { x = 414 y = 443 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_info"
+			position = { x = 414 y = 479 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_info
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_info"
+			position = { x = 414 y = 335 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_info"
+			position = { x = 414 y = 371 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_info"
+			position = { x = 414 y = 407 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_info"
+			position = { x = 414 y = 443 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_info"
+			position = { x = 414 y = 479 }
+			format = centre
+			font = "aldrich_20_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_info
+			maxWidth = 400
+		}
+
+
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points_info"
+			position = { x = 498 y = 331 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points_info"
+			position = { x = 498 y = 367 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points_info"
+			position = { x = 498 y = 403 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points_info"
+			position = { x = 498 y = 439 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points_info"
+			position = { x = 498 y = 475 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points_info
+			maxWidth = 400
+		}
+
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points_info"
+			position = { x = 324 y = 331 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points_info"
+			position = { x = 324 y = 367 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points_info"
+			position = { x = 324 y = 403 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points_info"
+			position = { x = 324 y = 439 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points_info
+			maxWidth = 400
+		}
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points_info"
+			position = { x = 324 y = 475 }
+			format = centre
+			font = "aldrich_28_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points_info
+			maxWidth = 400
+		}
+
+		##游戏主按钮
+		###外交
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_a"
+			position = { x = 500 y = 327 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_b"
+			position = { x = 500 y = 363 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_a"
+			position = { x = 500 y = 399 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_b"
+			position = { x = 500 y = 435 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_b"
+			position = { x = 500 y = 471 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_tt_delayed
+		}
+		###破坏
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_a"
+			position = { x = 505 y = 327 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_b"
+			position = { x = 505 y = 363 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_a"
+			position = { x = 505 y = 399 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_b"
+			position = { x = 505 y = 435 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_tt_delayed
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_a"
+			position = { x = 505 y = 471 }
+			clicksound = click_ok
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_tt_delayed
+		}
+
+		#锁定选择按钮
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button"
+			position = { x = 485 y = 511 }
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button_tt_delayed
+			clicksound = GEACPS_info_GUI_close
+		}
+
+		#双方可视筹码
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token"
+			position = { x = 175 y = 230 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_tt_delayed
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token"
+			position = { x = 794 y = 230 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_tt_delayed
+		}
+
+		#紧张度-中国
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar"
+			position = { x = 139 y = 488 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_bg"
+			position = { x = 133 y = 485 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_tt_delayed
+		}
+		#紧张度-日本
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar"
+			position = { x = 759 y = 488 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_bg"
+			position = { x = 756 y = 485 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_tt_delayed
+		}
+
+		#目前奖励分数-中国
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints_progressbar"
+			position = { x = 436 y = 314 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints_progressbar"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints_progressbar_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints_progressbar_tt_delayed
+		}
+
+		#目前分数-中国
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points_progressbar"
+			position = { x = 436 y = 314 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points_progressbar"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points_progressbar_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points_progressbar_tt_delayed
+		}
+
+		#目前分数-日本
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points_progressbar"
+			position = { x = 744 y = 314 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points_progressbar"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points_progressbar_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points_progressbar_tt_delayed
+		}
+
+		#回合进度-中国
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round"
+			position = { x = 216 y = 432 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_bg"
+			position = { x = 216 y = 432 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_tt_delayed
+		}
+		#回合进度-日本
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round"
+			position = { x = 794 y = 432 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_bg"
+			position = { x = 794 y = 432 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_tt_delayed
+		}
+
+		#地区倾向-中国
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude"
+			position = { x = 124 y = 161 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_bg"
+			position = { x = 124 y = 161 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_tt_delayed
+		}
+		#地区倾向-日本
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude"
+			position = { x = 1048 y = 161 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_bg"
+			position = { x = 1048 y = 161 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_tt
+			pdx_tooltip_delayed = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_tt_delayed
+		}
+
+		#博弈进程
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1"
+			position = { x = 354 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_small"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2"
+			position = { x = 437 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3"
+			position = { x = 525 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4"
+			position = { x = 613 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5"
+			position = { x = 701 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6"
+			position = { x = 789 y = 157 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_small"
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_bg"
+			position = { x = 354 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_small_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_tt
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_bg"
+			position = { x = 437 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_tt
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_bg"
+			position = { x = 525 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_tt
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_bg"
+			position = { x = 613 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_tt
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_bg"
+			position = { x = 701 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_tt
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_bg"
+			position = { x = 789 y = 157 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator_small_bg"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_tt
+		}
+
+		#时间进度条
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar"
+			position = { x = 498 y = 318 }
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_tt
+		}
+
+		#双方阵营
+		containerWindowType = {
+			name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_cn
+			size = { width = 319 height = 170 }
+			position = { x = 225 y = 605 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 0 left = 0 bottom = 0 right = 0 }
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxType = { #这是gridboxType，一种可以利用array来批量例举并排序的interface格式
+				name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_cn_grid
+				position = { x = 0 y = 0 }
+				size = { width = 300 height = 300 }
+				slotsize = { width = 287 height = 28 } #单个例举项目长宽
+				max_slots_horizontal = 1 #例举最大横向数目
+				add_horizontal = no #是否横向添加
+			}
+		}
+
+		containerWindowType = {
+			name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_jp
+			size = { width = 319 height = 170 }
+			position = { x = 675 y = 605 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider_tnoub_tablegui_red"
+			margin = { top = 0 left = 0 bottom = 0 right = 0 }
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxType = {
+				name = CHI_The_Ministry_Chinese_Affairs_Table_GUI_faction_jp_grid
+				position = { x = 0 y = 0 }
+				size = { width = 300 height = 300 }
+				slotsize = { width = 287 height = 28 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_Table_GUI_access_denied"
+			position = { x = 386 y = 216 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_Table_GUI_access_denied"
+			pdx_tooltip = CHI_The_Ministry_Chinese_Affairs_Table_GUI_access_denied_tt
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_CRT_frame"
+			position = { x = 10 y = 10 }
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_CRT_frame"
+		}
+	}
+
+	containerWindowType = {
+		name = TNOUB_CHI_The_Ministry_Chinese_Affairs_Table_GUI_GEACPS_info_interface_animation
+		size = { width = 1000 height = 200 }
+		position = { x = 10 y = 625 }
+		show_position = { x = 10 y = 625 }
+		hide_position = { x = 10 y = 1000 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 600
+		moveable = no
+		clipping = no
+
+		background = {
+			name = "background"
+			quadtexturesprite = "GFX_tiled_bg"
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_background"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_background"
+			position = { x = 0 y = -455 }
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_POST"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_POST"
+			position = { x = 100 y = -215 }
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_DATA"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_DATA"
+			position = { x = 900 y = -235 }
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_PROGRESS"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_PROGRESS"
+			position = { x = 400 y = 35 }
+		}
+		
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_NSB"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_NSB"
+			position = { x = 430 y = -295 }
+		}
+
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_unlock_button"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_unlock_button"
+			position = { x = 210 y = 105 }
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_unlock_button_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_animation_unlock_button_tt_delayed"
+			clicksound = menu_close_window
+		}
+	}
+
+	containerWindowType = {
+		name = TNOUB_CHI_The_Ministry_Chinese_Affairs_Table_GUI_GEACPS_info_interface
+		size = { width = 1000 height = 200 }
+		position = { x = 10 y = 625 }
+		fade_time = 1000
+		fade_type = linear
+		moveable = no
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_background"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_background"
+			position = { x = 0 y = -335 }
+		}
+
+		#博弈信息
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_countryinfo"
+			position = { x = 630 y = -280 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_countryinfo
+			maxWidth = 400
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_countryflag"
+			position = { x = 790 y = -259 }
+			quadTextureSprite = "GFX_player_flag"
+		}
+		##地区态度
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude"
+			position = { x = 630 y = -190 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude
+			maxWidth = 400
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_cn_progressbar"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_cn_progressbar"
+			position = { x = 650 y = -157 }
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_jp_progressbar"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_jp_progressbar"
+			position = { x = 717 y = -166 }
+		}
+
+		##控制等级
+		InstantTextBoxType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_control_level"
+			position = { x = 630 y = -68 }
+			format = centre
+			font = "aldrich_18_outline"
+			text = CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_control_level
+			maxWidth = 400
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_control_level_progressbar"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_control_level_progressbar"
+			position = { x = 704 y = -36 }
+		}
+
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_close_button"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_close_button"
+			position = { x = 897 y = -257 }
+			#shortcut = "ESCAPE"
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_close_button_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_close_button_tt_delayed"
+			clicksound = GEACPS_info_GUI_close
+		}
+
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_info"
+			spriteType = "hart_info_tt_ico"
+			position = { x = 4 y = 172 }
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_info_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_info_tt_delayed"
+		}
+
+
+		##地图
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CHI"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CHI"
+			position = { x = 8 y = -227 }
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CHI_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CHI_tt_delayed"
+		}
+		iconType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_JAP"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_JAP"
+			position = { x = 126 y = -269 }
+			pdx_tooltip = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_JAP_tt"
+			pdx_tooltip_delayed = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_JAP_tt_delayed"
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MEN"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MEN"
+			position = { x = 107 y = -248 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GNG"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GNG"
+			position = { x = 244 y = -44 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_VIN"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_VIN"
+			position = { x = 190 y = -28 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_LAO"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_LAO"
+			position = { x = 179 y = -22 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CAM"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_CAM"
+			position = { x = 195 y = 32 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_THA"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_THA"
+			position = { x = 159 y = -22 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_BUR"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_BUR"
+			position = { x = 127 y = -65 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_AZH"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_AZH"
+			position = { x = 54 y = -66 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_SHO"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_SHO"
+			position = { x = 180 y = 91 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_NRB"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_NRB"
+			position = { x = 240 y = 79 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_PHI-FGB"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_PHI-FGB"
+			position = { x = 290 y = 5 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_INS"
+			spriteType = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_INS"
+			position = { x = 136 y = 80 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GAN"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GAN"
+			position = { x = 116 y = -183 }
+			clicksound = click_ok
+		}
+		buttonType = {
+			name = "CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MAN"
+			quadTextureSprite = "GFX_CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MAN"
+			position = { x = 277 y = -276 }
+			clicksound = click_ok
+		}
+	}
+}

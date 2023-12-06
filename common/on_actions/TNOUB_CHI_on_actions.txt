@@ -1,0 +1,911 @@
+on_actions = {
+    on_daily_CHI = { #西北危机GUI脉冲
+        effect = {
+            CHI = {
+                if = {
+                    limit = {
+                        has_country_flag = CHI_Northwest_War
+                        QIN = {
+                            has_war_with = GAN
+                        }
+                    }
+                    add_to_variable = {
+                        CHI_Northwest_War_GUI_progressbar_var = -1
+                    }
+                    clamp_variable = {
+                        var = CHI_Northwest_War_GUI_progressbar_var
+                        min = 0
+                        max = 100
+                    }
+                    add_to_variable = {
+                        Northwest_War_timeleft = 1
+                    }
+                    clamp_variable = {
+                        var = Northwest_War_timeleft
+                        min = 1
+                        max = 61
+                    }
+                }
+            }
+        }
+    }
+    on_daily_CHI = { #外交博弈GUI脉冲
+        effect = {
+            CHI = {
+                if = {
+                    limit = {
+                        has_global_flag = TNOUB_GAW_Crisis
+                        has_country_flag = TNOUB_country_has_gui
+                        check_variable = {
+                            CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var < 12
+                        }
+                    }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 1 }
+                }
+                else_if = { #选国家回合结束
+                    limit = {
+                        has_global_flag = TNOUB_GAW_Crisis
+                        has_country_flag = TNOUB_country_has_gui
+                        check_variable = {
+                            CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 12
+                        }
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var < 2 }
+                    }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 1 }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_var = 1 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 0 }
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_lock
+                    clr_country_flag = CHI_show_The_Ministry_Chinese_Affairs_Table_GUI_access_denied
+                    set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button_available
+
+                    #专属阶段事件
+                    country_event = tnoub_chi.1120
+
+
+                    #重设日本分数
+                    CHI_TMCAT_reset_jap_points = yes
+                }
+
+                else_if = { #前三个正常回合
+                    limit = {
+                        has_global_flag = TNOUB_GAW_Crisis
+                        has_country_flag = TNOUB_country_has_gui
+                        check_variable = {
+                            CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 12
+                        }
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var < 5 }
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var > 1 }
+                    }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 1 }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_var = 1 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 0 }
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_lock
+                    set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button_available
+
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_selected_quantity = 0 }
+
+                    #专属阶段事件
+                    country_event = tnoub_chi.1120
+
+
+
+                    #结算小回合分数
+                    if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints < CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 }
+                    }
+                    else = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 }
+                    }
+                    #玩家分数重置
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points = 0 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints = 0 }
+
+                    #重设日本分数
+                    CHI_TMCAT_reset_jap_points = yes
+
+                    CHI_TMCAT_reset_gamebutton = yes
+                    CHI_TMCAT_reset_selected_gamebutton = yes
+                }
+
+                else_if = { #第四回合结束
+                    limit = {
+                        has_global_flag = TNOUB_GAW_Crisis
+                        has_country_flag = TNOUB_country_has_gui
+                        has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 12 }
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 5 }
+                    }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 1 }
+                    add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_var = 1 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 0 }
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_lock
+                    set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_confirm_lock_button_available
+
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_selected_quantity = 0 }
+
+                    set_country_flag = CHI_show_The_Ministry_Chinese_Affairs_Table_GUI_access_denied
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_access_denied_var = 2 }
+                    
+                    #结算小回合分数
+                    if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints < CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 }
+                    }
+                    else = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points }
+                        }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 }
+                        add_to_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 }
+                    }
+                    #分数重置
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points = 0 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints = 0 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points = 0 }
+
+                    CHI_TMCAT_reset_gamebutton = yes
+                    CHI_TMCAT_reset_selected_gamebutton = yes
+                }
+
+                else_if = { #结算回合结束
+                    limit = {
+                        has_global_flag = TNOUB_GAW_Crisis
+                        has_country_flag = TNOUB_country_has_gui
+                        has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 12 }
+                        check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 6 }
+                    }
+                    #回到选国家回合
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points = 0 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points = 0 }
+
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 1 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_var = 1 }
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 0 }
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_lock
+                    clr_country_flag = CHI_show_The_Ministry_Chinese_Affairs_Table_GUI_access_denied
+                    #（结算本回合内容并...
+                    if = { #胜利
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var }
+                        }
+
+                        #奖励：令目标国加入阵营
+                        ##广东
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+                                }
+                                GNG = {
+                                    NOT = {
+                                        has_country_leader = {
+	                                        character = GNG_nagano_shigeto
+	                                        ruling_only = yes
+                                        }
+                                    }
+                                }
+                            }
+                            GNG = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = GNG
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = GNG
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = GNG
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_GNG
+                        }
+
+                        ##早上好越南现在我有直升机
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_VIN
+                                }
+                            }
+                            VIN = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = VIN
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = VIN
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = VIN
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_VIN
+                        }
+
+                        ##老挝
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_LAO
+                                }
+                            }
+                            LAO = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = LAO
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = LAO
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = LAO
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_LAO
+                        }
+
+                        ##柬埔寨
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_CAM
+                                }
+                            }
+                            CAM = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = CAM
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = CAM
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = CAM
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_CAM
+                        }
+
+                        ##泰国
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_THA
+                                }
+                            }
+                            THA = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = THA
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = THA
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = THA
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_THA
+                        }
+
+                        ##缅甸
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_BUR
+                                }
+                            }
+                            BUR = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = BUR
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = BUR
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = BUR
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_BUR
+                        }
+                        
+                        ##自由印度-组长有令，暂时不管
+                        #else_if = {
+                        #    limit = {
+                        #        CHI = {
+                        #            has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_AZH
+                        #        }
+                        #    }
+                        #    AZH = {
+                        #        leave_faction = yes
+                        #    }
+                        #    CHI = {
+                        #        add_to_faction = AZH
+                        #    }
+                        #    remove_from_array = {
+                        #        global.Table_GUI_faction_member_JAP = AZH
+                        #    }
+                        #    add_to_array = {
+                        #        global.Table_GUI_faction_member_CHI = AZH
+                        #    }
+                        #    set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_AZH
+                        #}
+
+                        ##菲律宾
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_PHI
+                                }
+                            }
+                            PHI = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = PHI
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = PHI
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = PHI
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_PHI
+                        }
+
+                        ##印尼
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+                                }
+                            }
+                            INS = {
+                                leave_faction = yes
+                            }
+                            CHI = {
+                                add_to_faction = INS
+                            }
+                            remove_from_array = {
+                                global.Table_GUI_faction_member_JAP = INS
+                            }
+                            add_to_array = {
+                                global.Table_GUI_faction_member_CHI = INS
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_INS
+                        }
+
+
+
+                        #奖励：令目标国被破坏
+                        ##蒙疆
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MEN
+                                }
+                            }
+                            MEN = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_MEN
+                        }
+
+                        ##广东但是永野图了所有人
+                        if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+                                }
+                                GNG = {
+                                    has_country_leader = {
+	                                    character = GNG_nagano_shigeto
+	                                    ruling_only = yes
+                                    }
+                                }
+                            }
+                            GNG = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_GNG
+                        }
+
+                        ##马来亚
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_SHO
+                                }
+                            }
+                            SHO = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_SHO
+                        }
+                        
+                        ##婆罗洲
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_NRB
+                                }
+                            }
+                            NRB = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_NRB
+                        }
+
+                        ##菲律宾被IJA直接控制
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_FGB
+                                }
+                            }
+                            FGB = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_FGB
+                        }
+
+                        ##印尼
+                        #else_if = {
+                        #    limit = {
+                        #        CHI = {
+                        #            has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+                        #        }
+                        #    }
+                        #    INS = {
+                        #        add_timed_idea = {
+                        #            idea = CHI_Victims_of_diplomatic_games
+                        #            days = 360
+                        #        }
+                        #    }
+                        #    set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_INS
+                        #}
+                        
+                        ##西北
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GAN
+                                }
+                            }
+                            GAN = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_GAN
+                        }
+                        
+                        ##满洲
+                        else_if = {
+                            limit = {
+                                CHI = {
+                                    has_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MAN
+                                }
+                            }
+                            MAN = {
+                                add_timed_idea = {
+                                    idea = CHI_Victims_of_diplomatic_games
+                                    days = 360
+                                }
+                            }
+                            set_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_has_selected_MAN
+                        }
+
+                        #刷新顶部指示器
+                        if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 3 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 3 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 3 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 3 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 3 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 3 }
+                        }
+
+                        #清除当前选择地区flag
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MEN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_VIN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_LAO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_CAM
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_THA
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_BUR
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_AZH
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_SHO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_NRB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_PHI
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_FGB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GAN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MAN
+                    }
+                    else_if = { #失败
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var < CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var }
+                        }
+
+
+                        #刷新顶部指示器
+                        if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 4 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 4 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 4 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 4 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 4 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 4 }
+                        }
+
+                        #清除当前选择地区flag
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MEN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_VIN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_LAO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_CAM
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_THA
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_BUR
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_AZH
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_SHO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_NRB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_PHI
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_FGB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GAN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MAN
+                    }
+                    else = { #平局
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var }
+                        }
+
+
+                        #刷新顶部指示器
+                        if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 5 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 5 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 5 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 5 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 5 }
+                        }
+                        else_if = {
+                            limit = {
+                                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 2 }
+                            }
+                            set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 5 }
+                        }
+
+                        #清除当前选择地区flag
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MEN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_VIN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_LAO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_CAM
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_THA
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_BUR
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_AZH
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_SHO
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_NRB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_PHI
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_FGB
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GAN
+                        clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MAN
+                    }
+                    clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected
+
+                    #重置双方可视筹码
+                    set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 }
+			        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 }
+
+                    if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 20 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 85 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 33 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 71 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 33 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 71 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 47 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 57 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 47 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 57 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 60 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 43 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 60 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 43 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 73 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 28 }
+                    }
+                    else_if = {
+                        limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 73 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 28 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 86 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 14 }
+                    }
+                    else_if = { #最后一回合结束，接续开战事件
+                    limit = {
+                            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 86 }
+			                check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 14 }
+                        }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 100 }
+                        set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 0 }
+                        country_event = {
+                            id = chi.10
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    on_annex = {
+        effect = {
+            CHI = {
+                if = {
+                    limit = {
+                        ROOT = { tag = GAN }
+                        FROM = { tag = QIN }
+                    }
+                    CHI = {
+                        country_event = {
+                            id = tnoub_chi.497
+                        }
+                        country_event = {
+                            id = tnoub_chi.267
+                            hours = 12
+                            random_hours = 2
+                        }
+                        country_event = {
+                            id = tnoub_chi.268
+                            hours = 24
+                            random_hours = 4
+                        }
+                    }
+                    JAP = {
+			            add_to_faction = GAN
+		            }
+                }
+            }
+        }
+    }
+
+    on_capitulation = {
+        effect = {
+            if = {
+				limit = {
+					FROM = { original_tag = QIN }
+					ROOT = { original_tag = GAN }
+				}
+                QIN = {
+                    save_global_event_target_as = winning_country
+                    transfer_state = 764
+                    transfer_state = 283
+                    transfer_state = 1302
+                    add_state_core = 764
+                    add_state_core = 283
+                    add_state_core = 1302
+                    add_state_core = 283
+                }
+                GAN = {
+                    white_peace = QIN
+                    save_global_event_target_as = losing_country
+                    remove_state_core = 764
+                    remove_state_core = 283
+                    remove_state_core = 1302
+                    remove_state_core = 283
+                    set_cosmetic_tag = GAN_neinatsu_gunseikan
+                    set_politics = {
+	                    ruling_party = despotism
+                        elections_allowed = no
+                        last_election = "1935.12.17"
+                    }
+				    set_political_party = {
+    				    ideology = despotism
+    				    popularity = 45
+				    }
+                    set_country_leader_description = {
+                        ideology = despotism
+                        desc = "POLITICS_SEIHOKU_COUNCIL_DESC_NINGXIA"
+                    }
+                    set_capital = { state = 616 remember_old_capital = no }
+                }
+                set_global_flag = war_won
+				set_global_flag = show_peace_popup_alert
+				add_to_variable = { global.peace_popup_dirty = 1 }
+                set_global_flag = skip_default_capitulation
+                JAP = {
+			        add_to_faction = GAN
+		        }
+                CHI = {
+                    country_event = {
+                        id = tnoub_chi.498
+                    }
+                    country_event = {
+                        id = tnoub_chi.264
+                        hours = 12
+                        random_hours = 2
+                    }
+                    country_event = {
+                        id = tnoub_chi.265
+                        hours = 24
+                        random_hours = 4
+                    }
+                    set_country_flag = CHI_northwestwar_win
+                }
+            }
+        }
+    }
+
+    on_capitulation = { #大东亚战争失败
+        effect = {
+            if = {
+				limit = {
+					FROM = { original_tag = JAP }
+					ROOT = { original_tag = CHI }
+				}
+                JAP = {
+                    save_global_event_target_as = winning_country
+                }
+                CHI = {
+                    white_peace = JAP
+                    save_global_event_target_as = losing_country
+                }
+                set_global_flag = war_won
+				set_global_flag = show_peace_popup_alert
+				add_to_variable = { global.peace_popup_dirty = 1 }
+                set_global_flag = skip_default_capitulation
+
+                TNOUB_GAW_failed = yes
+
+                CHI = {
+                    set_country_flag = CHI_gaw_failure_ending
+                }
+            }
+        }
+    }
+}

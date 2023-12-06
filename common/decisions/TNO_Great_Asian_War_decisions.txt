@@ -1,0 +1,758 @@
+TNOUB_GAW_category = {
+	CHI_war_situation_changes = {
+		icon = GFX_
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_global_flag = GAW_in_progress
+		}
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		activation = {
+			has_global_flag = GAW_in_progress
+		}
+
+		is_good = yes
+
+		days_mission_timeout = 7
+
+		priority = 100
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: CHI_war_situation_changes mission timer elapsed"
+			hidden_effect = {
+				if = {
+					limit = {
+						JAP = {
+							has_country_flag = TNOUB_GAW_Xinjing_Falls
+						}
+					}
+					add_to_variable = { global.TNOUB_JAP_Weariness_Change = 1 }
+				}
+				if = {
+					limit = {
+						JAP = {
+							check_variable = { global.TNOUB_JAP_Weariness_Change > 5 }
+						}
+					}
+					add_to_variable = { global.JAP_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_JAP_Weariness_Change = 0 }
+				}
+				if = {
+					limit = {
+						CHI = {
+							has_country_flag = TNOUB_GAW_Jinan_Falls
+						}
+					}
+					add_to_variable = { global.TNOUB_CHI_Weariness_Change = 1 }
+				}
+				if = {
+					limit = {
+						CHI = {
+							AND = {
+								check_variable = { global.TNOUB_CHI_Weariness_Change > 7 }
+								has_country_flag = TNOUB_GAW_Jinan_Falls
+								controls_province = 11913
+							}
+						}
+					}
+					add_to_variable = { global.CHI_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_CHI_Weariness_Change = 0 }
+				}
+				if = {
+					limit = {
+						CHI = {
+							AND = {
+								check_variable = { global.TNOUB_CHI_Weariness_Change > 3 }
+								has_country_flag = TNOUB_GAW_Jinan_Falls
+								NOT = {
+									controls_province = 11913
+								}
+							}
+						}
+					}
+					add_to_variable = { global.CHI_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_CHI_Weariness_Change = 0 }
+				}
+				if = {
+					limit = {
+						CHI = {
+							AND = {
+								check_variable = { global.TNOUB_CHI_Weariness_Change > 5 }
+								has_country_flag = TNOUB_GAW_Jinan_Falls
+								NOT = {
+									controls_province = 11913
+								}
+							}
+						}
+					}
+					add_to_variable = { global.CHI_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_CHI_Weariness_Change = 0 }
+				}
+				add_to_variable = { global.TNOUB_JAP_Weariness_Change_2 = 1 }
+				if = {
+					limit = {
+						JAP = {
+							check_variable = { global.TNOUB_JAP_Weariness_Change_2 > 15 }
+						}
+					}
+					add_to_variable = { global.JAP_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_JAP_Weariness_Change_2 = 0 }
+				}
+				add_to_variable = { global.TNOUB_CHI_Weariness_Change_2 = 1 }
+				if = {
+					limit = {
+						CHI = {
+							check_variable = { global.TNOUB_CHI_Weariness_Change_2 > 15 }
+						}
+					}
+					add_to_variable = { global.CHI_GAW_Weariness = 5 }
+					set_variable = { global.TNOUB_CHI_Weariness_Change_2 = 0 }
+				}
+
+				set_temp_variable = { temp1 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp1 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_army_org_factor = 0.2 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_army_org_factor = temp1 }
+
+				set_temp_variable = { temp2 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp2 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_army_org_regain = 0.2 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_army_org_regain = temp2 }
+
+				set_temp_variable = { temp3 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp3 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_stability_factor = 0.4 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_stability_factor = temp3 }
+
+				set_temp_variable = { temp4 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp4 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_war_support_factor = 0.4 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_war_support_factor = temp4 }
+
+				set_temp_variable = { temp5 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp5 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_breakthrough_factor = 0.2 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_breakthrough_factor = temp5 }
+
+				set_temp_variable = { temp6 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp6 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_army_attack_factor = 0.3 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_army_attack_factor = temp6 }
+
+				set_temp_variable = { temp7 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp7 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_army_defence_factor = 0.3 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_army_defence_factor = temp7 }
+
+				set_temp_variable = { temp8 = global.CHI_GAW_Weariness }
+    			multiply_temp_variable = { temp8 = 0.01 }
+				set_variable = { global.CHI_GAW_buff_dynamic_modifier_army_speed_factor = 0.3 }
+    			subtract_from_variable = { global.CHI_GAW_buff_dynamic_modifier_army_speed_factor = temp8 }
+
+
+				set_temp_variable = { temp9 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp9 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_army_org_factor = 0.2 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_army_org_factor = temp9 }
+
+				set_temp_variable = { temp10 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp10 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_army_org_regain = 0.2 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_army_org_regain = temp10 }
+
+				set_temp_variable = { temp11 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp11 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_stability_factor = 0.4 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_stability_factor = temp11 }
+
+				set_temp_variable = { temp12 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp12 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_war_support_factor = 0.4 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_war_support_factor = temp12 }
+
+				set_temp_variable = { temp13 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp13 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_breakthrough_factor = 0.2 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_breakthrough_factor = temp13 }
+
+				set_temp_variable = { temp14 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp14 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_army_attack_factor = 0.3 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_army_attack_factor = temp14 }
+
+				set_temp_variable = { temp15 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp15 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_army_defence_factor = 0.3 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_army_defence_factor = temp15 }
+
+				set_temp_variable = { temp8 = global.JAP_GAW_Weariness }
+    			multiply_temp_variable = { temp8 = 0.01 }
+				set_variable = { global.JAP_GAW_buff_dynamic_modifier_army_speed_factor = 0.3 }
+    			subtract_from_variable = { global.JAP_GAW_buff_dynamic_modifier_army_speed_factor = temp8 }
+
+				if = {
+					limit = {
+						AND = {
+							check_variable = { global.CHI_GAW_Weariness > 100 }
+							check_variable = { global.JAP_GAW_Weariness > 100 }
+						}
+					}
+					CHI = {
+						country_event = {
+							id = tnoub_chi.700
+						}
+					}
+				}
+				if = {
+					limit = {
+		
+						OR = {
+							NOT = {
+								JAP = {
+       								has_full_control_of_state = 1816
+								}
+							}
+							NOT = {
+								JAP = {
+       								has_full_control_of_state = 1819
+								}
+							}
+							NOT = {
+								JAP = {
+       								has_full_control_of_state = 1818
+								}
+							}
+							NOT = {
+								JAP = {
+       								has_full_control_of_state = 655
+								}
+							}
+						}
+					}
+					CHI = {
+						country_event = tnoub_gaw.8
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHI_war_situation_changes"
+		}
+	}
+
+	GAW_CHI_peace_total_victory = {
+		allowed = {
+			original_tag = CHI
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GAW_CHI_victory_con_tt_1
+				has_global_flag = GAW_in_progress
+				NOT = {
+					any_enemy_country = {
+						OR = {
+							controls_state = 595 #China Proper
+							controls_state = 596
+							controls_state = 597
+							controls_state = 598
+							controls_state = 600
+							controls_state = 602
+							controls_state = 605
+							controls_state = 606
+							controls_state = 607
+							controls_state = 608
+							controls_state = 609
+							controls_state = 613
+							controls_state = 614
+							controls_state = 620
+							controls_state = 811
+							controls_state = 812
+							controls_state = 813
+							controls_state = 959
+							controls_state = 961
+							controls_state = 1014
+							controls_state = 1015
+							controls_state = 1016
+							controls_state = 1019
+							controls_state = 1020
+							controls_state = 1021
+							controls_state = 1022
+							controls_state = 1023
+							controls_state = 1537
+							controls_state = 1538
+
+							controls_state = 594 #Guangxi
+							controls_state = 599
+
+							controls_state = 603 #Guizhou
+
+							controls_state = 325 #Yunnan
+							controls_state = 960
+
+							controls_state = 615 #Shaanxi
+							controls_state = 622
+							controls_state = 956
+
+							controls_state = 905 #Xikang
+							controls_state = 964
+
+							controls_state = 604 #Qinghai
+							controls_state = 906
+
+							controls_state = 322 #Tibet
+							controls_state = 601
+							controls_state = 765
+							controls_state = 1961
+							controls_state = 1962
+							controls_state = 1963
+
+							controls_state = 617 #Xinjiang
+							controls_state = 618
+							controls_state = 619
+							controls_state = 957
+							controls_state = 958
+							controls_state = 1964
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = GAW_CHI_victory_con_tt_2
+				any_enemy_country = {
+					NOT = {
+						AND = {
+							controls_state = 610
+							controls_state = 1640
+							controls_state = 1641
+							controls_state = 1642
+							controls_state = 714
+							controls_state = 715
+							controls_state = 1643
+							controls_state = 717
+							controls_state = 1638
+							controls_state = 1639
+							controls_state = 1636
+							controls_state = 1637
+							controls_state = 810
+							controls_state = 1265
+							controls_state = 328
+							controls_state = 801
+						}
+					}
+				}
+				#NOT = {country_exists = MAN}
+			}
+			custom_trigger_tooltip = {
+				tooltip = GAW_CHI_victory_con_tt_3
+				NOT = {country_exists = GAN}
+			}
+			custom_trigger_tooltip = {
+				tooltip = GAW_CHI_victory_con_tt_4
+				any_enemy_country = {
+					NOT = {
+						AND = {
+							controls_state = 326
+							controls_state = 592
+							controls_state = 593
+							controls_state = 729
+							controls_state = 1017
+							controls_state = 1438
+							controls_state = 1439
+							controls_state = 1464
+						}
+					}
+				}
+			}
+		}
+
+		days_re_enable = 30
+
+		complete_effect = {
+			custom_effect_tooltip = GAW_CHI_peace_total_victory_tt
+			hidden_effect = {
+				JAP = {
+					country_event = {id = tnoub_gaw.106 hours = 3}
+				}
+			}
+		}
+	}
+
+	
+	TNOUB_GAW_CHI_tap_jiangsu = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_jiangsu_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_jiangxi = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_jiangxi_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_changde = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_changde_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_shijiazhuang = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_shijiazhuang_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuang
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_wuhan = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_wuhan_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_chongqing = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_chongqing_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_yunnan = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_yunnan_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan
+    				producer = CHI
+				}
+			}
+		}
+	}
+	TNOUB_GAW_CHI_tap_fujian = {
+		allowed = {
+			original_tag = CHI
+		}
+
+		visible = {
+			has_country_flag = CHI_fujian_point_build
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = support_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = artillery_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_air_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian
+    				producer = CHI
+				}
+				add_equipment_to_stockpile = {
+    				type = anti_tank_equipment
+    				amount = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian
+    				producer = CHI
+				}
+			}
+		}
+	}
+}

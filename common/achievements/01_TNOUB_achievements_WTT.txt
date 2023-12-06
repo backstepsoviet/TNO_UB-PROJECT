@@ -1,0 +1,127 @@
+# possible - filters out achivements on game start so we dont have to check everything all the
+#time
+## happened - checks if achivement happened
+
+##### WAKING THE TIGER #####
+unique_id = WTT_achievements
+
+CHI_expel_the_japaneses = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 西北战争完胜
+			has_country_flag = CHI_northwestwar_win
+			tooltip = CHI_expel_the_japaneses_tooltip
+		}
+	}
+}
+
+CHI_bauhinia_evergreen = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 检测中国与广东是否处于同一阵营
+			GNG = {
+				is_in_faction_with = CHI
+				NOT = {
+					is_in_faction_with = JAP
+				}
+			}
+			tooltip = CHI_bauhinia_evergreen_tooltip
+		}
+	}
+}
+
+CHI_outside_enemies = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 检测外交博弈至少有一场胜利
+			OR = {
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 3 }
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 3 }
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 3 }
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 3 }
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 3 }
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 3 }
+			}
+			tooltip = CHI_outside_enemies_tooltip
+		}
+	}
+}
+
+CHI_divine_assistance = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 大东亚战争胜利，且日本造成的伤亡不超过1M
+			casualties_inflicted_by = {
+    			opponent = JAP
+    			thousands > 1000
+			}
+			has_country_flag = CHI_gaw_success_ending
+			tooltip = CHI_divine_assistance_tooltip
+		}
+	}
+}
+
+CHI_slight_oversight = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 高宗武政府被张仁蠡夺权
+			has_country_flag = CHI_modernization_failure_ending
+			tooltip = CHI_slight_oversight_tooltip
+		}
+	}
+}
+
+CHI_all_hope_gone = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 大东亚战争失败
+			has_country_flag = CHI_gaw_failure_ending
+			tooltip = CHI_all_hope_gone_tooltip
+		}
+	}
+}
+
+CHI_dawn_on_the_horizon = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = CHI
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			# 大东亚战争胜利
+			has_country_flag = CHI_gaw_success_ending
+			tooltip = CHI_dawn_on_the_horizon_tooltip
+		}
+	}
+}

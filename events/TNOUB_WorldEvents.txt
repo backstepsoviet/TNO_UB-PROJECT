@@ -1,0 +1,305 @@
+add_namespace = TNOUB_WORLD
+add_namespace = TNOUB_novel #for althist novels
+
+#Taipei Summit
+news_event = {
+	id = TNOUB_WORLD.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.1"}
+	title = TNOUB_WORLD.1.t
+	desc = TNOUB_WORLD.1.desc
+	picture = GFX_TNOUB_news_event_CHI_Taipei_Summit
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.1.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.1.b
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.1.c
+		trigger = {
+			OR = {
+				original_tag = GER
+				original_tag = USA
+			}
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.1.d
+		trigger = {
+			OR = {
+				has_government = communist
+				has_government = socialist
+			}
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.1.e
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = JAP
+				original_tag = GER
+				original_tag = USA
+				has_government = communist
+				has_government = socialist
+			}
+		}
+	}
+}
+
+#China Social Reform
+news_event = {
+	id = TNOUB_WORLD.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.2"}
+	title = TNOUB_WORLD.2.t
+	desc = TNOUB_WORLD.2.desc
+	picture = GFX_news_event_
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.2.a
+	}
+}
+
+#Northwest Crisis
+news_event = {
+	id = TNOUB_WORLD.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.3"}
+	title = TNOUB_WORLD.3.t
+	desc = TNOUB_WORLD.3.desc
+	picture = GFX_news_event_
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.3.a
+	}
+}
+
+#Five Modernization Finished
+news_event = {
+	id = TNOUB_WORLD.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.4"}
+	title = TNOUB_WORLD.4.t
+	desc = TNOUB_WORLD.4.desc
+	picture = GFX_news_event_
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.4.a
+	}
+}
+
+#Nanking Summit
+news_event = {
+	id = TNOUB_WORLD.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.5"}
+	title = TNOUB_WORLD.5.t
+	desc = TNOUB_WORLD.5.desc
+	picture = GFX_TNOUB_news_event_CHI_Nanjing_Summit
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.5.a
+	}
+}
+
+#Nanking Summit Broke
+news_event = {
+	id = TNOUB_WORLD.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.6"}
+	title = TNOUB_WORLD.6.t
+	desc = TNOUB_WORLD.6.desc
+	picture = GFX_TNOUB_news_event_CHI_Nanking_Summit_Broke
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.6.a
+	}
+}
+
+#Japan Sanctions RGOC
+news_event = {
+	id = TNOUB_WORLD.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.7"}
+	title = TNOUB_WORLD.7.t
+	desc = TNOUB_WORLD.7.desc
+	picture = GFX_TNOUB_news_event_CHI_Japan_Sanctions_RGOC
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.7.a
+	}
+	option = {
+		name = TNOUB_WORLD.7.b
+		trigger = {
+			NOT = {
+				original_tag = CHI
+			}
+		}
+	}
+}
+
+#Japan-Manchuria Military Exercise
+news_event = {
+	id = TNOUB_WORLD.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.8"}
+	title = TNOUB_WORLD.8.t
+	desc = TNOUB_WORLD.8.desc
+	picture = GFX_TNOUB_news_event_CHI_Japan-Manchuria_Military_Exercise
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.8.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.8.b
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.8.c
+		trigger = {
+			NOT = {
+				original_tag = CHI
+				original_tag = JAP
+			}
+		}
+	}
+}
+
+#Chinese Navy Blockades Qingdao
+news_event = {
+	id = TNOUB_WORLD.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.9"}
+	title = TNOUB_WORLD.9.t
+	desc = TNOUB_WORLD.9.desc
+	picture = GFX_TNOUB_news_event_CHI_Chinese_Navy_Blockades_Qingdao
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.9.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.9.b
+		trigger = {
+			NOT = {
+				original_tag = CHI
+			}
+		}
+	}
+}
+
+#Great Asian War Begin
+news_event = {
+	id = TNOUB_WORLD.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.10"}
+	title = TNOUB_WORLD.10.t
+	desc = TNOUB_WORLD.10.desc
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.10.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.10.b
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.10.c
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = JAP
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = TNOUB_WORLD.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.11"}
+	title = TNOUB_WORLD.11.t
+	desc = TNOUB_WORLD.11.desc
+	picture = GFX_TNOUB_news_event_CHI_Hirohito_issues_Gyokuon_hoso
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.11.a
+		trigger = {
+			original_tag = CHI
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.11.b
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = TNOUB_WORLD.11.c
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = CHI
+					original_tag = JAP
+				}
+			}
+		}
+	}
+}
+
+#2WRW
+news_event = {
+	id = TNOUB_WORLD.2000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TNOUB_WORLD.2000"}
+	title = TNOUB_WORLD.2000.t
+	desc = TNOUB_WORLD.2000.desc
+	picture = GFX_news_event_
+
+	is_triggered_only = yes
+
+	option = {
+		name = TNOUB_WORLD.2000.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_FALL_ROT }
+			TNO_fire_super_event = yes
+		}
+	}
+}

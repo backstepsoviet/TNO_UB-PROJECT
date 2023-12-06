@@ -1,0 +1,11 @@
+﻿l_english:
+ TNOUB_PEACE_POPUP_WAR_CONSLUSION_GAW_NLF: "In the midst of the Greater East Asian War,§Y[winning_country.GetNameWithFlag]§! defeated §Y[losing_country.GetNameWithFlag]§!Colonial government."
+ TNOUB_PEACE_POPUP_WAR_CONSLUSION_GAW_CP: "In the flames of the Greater East Asia War, §Y[winning_country.GetNameWithFlag]§! defeated the §Y[losing_country.GetNameWithFlag]§! who dared to resist."
+ TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_QIN: "In the §Oconstant artillery fire§! in the northwest desert, §Y[winning_country.GetNameWithFlag]§! completely defeated §Y[losing_country.GetNameWithFlag]§!, and once again rescued the ravaged country from the Japanese invaders. The people of Shaanxi and Gansu."
+ TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_GAN: "Under the §Rdimming red sun§! in the northwest desert, §Y[winning_country.GetNameWithFlag]§! completely wiped out §Y[losing_country.GetNameWithFlag]§!, and another group of patriots fighting for national independence returned to the earth."
+ TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_DRAW: "In the §grolling smoke§! of the northwest desert, §Y[winning_country.GetNameWithFlag]§! resisted the §Y[losing_country.GetNameWithFlag]§!'s surprise attack and successfully defended the land at his feet."
+ TNOUB_PEACE_POPUP_FLAVOR_QIN: "I wish I could die if I didn't fight against the Japanese. I will leave this as a shame today. \nThe country is broken like this, why should I regret it?"
+ TNOUB_PEACE_POPUP_FLAVOR_GAN: "三十年噩梦，醒时归一眠。"
+ TNOUB_PEACE_POPUP_FLAVOR_DRAW: "Howl the winds, neigh the horses,\nRoars Huanghe river, roars Huanghe River!"
+ TNOUB_PEACE_POPUP_FLAVOR_MAN: "My family was along the Songhua River, Where there are my compatriots, And my aged parents."
+ TNOUB_PEACE_POPUP_FLAVOR_GNG: "法团之国轰然倒塌。"

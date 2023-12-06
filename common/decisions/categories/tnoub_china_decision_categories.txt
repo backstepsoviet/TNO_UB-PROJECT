@@ -1,0 +1,48 @@
+CHI_Remilitarization_category = {	#中国再武装
+	icon = GFX_decision_category_army_reform
+
+	visible = {
+		has_country_flag = TNOUB_CHI_Remilitarization
+		original_tag = CHI
+		NOT = {
+			has_global_flag = TNOUB_GAW_Crisis
+		}
+		is_in_faction_with = JAP
+	}
+
+	scripted_gui = TNO_CHI_Military_GUI
+}
+
+CHI_Hiding_Our_Interests_Category = {	#掩饰我方目的
+	icon = GFX_
+
+	visible = {
+		has_country_flag = TNOUB_CHI_Hiding_Our_Interests
+	}
+
+	scripted_gui = TNOUB_CHI_Hiding_Our_Interests_GUI
+}
+
+CHI_Oil_Crisis_Category = {	#石油危机
+	icon = GFX_decision_category_TNOUB_CHI_oilcrisis
+
+	visible = {
+		has_country_flag = CHI_Social_Reform
+	}
+	visible_when_empty = yes
+	priority = {
+		base = 90
+	}
+
+	scripted_gui = TNOUB_CHI_Oil_Crisis_GUI
+}
+
+CHI_Northwest_War_Category = { #西北战事
+	icon = GFX_decision_category_TNOUB_CHI_northwestwar
+
+	visible = {
+		has_country_flag = CHI_Northwest_War
+	}
+
+	scripted_gui = TNOUB_CHI_Northwest_War_GUI
+}

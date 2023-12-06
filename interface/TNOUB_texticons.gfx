@@ -1,0 +1,81 @@
+spriteTypes = {
+	#signature
+    spriteType = {
+		name = "GFX_Xiawei_signature"
+		texturefile = "gfx/texticons/Xiawei_signature.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Zhangzhizhong_signature"
+		texturefile = "gfx/texticons/Zhangzhizhong_signature.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Liuwenhui_signature"
+		texturefile = "gfx/texticons/Liuwenhui_signature.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Majiyuan_signature"
+		texturefile = "gfx/texticons/Majiyuan_signature.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_Fuzuoyi_signature"
+		texturefile = "gfx/texticons/Fuzuoyi_signature.dds"
+        legacy_lazy_load = no
+	}
+	#normal texticon
+	spriteType = {
+		name = "GFX_CHI_supply_route_smooth_rate"
+		texturefile = "gfx/texticons/CHI_supply_route_smooth_rate.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_oilcrisis_industry_reform"
+		texturefile = "gfx/texticons/CHI_oilcrisis_industry_reform.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_oilcrisis_agricultur_reform"
+		texturefile = "gfx/texticons/CHI_oilcrisis_agricultur_reform.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_oilcrisis_government_prestige"
+		texturefile = "gfx/texticons/CHI_oilcrisis_government_prestige.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_Table_GUI_gray_plus"
+		texturefile = "gfx/texticons/CHI_Table_GUI_gray_plus.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_Table_GUI_token_blue"
+		texturefile = "gfx/texticons/CHI_Table_GUI_token_blue.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_Table_GUI_CPS"
+		texturefile = "gfx/texticons/CHI_Table_GUI_CPS.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_CHI_Table_GUI_token_red"
+		texturefile = "gfx/texticons/CHI_Table_GUI_token_red.dds"
+        legacy_lazy_load = no
+	}
+
+	#bookmarks
+	spriteType = {
+		name = "GFX_texticon_bookmark_Table_GUI"
+		texturefile = "gfx/texticons/texticon_bookmark_Table_GUI.dds"
+        legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticon_bookmark_CHI"
+		texturefile = "gfx/texticons/texticon_bookmark_CHI.dds"
+        legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,15 @@
+spriteTypes = {
+    ###Reorganized China
+	spriteType = {
+		name = "GFX_dynamic_modifier_CHI_remilitarization_status"
+		texturefile = "gfx/interface/dynamic_modifier/CHI/dynamic_modifier_CHI_remilitarization_status.dds"
+	}
+	spriteType = {
+		name = "GFX_dynamic_modifier_CHI_prepare_for_total_war"
+		#texturefile = "gfx/interface/ideas/national_spirits/idea_BUR_Suspension_of_the_1953_Constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_dynamic_modifier_CHI_flame_of_revenge"
+		#texturefile = "gfx/interface/ideas/national_spirits/idea_BUR_The_Fading_Star_of_the_Father.dds"
+	}
+}

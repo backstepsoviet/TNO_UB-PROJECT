@@ -1,0 +1,1113 @@
+﻿##################################
+###   Great Asian War Events   ###
+##################################
+
+add_namespace = tnoub_gaw
+add_namespace = gawnews
+
+#ids: 
+#1-99 - General Effect Events
+
+
+country_event = {#Xinjing Falls
+	id = tnoub_gaw.1
+	title = tnoub_gaw.1.t
+	desc = tnoub_gaw.1.d
+	picture = GFX_
+
+	trigger = {
+		MAN = {
+			NOT = {
+       			controls_state = 328
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+		JAP = {
+			NOT = {
+				has_country_flag = TNOUB_GAW_Xinjing_Falls
+			}
+		}
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.1"
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = tnoub_gaw.1.a
+		set_country_flag = TNOUB_GAW_Xinjing_Falls
+	}
+}
+
+country_event = {#Xinjing Return
+	id = tnoub_gaw.2
+	title = tnoub_gaw.2.t
+	desc = tnoub_gaw.2.d
+	picture = GFX_
+
+	trigger = {
+		MAN = {
+       		controls_state = 328
+		}
+		JAP = {
+			has_country_flag = TNOUB_GAW_Xinjing_Falls
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.2"
+	}
+
+	fire_only_once = no
+
+	option = {
+		name = tnoub_gaw.2.a
+		clr_country_flag = TNOUB_GAW_Xinjing_Falls
+		if = {
+			limit = {
+				check_variable = { global.JAP_GAW_Weariness > 50 }
+			}
+			add_to_variable = { global.JAP_GAW_Weariness = -10 }
+		}
+	}
+}
+
+country_event = {#Taipei Falls
+	id = tnoub_gaw.3
+	title = tnoub_gaw.3.t
+	desc = tnoub_gaw.3.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 524
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.3"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.3.a
+		add_to_variable = { global.JAP_GAW_Weariness = 10 }
+	}
+}
+
+country_event = {#Hainan Falls
+	id = tnoub_gaw.4
+	title = tnoub_gaw.4.t
+	desc = tnoub_gaw.4.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 591
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.4"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.4.a
+		add_to_variable = { global.JAP_GAW_Weariness = 5 }
+	}
+}
+
+country_event = {#
+	id = tnoub_gaw.5
+	title = tnoub_gaw.5.t
+	desc = tnoub_gaw.5.d
+	picture = GFX_
+
+	trigger = {
+		NOT = {
+			country_exists = GAN
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.5"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.5.a
+		add_to_variable = { global.JAP_GAW_Weariness = 5 }
+	}
+}
+
+country_event = {#Chosen Falls
+	id = tnoub_gaw.6
+	title = tnoub_gaw.6.t
+	desc = tnoub_gaw.6.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 560
+       			controls_state = 527
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.6"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.6.a
+		add_to_variable = { global.JAP_GAW_Weariness = 5 }
+	}
+}
+
+country_event = {#Hainan Falls
+	id = tnoub_gaw.7
+	title = tnoub_gaw.7.t
+	desc = tnoub_gaw.7.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 962
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.7"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.7.a
+		add_to_variable = { global.JAP_GAW_Weariness = 10 }
+	}
+}
+
+country_event = {#Chosen Falls
+	id = tnoub_gaw.8
+	title = tnoub_gaw.8.t
+	desc = tnoub_gaw.8.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			OR = {
+				NOT = {
+       				has_full_control_of_state = 1816
+				}
+				NOT = {
+       				has_full_control_of_state = 1819
+				}
+				NOT = {
+       				has_full_control_of_state = 525
+				}
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = CHI
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.8"
+	}
+
+	fire_only_once = yes
+	timeout_days = 7
+
+	
+	option = {#submit
+		name = tnoub_gaw.8.a
+		country_event = tnoub_chi.700
+	}
+	option = {#Fight on and get nuked
+		name = tnoub_gaw.8.b
+		hidden_effect = {
+			JAP = {
+				country_event = {
+					id = nuclearwar.6
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {#NP Falls
+	id = tnoub_gaw.9
+	title = tnoub_gaw.9.t
+	desc = tnoub_gaw.9.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 333
+       			controls_state = 808
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.9"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.9.a
+		add_to_variable = { global.JAP_GAW_Weariness = 2 }
+	}
+}
+
+country_event = {#Shonan-to Falls
+	id = tnoub_gaw.10
+	title = tnoub_gaw.10.t
+	desc = tnoub_gaw.10.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 333
+       			controls_state = 808
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.10"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.10.a
+		add_to_variable = { global.JAP_GAW_Weariness = 2 }
+	}
+}
+
+country_event = {# Falls
+	id = tnoub_gaw.11
+	title = tnoub_gaw.11.t
+	desc = tnoub_gaw.11.d
+	picture = GFX_
+
+	trigger = {
+		JAP = {
+			NOT = {
+       			controls_state = 523
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.11"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.11.a
+		add_to_variable = { global.JAP_GAW_Weariness = 2 }
+	}
+}
+
+country_event = {# Beijing Falls
+	id = tnoub_gaw.50
+	title = tnoub_gaw.50.t
+	desc = tnoub_gaw.50.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_state = 608
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.50"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.50.a
+		add_to_variable = { global.CHI_GAW_Weariness = 2 }
+	}
+}
+
+country_event = {# Jinan Falls
+	id = tnoub_gaw.51
+	title = tnoub_gaw.51.t
+	desc = tnoub_gaw.51.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 1069
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+		CHI = {
+			NOT = {
+				has_country_flag = TNOUB_GAW_Jinan_Falls
+			}
+		}
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.51"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.51.a
+		add_to_variable = { global.CHI_GAW_Weariness = 5 }
+		CHI = {
+			set_country_flag = TNOUB_GAW_Jinan_Falls
+		}
+	}
+}
+
+country_event = {# Jinan Retake
+	id = tnoub_gaw.52
+	title = tnoub_gaw.52.t
+	desc = tnoub_gaw.52.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+       		controls_province = 1069
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+		CHI = {
+			has_country_flag = TNOUB_GAW_Jinan_Falls
+		}
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.52"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.52.a
+		add_to_variable = { global.CHI_GAW_Weariness = -5 }
+		CHI = {
+			clr_country_flag = TNOUB_GAW_Jinan_Falls
+		}
+	}
+}
+
+
+country_event = {# Taiyuan Falls
+	id = tnoub_gaw.53
+	title = tnoub_gaw.53.t
+	desc = tnoub_gaw.53.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 12344
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.53"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.53.a
+		add_to_variable = { global.CHI_GAW_Weariness = 2 }
+	}
+}
+
+
+country_event = {# Xuzhou Falls
+	id = tnoub_gaw.54
+	title = tnoub_gaw.54.t
+	desc = tnoub_gaw.54.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 12055
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.54"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.54.a
+		add_to_variable = { global.CHI_GAW_Weariness = 2 }
+	}
+}
+
+
+country_event = {# Shanghai Falls
+	id = tnoub_gaw.55
+	title = tnoub_gaw.55.t
+	desc = tnoub_gaw.55.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 7014
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.55"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.55.a
+		add_to_variable = { global.CHI_GAW_Weariness = 5 }
+	}
+}
+
+
+country_event = {# Nanjing Falls
+	id = tnoub_gaw.56
+	title = tnoub_gaw.56.t
+	desc = tnoub_gaw.56.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 11913
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.56"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.56.a
+		add_to_variable = { global.CHI_GAW_Weariness = 10 }
+	}
+}
+
+country_event = {# Wuhan Falls
+	id = tnoub_gaw.57
+	title = tnoub_gaw.57.t
+	desc = tnoub_gaw.57.d
+	picture = GFX_
+
+	trigger = {
+		CHI = {
+			NOT = {
+       			controls_province = 4619
+			}
+		}
+		has_global_flag = GAW_in_progress
+		tag = JAP
+    }
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.57"
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_gaw.57.a
+		add_to_variable = { global.CHI_GAW_Weariness = 10 }
+	}
+}
+
+country_event = {#Japan accepts peace deal
+	id = tnoub_gaw.201
+	title = tnoub_gaw.201.t
+	desc = tnoub_gaw.201.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.201"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#Ends Conflict with Japan
+		name = tnoub_gaw.201.a
+		custom_effect_tooltip = tnoub_gaw.201.a.tt
+		hidden_effect = {
+			country_event = {id = gaw.203 hours = 3}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+				every_controlled_state = {
+					set_state_owner_to = PREV
+				}
+			}
+			every_enemy_country = {
+				white_peace = PREV
+			}
+		}
+	}
+}
+
+
+country_event = {#Chinese peace offer for Japan - Chinese total victory
+	id = tnoub_gaw.106
+	title = tnoub_gaw.106.t
+	desc = tnoub_gaw.106.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event tnoub_gaw.106"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#accept peace and basically lose the cold war
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				check_variable = { global.JAP_GAW_Weariness < 25 }
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 24 }
+					check_variable = { global.JAP_GAW_Weariness < 50 }
+				}
+			}
+			modifier = {
+				factor = 60
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 49 }
+					check_variable = { global.JAP_GAW_Weariness < 60 }
+				}
+			}
+			modifier = {
+				factor = 70
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 59 }
+					check_variable = { global.JAP_GAW_Weariness < 70 }
+				}
+			}
+			modifier = {
+				factor = 80
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 69 }
+					check_variable = { global.JAP_GAW_Weariness < 80 }
+				}
+			}
+			modifier = {
+				factor = 90
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 89 }
+					check_variable = { global.JAP_GAW_Weariness < 90 }
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					check_variable = { global.JAP_GAW_Weariness > 89 }
+					check_variable = { global.JAP_GAW_Weariness < 100 }
+				}
+			}
+		}
+		name = tnoub_gaw.106.a
+		hidden_effect = {
+			CHI = {
+				country_event = {id = tnoub_chi.700 hours = 3}
+			}
+		}
+	}
+	option = {#reject the peace and try for a desperate last push
+		ai_chance = {
+			base = 10
+		}
+		name = tnoub_gaw.106.b
+		hidden_effect = {
+			CHI = {
+				country_event = {id = tnoub_gaw.202 hours = 3}
+			}
+		}
+	}
+}
+
+country_event = {#Japan rejects peace deal
+	id = tnoub_gaw.202
+	title = tnoub_gaw.202.t
+	desc = tnoub_gaw.202.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.202"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#The War drags on
+		name = tnoub_gaw.202.a
+
+	}
+}
+
+country_event = {#End of the Great Asian War - Japan victorious
+	id = gaw.103
+	title = gaw.103.t
+	desc = gaw.103.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.103"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gaw.103.a
+		hidden_effect = {country_event = {id = gaw.104 hours = 3}}
+		set_global_flag = GAW_JAP_victory
+		clr_global_flag = GAW_in_progress
+	}
+}
+
+country_event = {# What shall Japan do with China?
+	id = gaw.104
+	title = gaw.104.t
+	desc = gaw.104.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.104"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#boring ol sphere china
+		name = gaw.104.a
+
+	}
+
+	option = {#fucked up shina
+		name = gaw.104.b
+
+	}
+
+	option = {#REALLY GOOD IDEA
+		name = gaw.104.c
+
+	}
+}
+
+country_event = {#NLF moves into Korea, Japanese ultimatum
+	id = gaw.105
+	title = gaw.105.t
+	desc = gaw.105.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.105"
+	}
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = gaw.105.a
+		CHI = {
+			country_event = {id = gaw.206}
+		}
+	}
+}
+
+country_event = {#Chinese peace offer for Japan - Chinese total victory
+	id = gaw.106
+	title = gaw.106.t
+	desc = gaw.106.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.106"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#accept peace and basically lose the cold war
+		ai_chance = {factor = 100}
+		name = gaw.106.a
+		hidden_effect = {
+			CHI = {
+				country_event = {id = gaw.201 hours = 3}
+			}
+		}
+	}
+	option = {#reject the peace and try for a desperate last push
+		name = gaw.106.b
+		hidden_effect = {
+			CHI = {
+				country_event = {id = gaw.202 hours = 3}
+			}
+		}
+	}
+}
+
+country_event = {#End of the GAW - China victorious
+	id = gaw.200
+	title = gaw.200.t
+	desc = gaw.200.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.200"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = gaw.200
+	}
+}
+
+country_event = {#Japan accepts peace deal
+	id = gaw.201
+	title = gaw.201.t
+	desc = gaw.201.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.201"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#Ends Conflict with Japan
+		name = gaw.201.a
+		custom_effect_tooltip = gaw.201.a.tt
+		hidden_effect = {
+			country_event = {id = gaw.203 hours = 3}
+			GAW_JAP_surrender_chinese_states = yes
+			every_country = {
+				limit = {
+					has_war_with = CHI
+				}
+				white_peace = CHI
+			}
+		}
+	}
+}
+
+country_event = {#Japan rejects peace deal
+	id = gaw.202
+	title = gaw.202.t
+	desc = gaw.202.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.202"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#The War drags on
+		name = gaw.202.a
+
+	}
+}
+
+
+country_event = {#End of the GAW - China victorious
+	id = gaw.205
+	title = gaw.205
+	desc = gaw.205
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.205"
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = gaw.205.a
+		set_global_flag = GAW_CHI_victory
+		clr_global_flag = GAW_in_progress
+	}
+}
+
+country_event = {#Japanese nuclear ultimatum if Korea is threatened
+	id = gaw.206
+	title = gaw.206.t
+	desc = gaw.206.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.206"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#submit
+		name = gaw.206.a
+		country_event = gaw.201
+	}
+	option = {#Fight on and get nuked
+		name = gaw.206.b
+		hidden_effect = {
+			JAP = {
+				country_event = {
+					id = nuclearwar.6
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Manchuria Falls
+	id = gaw.300
+	title = gaw.300.t
+	desc = gaw.300.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.300"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#China/Chinese ally
+		trigger = {
+			has_country_flag = gaw_chi_ally
+		}
+		name = gaw.300.a
+	}
+	option = {#Japan/Japanese Ally
+		trigger = {
+			has_country_flag = gaw_jap_ally
+		}
+		name = gaw.300.b
+	}
+	option = {#Everyone else
+		trigger = {
+			has_country_flag = gaw_neutral
+		}
+		name = gaw.300.c
+	}
+}
+
+country_event = {#Guangdong Falls
+	id = gaw.301
+	title = gaw.301.t
+	desc = gaw.301.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.301"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#China/Chinese ally
+		trigger = {
+			has_country_flag = gaw_chi_ally
+		}
+		name = gaw.301.a
+	}
+	option = {#Japan/Japanese Ally
+		trigger = {
+			has_country_flag = gaw_jap_ally
+		}
+		name = gaw.301.b
+	}
+	option = {#Everyone else
+		trigger = {
+			has_country_flag = gaw_neutral
+		}
+		name = gaw.301.c
+	}
+}
+
+country_event = {#Mengjiang Falls
+	id = gaw.302
+	title = gaw.302.t
+	desc = gaw.302.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.302"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {#China/Chinese ally
+		trigger = {
+			has_country_flag = gaw_chi_ally
+		}
+		name = gaw.302.a
+	}
+	option = {#Japan/Japanese Ally
+		trigger = {
+			has_country_flag = gaw_jap_ally
+		}
+		name = gaw.302.b
+	}
+	option = {#Everyone else
+		trigger = {
+			has_country_flag = gaw_neutral
+		}
+		name = gaw.302.c
+	}
+}
+
+country_event = {#Shanghai is captured by China
+	id = gaw.303
+	title = gaw.303.t
+	desc = gaw.303.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.303"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		NOT = {has_global_flag = GAW_CHI_Shanghai}
+	}
+
+	option = {
+		name = gaw.303.a
+		set_global_flag = GAW_CHI_Shanghai
+	}
+}
+
+country_event = {#Shanghai is recaptured by Japan
+	id = gaw.304
+	title = gaw.304.t
+	desc = gaw.304.d
+	picture = GFX_report_event_CHI_nanjing_summit_start
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: Event_gaw.304"
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	trigger = {
+		NOT = {has_global_flag = GAW_JAP_Shanghai}
+	}
+
+	option = {
+		name = gaw.304.a
+		set_global_flag = GAW_JAP_Shanghai
+	}
+}

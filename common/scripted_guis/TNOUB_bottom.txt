@@ -1,0 +1,50 @@
+
+scripted_gui = {
+
+	TNOUB_bottom_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "TNOUB_bottom_gui"
+
+		visible = {
+			has_country_flag = TNOUB_country_has_gui
+		}
+
+		triggers = {
+			CHI_Table_crt_icon_visible = {
+				original_tag = CHI
+			}
+		}
+
+		effects = {
+			CHI_Table_crt_icon_click = {
+				if = {
+					limit = { NOT = { has_country_flag = CHI_Show_The_Ministry_Chinese_Affairs_Table_GUI } }
+					set_country_flag = CHI_Show_The_Ministry_Chinese_Affairs_Table_GUI
+					#clr_country_flag = gui_alert_visible_2
+				}
+				else_if = {
+					limit = { has_country_flag = CHI_Show_The_Ministry_Chinese_Affairs_Table_GUI }
+					clr_country_flag = CHI_Show_The_Ministry_Chinese_Affairs_Table_GUI
+					#clr_country_flag = gui_alert_visible_2
+				}
+			}
+		}
+	}
+
+	#TNOUB_arrows_alert = {
+	#	context_type = player_context
+	#	parent_window_token = top_bar
+	#	window_name = "TNOUB_arrows_alert"
+
+	#	visible = {
+	#		has_country_flag = country_has_gui
+	#	}
+
+	#	triggers = {
+	#		gui_alert_visible = {
+	#			has_country_flag = gui_alert_visible_2
+	#		}
+	#	}
+	#}
+}

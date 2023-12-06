@@ -1,0 +1,26 @@
+###################################
+###   TNOUB Free India Events   ###
+###################################
+
+add_namespace = tnoub_azh
+
+#ids: 
+
+country_event = { #Bhutan join in
+	id = tnoub_azh.1
+	title = tnoub_azh.1.t
+	desc = tnoub_azh.1.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_azh.1.a
+        AZH = {
+            annex_country = {
+				target = BHU
+				transfer_troops = yes
+			}
+        }
+	}
+}

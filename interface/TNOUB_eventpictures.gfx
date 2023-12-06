@@ -1,0 +1,149 @@
+spriteTypes = { ### Only for report/country event pictures, news events go in TNOUB_news_events.gfx
+
+	### TNOUB RGOC EVENTS ###
+	
+	spriteType = {
+		name = "GFX_TNOUB_report_event_office_of_the_president_gao"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_office_of_the_president_gao.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_taoxisheng_and_gaozongwu"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_taoxisheng_and_gaozongwu.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_patriotic_student"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_patriotic_student.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_photo_of_the_puppet_government"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_photo_of_the_puppet_government.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_student_representatives_in_nanjing"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_student_representatives_in_nanjing.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Flag_of_the_Republic_of_China_stamp"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Flag_of_the_Republic_of_China_stamp.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Looking_out_from_airplane"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Looking_out_from_airplane.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Reporters_at_the_Taipei_Summit"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Reporters_at_the_Taipei_Summit.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Minutes_to_Gao_Zongwu"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Minutes_to_Gao_Zongwu.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_scene_from_the_Taipei_summit"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_scene_from_the_Taipei_summit.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_protest_against_Japan_in_Nanjing"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_protest_against_Japan_in_Nanjing.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Remilitarization"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Remilitarization.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Reunification"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Reunification.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Japanese_invade_Shanghai"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Japanese_invade_Shanghai.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_secret_warehouse"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_secret_warehouse.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_another_secret_warehouse"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_another_secret_warehouse.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_night_car"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_night_car.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_sunset"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_sunset.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_mother_and_child"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_mother_and_child.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Northwest_War"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Northwest_War.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Nanjing_Massacre"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Nanjing_Massacre.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Letter_from_Guangxi"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Letter_from_Guangxi.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_69G_Tank"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_69G_Tank.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_fireworks_burnt"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_fireworks_burnt.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_NRA_Enters_Northwest"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_NRA_Enters_Northwest.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Northwest_War_draw"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Northwest_War_draw.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Northwest_War_win"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Northwest_War_win.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Northwest_War_lose"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Northwest_War_lose.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Map_of_tibet"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Map_of_tibet.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_cargo_list"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_cargo_list.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_newsstand"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_newsstand.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_timebomb"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_timebomb.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_the_red_army"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_the_red_army.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_White_Lily"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_White_Lily.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Japanese_flag_lowered"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Japanese_flag_lowered.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_report_event_Chinese_youth_celebrate"
+		texturefile = "gfx/event_pictures/TNOUB_china/GFX_TNOUB_report_event_Chinese_youth_celebrate.dds"
+	}
+}

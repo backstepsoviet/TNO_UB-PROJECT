@@ -1,0 +1,62 @@
+spriteTypes = {
+
+	### categories
+
+	#
+	spriteType = {
+		name = "GFX_decision_category_TNOUB_CHI_kuomintang"
+		texturefile = "gfx/interface/decisions/decision_category_TNOUB_CHI_kuomintang.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_TNOUB_CHI_xunzheng"
+		texturefile = "gfx/interface/decisions/decision_category_TNOUB_CHI_xunzheng.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_TNOUB_CHI_xianzheng"
+		texturefile = "gfx/interface/decisions/decision_category_TNOUB_CHI_xianzheng.dds"
+	}
+
+	#CHI_oilcrisis
+	spriteType = {
+		name = "GFX_decision_category_TNOUB_CHI_oilcrisis"
+		texturefile = "gfx/interface/decisions/decision_category_TNOUB_CHI_oilcrisis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_oilcrisis_reform_successful"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_oilcrisis_reform_successful.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_oilcrisis_gears_turning"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_oilcrisis_gears_turning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_oilcrisis_Japanophiles_is_in_action"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_oilcrisis_Japanophiles_is_in_action.dds"
+	}
+
+	#CHI_northwestwar
+	spriteType = {
+		name = "GFX_decision_category_TNOUB_CHI_northwestwar"
+		texturefile = "gfx/interface/decisions/decision_category_TNOUB_CHI_northwestwar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_NWW_sharpen_the_weapon"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_NWW_sharpen_the_weapon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_NWW_lend_helping_hand"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_NWW_lend_helping_hand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_TNOUB_CHI_NWW_diplomatic_mediation"
+		texturefile = "gfx/interface/decisions/decision_TNOUB_CHI_NWW_diplomatic_mediation.dds"
+	}
+}

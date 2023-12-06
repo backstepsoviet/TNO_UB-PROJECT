@@ -1,0 +1,77 @@
+﻿l_simp_chinese:
+  #Yunnan - The Battle of Sichuan
+  THE_BATTLE_OF_SICHUAN:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   四川之争"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_RANDOM_DESC:0 "龙云在西南夺取政权后，高宗武的中华民国与护国军为争夺重庆所在地四川的控制权而发生冲突。\n\n整个冲突的命运，将取决于哪一方占领了这片人口众多、资源丰富、工业蓬勃发展的土地。"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   护国军控制四川"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "护国军成功地消除了中华民国在四川的影响，并迫使他们加入西南暴动。\n这一成功将§G大大增加§!护国军的合法性。"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_CHI_REPUBLIC_OF_CHINA:0 "£TNO_game_rule_flag_CHI   中华民国控制四川"
+  RULE_OPTION_THE_BATTLE_OF_SICHUAN_CHI_REPUBLIC_OF_CHINA_DESC:0 "中华民国成功地平息了四川的叛乱，结束了无政府状态。\n这将§R非常伤害§!护国军的合法性。"
+
+  #Warlord Insurrection in China
+
+  WARLORD_INSURRECTION_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   解放的最后机会"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_RANDOM_DESC:0 "高宗武领导的§G中华民国§!政府将与代表旧时代最后一息的§x中华民国护国军§!进行决战，只有一个政权能够存活下来，并最终面对日本。"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §x唤醒猛虎§!"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "护国军击败了卖国政府，日本将成立华北政务委员会以维持伪政权在华北的残余势力。第二次北伐成功了，\n§R至少在他们解决了东方的旭日之前。§!"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_CHI_REPUBLIC_OF_CHINA:0 "£TNO_game_rule_flag_CHI   打倒疯狗"
+  RULE_OPTION_WARLORD_INSURRECTION_OUTCOME_CHI_REPUBLIC_OF_CHINA_DESC:0 "南京的改组政府将镇压西南暴动，推动高宗武为中国自由地追求他的五个现代化，并在70年代对抗压迫者。"
+
+  #The Great Asian War - NPA
+
+  NPA_GREAT_ASIAN_WAR_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_JAP   大东亚战争（护国军）"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_RANDOM_DESC:0 "即使在人力和资源的巨大损失下，日本人仍将击败西部的叛乱军阀，确认其在东亚的控制权并确保其作为超级大国的地位，尽管由于其进行的代价高昂的战争而被高度削弱和脆弱。"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §x白日重升§!"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "最终，护国军将把它的日本压迫者赶出中国, 但不得不在与朝鲜的边境停下来，因为绝望的日本帝国主义者威胁只要护国军跨过鸭绿江一步，就将使用核武器。随着日本的彻底失败，它的超级大国地位也随之丧失了，冷战将在德美两国间继续。\n\n§R要求:§!\n£TNO_game_rule_flag_YUN_NPA   §x唤醒猛虎§! 在 £TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   解放的最后机会"
+
+  #Sun Fo's Successor
+
+  YUN_GREAT_ASIAN_WAR_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_JAP   孙科的继任者"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_RANDOM_DESC:0 "孙科主席在最危急的时刻去世了，国民党的派系斗争因此达到顶峰，如无意外，一位新的国民党员将会担任主席。"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §W §!"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "国民党正统派赢得了权力斗争，宣布将要实现国父的理想。然而，他们最终能走多远，还有待观察。"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §x §!"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 " "
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §W蒋经国主席§!"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 " "
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §x陈立夫主席§!"
+  RULE_OPTION_NPA_GREAT_ASIAN_WAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 " "
+
+  #Sun Fo's Successor
+
+  CHINA_CIVILWAR_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_JAP   中国内战"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_RANDOM_DESC:0 "各政治势力的矛盾终于发展到了不可调和的地步，中华大地再次燃起战火，中国的命运将被引向何方？\n\n§R要求:§!\n£TNO_game_rule_flag_YUN_NPA   §x政府崩溃§! 在 £TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   自由中国的石油危机"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_CPC_NATIONAL_LIBERATION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m红色黎明§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_CPC_NATIONAL_LIBERATION_ARMY_DESC:0 "共产党赢得了内战，中国的未来将转向共产主义。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m回归初心§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "国民党中间派赢得了内战，中国的未来将继续遵循孙中山先生的道路。"
+
+  #China Civil War
+
+  CHINA_CIVILWAR_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_JAP   中国内战"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_RANDOM_DESC:0 "各政治势力的矛盾终于发展到了不可调和的地步，中华大地再次燃起战火，中国的命运将被引向何方？\n\n§R要求:§!\n£TNO_game_rule_flag_YUN_NPA   §x政府崩溃§! 在 £TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   自由中国的石油危机"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_CPC_NATIONAL_LIBERATION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m红色黎明§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_CPC_NATIONAL_LIBERATION_ARMY_DESC:0 "共产党赢得了内战，中国的未来将转向共产主义。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m回归初心§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "国民党中间派赢得了内战，中国的未来将继续遵循孙中山先生的道路。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m希望萌芽§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "军政府稳定了局势，中国的希望仍未破灭。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m似曾相识§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "国民党右派赢得了内战，中国的未来将再一次陷入威权统治。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m黑影扩散§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "三民主义力行社赢得了内战，中国的未来将转向极右翼。"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY:0 "£TNO_game_rule_flag_YUN_NPA   §m再次崩溃§!"
+  RULE_OPTION_CHINA_CIVILWAR_OUTCOME_YUN_NATIONAL_PROTECTION_ARMY_DESC:0 "没有人赢得内战，军阀们纷纷独立于中央政府，中原陷入无政府状态，中华大地再一次陷入军阀混战。"
+
+  #The Great Asian War - RGOC
+
+  RGOC_GREAT_ASIAN_WAR_OUTCOME:0 "£TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_JAP   大东亚战争（改组政府）"
+  RGOC_GREAT_ASIAN_WAR_OUTCOME_RANDOM:0 "默认 - AI随机"
+  RGOC_GREAT_ASIAN_WAR_OUTCOME_RANDOM_DESC:0 "卧薪尝胆的§G中华民国§!政府在完成五个现代化后终于决定反抗，在这场争夺东亚霸权的战争中，中国能走得多远呢？"
+  RGOC_GREAT_ASIAN_WAR_OUTCOME_CHI_REPUBLIC_OF_CHINA:0 "£TNO_game_rule_flag_YUN_NPA   §x巨龙崛起§!"
+  RGOC_GREAT_ASIAN_WAR_OUTCOME_CHI_REPUBLIC_OF_CHINA_DESC:0 "改组政府胜利了-占位符\n\n§R要求:§!不预设\n£TNO_game_rule_flag_YUN_NPA   §x唤醒猛虎§! 在 £TNO_game_rule_flag_YUN_NPA  £TNO_game_rule_flag_CHI   解放的最后机会"

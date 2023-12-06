@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_GAW_NLF: "在大东亚战争的战火中，§Y[winning_country.GetNameWithFlag]§!击败了§Y[losing_country.GetNameWithFlag]§!殖民政府。"
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_GAW_CP: "在大东亚战争的战火中，§Y[winning_country.GetNameWithFlag]§!击败了胆敢反抗的§Y[losing_country.GetNameWithFlag]§!。"
+
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_QIN: "在西北荒漠的§O连天炮火§!之中，§Y[winning_country.GetNameWithFlag]§!彻底击溃了§Y[losing_country.GetNameWithFlag]§!，重新从日寇手中救下了饱受蹂躏的陕甘人民。"
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_GAN: "在西北荒漠的§R昏昏红日§!之下，§Y[winning_country.GetNameWithFlag]§!彻底消灭了§Y[losing_country.GetNameWithFlag]§!，又一群争取国家独立的志士魂归大地。"
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_NWW_DRAW: "在西北荒漠的§g滚滚狼烟§!之中，§Y[winning_country.GetNameWithFlag]§!抵御住了§Y[losing_country.GetNameWithFlag]§!的突袭，成功保卫了自己脚下的国土。"
+
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_ER_China: "在少数民族叛乱中，§Y[winning_country.GetNameWithFlag]§!击败了§Y[losing_country.GetNameWithFlag]§!分裂势力，维护了中国的统一。"
+  TNOUB_PEACE_POPUP_WAR_CONSLUSION_ER_Ethnics: "在少数民族解放战争中，§Y[winning_country.GetNameWithFlag]§!击退了§Y[losing_country.GetNameWithFlag]§!政府，得到了民族的自由。"
+
+  TNOUB_PEACE_POPUP_FLAVOR_QIN: "恨不抗日死，留作今日羞。\n国破尚如此，我何惜此头？"
+  TNOUB_PEACE_POPUP_FLAVOR_GAN: "三十年噩梦，醒时归一眠。"
+  TNOUB_PEACE_POPUP_FLAVOR_DRAW: "风在吼，马在叫。\n黄河在咆哮，黄河在咆哮！"
+
+  TNOUB_PEACE_POPUP_FLAVOR_MAN: "我的家在东北松花江上，那里有我的同胞，还有那衰老的爹娘。"
+  TNOUB_PEACE_POPUP_FLAVOR_GNG: "法团之国轰然倒塌。"

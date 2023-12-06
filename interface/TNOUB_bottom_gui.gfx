@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_CHI_Table_crt_icon"
+		texturefile = "gfx/interface/bottom_gui/CHI_Table_crt_icon.dds"
+		noOfFrames = 2
+	}
+}

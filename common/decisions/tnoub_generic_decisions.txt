@@ -1,0 +1,806 @@
+### China-Exclusive Debug Begin ###
+tnoub_global_debug_decisions = {
+	tnoub_show_hide_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = tnoub_hide_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = tnoub_hide_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_debug_decisions"
+			if = {
+				limit = { has_country_flag = tnoub_hide_debug_decisions }
+				clr_country_flag = tnoub_hide_debug_decisions
+			}
+			else = {
+				set_country_flag = tnoub_hide_debug_decisions
+			}
+		}
+	}
+
+	tnoub_debug_fire_GAW_superevent = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			set_temp_variable = { TNO_temp_super_event = token:SE_GREAT_ASIAN_WAR_RGOC }
+			TNO_fire_super_event = yes
+		}
+	}
+
+	tnoub_debug_start_stock_speculation = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			CHI_gao_zongwu = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = liberal_conservatism_market_liberalism_subtype
+						traits = { }
+						expire = "1999.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
+				}
+			}
+			CHI = {
+				set_politics = {
+					ruling_party = liberal_conservatism
+					long_name = RGOC_chaogu_weiyuanhui_long
+					name = RGOC_chaogu_weiyuanhui
+				}
+	
+				set_party_name = {
+					ideology = liberal_conservatism
+					long_name = RGOC_chaogu_weiyuanhui_long
+					name = RGOC_chaogu_weiyuanhui
+				}
+	
+				set_popularities = {
+					liberal_conservatism = 100
+				}
+			}
+		}
+	}
+
+	tnoub_debug_start_oil_crisis = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			load_focus_tree = tnoub_china_remaining_modernization
+			set_country_flag = CHI_Oil_Crisis
+			set_country_flag = CHI_Social_Reform
+			set_country_flag = CHI_Remaining_Modernization
+
+			set_variable = { CHI_Oil_Crisis_GUI_agriculture_progressbar_var = 73 } #农业改革进度
+			set_variable = { CHI_Oil_Crisis_GUI_industry_progressbar_var = 85 }	#工业改革进度
+			set_variable = { CHI_Oil_Crisis_GUI_government_prestige = 27 } #政府声望
+
+			set_variable = { CHI_Oil_Crisis_gears_turning_agriculture_var = 5 } #齿轮在转动决议中 每周降低的农业数值
+			set_variable = { CHI_Oil_Crisis_gears_turning_industry_var = 5 } #齿轮在转动决议中 每周降低的工业数值
+			set_variable = { CHI_Oil_Crisis_Japanophiles_is_in_action_invalid_probability_var = 0 } #华北派在行动决议中 无事发生的可能性
+			
+
+			set_variable = { CHI_oil_crisis_agriculture_dynamic_modifiers_var = -0.365 } #各项改革数值的影响_农业
+			set_variable = { CHI_oil_crisis_industry_dynamic_modifiers_var = -0.425 } #各项改革数值的影响_工业
+
+			add_dynamic_modifier = { modifier = CHI_oil_crisis_agriculture_dynamic_modifier }
+			add_dynamic_modifier = { modifier = CHI_oil_crisis_industry_dynamic_modifier }
+
+			custom_effect_tooltip = CHI_The_Oil_Crisis_tt_desc
+			TNO_Oil_Crisis_apply_modifier = yes
+			add_dynamic_modifier = { modifier = CHI_oilcrisis_status_modifier }
+			CHI_calc_oilcrisis_cost_change = yes
+			CHI_reload_tree = yes
+		}
+	}
+
+	tnoub_debug_start_big_game = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			leave_faction = yes
+			create_faction = CHI_GAOZONGWU_FACTION_NAME
+			set_global_flag = TNOUB_GAW_Crisis
+			set_country_flag = TNOUB_country_has_gui
+			set_country_flag = gui_alert_visible
+			#set_country_flag = gui_alert_visible_2
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_VS_progressbar_var = 25 } #底部实力对比进度条变量
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_defcon_progressbar_var = 20 } #战备状态变量-中国
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_defcon_progressbar_var = 85 } #战备状态变量-日本
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points = 0 } #分数暂存/显示变量-中国 55分封顶
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_points_add = 0 } #分数计算缓存变量
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_bonuspoints = 0 } #奖励分数暂存/显示变量-中国
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points = 0 } #分数显示变量-日本
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_round_var = 1 } #小回合进行指示器变量-左
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_round_var = 1 } #小回合进行指示器变量-右
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var = 1 } #主界面地区倾向-中国 共6帧，第一帧为未选中
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 1 } #主界面地区倾向-日本 共6帧，第一帧为未选中
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_game_token_var = 1 } #中国可视筹码
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_game_token_var = 1 } #日本可视筹码
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator1_var = 1 } #顶部博弈历史指示器变量，1透明 2进行中 3胜利 4失败 5平局
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator2_var = 1 } #同上
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator3_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator4_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator5_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_progress_indicator6_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_time_progressbar_var = 0 } #所在小回合的剩余时间变量
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_control_level_progressbar_var = 100 } #（选国家界面）控制等级变量 #81-100，平等成员 #45-80，经济依附 #19-44，政治傀儡 #0-19，军事占领
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_cn_progressbar_var = 0 } #（选国家界面）对中国倾向
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_jp_progressbar_var = 100 } #（选国家界面）对日本倾向
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_attitude_var = 0 } #（选国家界面）用于计算中日变量的差的变量，主要用在动态本地化
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_var = 0 } #（选国家界面）用于检测目前选择的国家，按照TNOUB_CHI_GUI.txt中的国家顺序依次对应，0则视为未选中
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_1 = 0 } #顶部指示条的检测数值
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_2 = 0 } #同上
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_3 = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_4 = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_5 = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_info_6 = 0 }
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 1 } #游戏按钮变量，1正常 2选中/锁定 3透明
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 1 } #同上
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 1 }
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_var = 1 } #同理，但是破坏决议
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_var = 1 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_var = 1 }
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_selected_quantity = 0 } #当前选中决议数量，用于限制每回合决议数量
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points = 0 } #外交决议第一个按钮所含分数
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points = 0 } #第二个
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points = 0 }
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points = 0 } #破坏决议第一个按钮所含分数
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points = 0 } #第二个
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points = 0 }
+
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_access_denied_var = 0 } #拒绝访问封条帧变量
+
+			#annex_country = {
+			#	target = SHX
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = QIN
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = XIK
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = TIB
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = XIN
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = GUZ
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = YUN
+			#	transfer_troops = no
+			#}
+			#annex_country = {
+			#	target = GUX
+			#	transfer_troops = no
+			#}
+			605 = {
+				set_demilitarized_zone = no
+			}
+			1962 = {
+				set_demilitarized_zone = no
+			}
+			1963 = {
+				set_demilitarized_zone = no
+			}
+			1964 = {
+				set_demilitarized_zone = no
+			}
+			1961 = {
+				set_demilitarized_zone = no
+			}
+
+			add_to_array = {
+				global.Table_GUI_faction_member_CHI = CHI
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = CHI
+					NOT = {
+						tag = CHI
+					}
+				}
+				add_to_array = {
+					global.Table_GUI_faction_member_CHI = THIS
+				}
+			}
+
+			add_to_array = {
+				global.Table_GUI_faction_member_JAP = JAP
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = JAP
+					NOT = {
+						tag = JAP
+					}
+				}
+				add_to_array = {
+					global.Table_GUI_faction_member_JAP = THIS
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						country_exists = QIN
+					}
+				}
+				set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GAN_var = 1 }
+			}
+			else_if = {
+				limit = {
+					GAN = {
+						has_full_control_of_state = 764
+					}
+				}
+				set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GAN_var = 2 }
+			}
+			else = {
+				set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_GAN_var = 3 }
+			}
+
+			if = {
+				limit = {
+					MAN = {
+						has_full_control_of_state = 657
+					}
+				}
+				set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MAN_var = 1 }
+			}
+			else = {
+				set_variable = { CHI_The_Ministry_Chinese_Affairs_GEACPS_info_GUI_map_MAN_var = 2 }
+			}
+		}
+	}
+
+	tnoub_debug_big_game_GUI_test = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MEN
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GNG
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_VIN
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_LAO
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_CAM
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_THA
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_BUR
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_AZH
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_SHO
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_NRB
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_PHI
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_FGB
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_INS
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_GAN
+			clr_country_flag = CHI_The_Ministry_Chinese_Affairs_Table_GUI_country_selected_MAN
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var = 0 }
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 0 }
+		}
+	}
+
+	tnoub_debug_lock_legyuan = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			set_country_flag = TNOUB_CHI_LegYuan_locked
+		}
+	}
+	tnoub_debug_load_remaining_modernization_tree = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			load_focus_tree = tnoub_china_remaining_modernization
+			set_country_flag = CHI_Remaining_Modernization
+			clr_country_flag = CHI_Polio
+			clr_country_flag = CHI_Modernization
+			clr_global_flag = CHI_Western_Insurrection_Crisis
+			clr_country_flag = CHI_show_western_tree_hidden_middle
+			clr_country_flag = CHI_show_western_tree_hidden_japan
+			clr_country_flag = CHI_Nanjing_Crisis
+			clr_country_flag = CHI_war_with_japan
+		}
+	}
+	tnoub_debug_load_china_war_prepare_tree = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			load_focus_tree = tnoub_china_war_prepare_tree
+			set_country_flag = CHI_war_prepare
+			clr_country_flag = CHI_Remaining_Modernization
+			clr_country_flag = CHI_Polio
+			clr_country_flag = CHI_Modernization
+			clr_global_flag = CHI_Western_Insurrection_Crisis
+			clr_country_flag = CHI_show_western_tree_hidden_middle
+			clr_country_flag = CHI_show_western_tree_hidden_japan
+			clr_country_flag = CHI_Nanjing_Crisis
+			clr_country_flag = CHI_war_with_japan
+		}
+	}
+	tnoub_debug_load_china_war_tree = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			load_focus_tree = china_war_tree
+			set_country_flag = CHI_war_with_japan
+			clr_country_flag = CHI_war_prepare
+			clr_country_flag = CHI_Remaining_Modernization
+			clr_country_flag = CHI_Polio
+			clr_country_flag = CHI_Modernization
+			clr_global_flag = CHI_Western_Insurrection_Crisis
+			clr_country_flag = CHI_show_western_tree_hidden_middle
+			clr_country_flag = CHI_show_western_tree_hidden_japan
+			clr_country_flag = CHI_Nanjing_Crisis
+		}
+	}
+	tnoub_debug_load_polio_tree = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			load_focus_tree = tnoub_china_remaining_modernization
+			set_country_flag = CHI_Polio
+			clr_country_flag = CHI_Modernization
+			clr_global_flag = CHI_Western_Insurrection_Crisis
+			clr_country_flag = CHI_show_western_tree_hidden_middle
+			clr_country_flag = CHI_show_western_tree_hidden_japan
+			clr_country_flag = CHI_Nanjing_Crisis
+			clr_country_flag = CHI_war_with_japan
+		}
+	}
+	
+	tnoub_debug_peace = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			every_country = {
+				#limit = {
+				#	OR = {
+				#		is_in_faction_with = CHI
+				#		is_in_faction_with = JAP
+				#	}
+				#}
+				every_controlled_state = {
+					set_state_owner_to = PREV
+				}
+			}
+			every_enemy_country = {
+				white_peace = PREV
+			}
+		}
+	}
+
+	tnoub_debug_trigger_Northwest_War = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			country_event = tnoub_chi.400
+			set_country_flag = CHI_Northwest_War
+			set_variable = { CHI_Northwest_War_GUI_progressbar_var = 0 }
+			set_variable = { Northwest_War_timeleft = 1 }
+			set_variable = { CHI_current_number_volunteers = 0 }
+			set_variable = { CHI_NWW_EQ_firearms = 0 }
+			set_variable = { CHI_NWW_EQ_artillery = 0 }
+			set_variable = { CHI_NWW_EQ_armor = 0 }
+		}
+	}
+
+	tnoub_debug_set_great_asain_war_china_victory = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			CHI = {
+				leave_faction = yes
+				set_cosmetic_tag = CHI_FIVE
+				annex_country = {
+					target = GNG
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GUX
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = YUN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GUZ
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SIC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XIK
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = QIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SHX
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = ETR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GAN
+					transfer_troops = no
+				}
+
+				annex_country = {
+					target = TIB
+					transfer_troops = no
+				}
+
+				transfer_state = 601
+				transfer_state = 1464
+				transfer_state = 524
+				transfer_state = 328
+				transfer_state = 610
+				transfer_state = 714
+				transfer_state = 715
+				transfer_state = 716
+				transfer_state = 717
+				transfer_state = 801
+				transfer_state = 1265
+				transfer_state = 591
+				transfer_state = 813
+				transfer_state = 812
+				transfer_state = 1022
+				transfer_state = 811
+				transfer_state = 810
+				transfer_state = 524
+
+				add_state_core = 591
+				add_state_core = 813
+				add_state_core = 812
+				add_state_core = 1022
+				add_state_core = 811
+				add_state_core = 810
+				add_state_core = 524
+
+				#set_autonomy = {
+				#	target = TIB
+				#	autonomy_state = autonomy_dominion
+				#	end_wars = yes
+				#}
+				set_autonomy = {
+					target = MON
+					autonomy_state = autonomy_dominion
+					end_wars = yes
+				}
+				set_autonomy = {
+					target = KOR
+					autonomy_state = autonomy_client_state
+					end_wars = yes
+				}
+			}
+			#TIB = {
+			#	leave_faction = yes
+			#	set_cosmetic_tag = TIB_CHI_autonomous_region
+			#}
+			MON = {
+				leave_faction = yes
+				set_cosmetic_tag = MON_CHI_military_occupation_zone
+				annex_country = {
+					target = MEN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = PRC
+					transfer_troops = yes
+				}
+			}
+			MAN = {
+				leave_faction = yes
+				set_cosmetic_tag = MAN_CHI_military_occupation_zone
+			}
+			KOR = {
+				leave_faction = yes
+				set_cosmetic_tag = KOR_CHI_military_occupation_zone
+				transfer_state = 525
+				transfer_state = 527
+				transfer_state = 560
+				transfer_state = 655
+				transfer_state = 962
+				transfer_state = 963
+				transfer_state = 1018
+				transfer_state = 1024
+			}
+
+			#load_focus_tree = 
+			#set_country_flag = tnoub_chi_
+			clr_country_flag = CHI_Modernization
+			clr_global_flag = CHI_Western_Insurrection_Crisis
+			clr_country_flag = CHI_show_western_tree_hidden_middle
+			clr_country_flag = CHI_show_western_tree_hidden_japan
+			clr_country_flag = CHI_Nanjing_Crisis
+			clr_country_flag = CHI_war_with_japan
+			clr_country_flag = CHI_CHI_Polio
+			clr_country_flag = CHI_Remaining_Modernization
+		}
+	}
+
+	tnoub_debug_funny_dengism = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = YUN
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		complete_effect = {
+			create_country_leader = {
+				name = YUN_deng_xiaoping
+				desc = "POLITICS_DENG_XIAOPING_DESC"
+				picture = GFX_YUN_Deng_Xiaoping_portrait
+				expire = "1992.1.1"
+				ideology = funny_ideology_dengism_subtype
+				traits = {
+					
+				}
+			}
+			set_politics = {
+				ruling_party = paternalism
+				long_name = funny_dengism_cpc_long
+    			name = funny_dengism_cpc
+			}
+			set_popularities = {
+				paternalism = 100
+			}
+			
+			YUN = {
+				leave_faction = yes
+				set_cosmetic_tag = YUN_Funny_Dengism_China
+				annex_country = {
+					target = GNG
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GUX
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CHI
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GUZ
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SIC
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XIK
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = QIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = SHX
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = XIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = ETR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = GAN
+					transfer_troops = no
+				}
+
+				transfer_state = 601
+				transfer_state = 1464
+				transfer_state = 524
+				transfer_state = 328
+				transfer_state = 610
+				transfer_state = 714
+				transfer_state = 715
+				transfer_state = 716
+				transfer_state = 717
+				transfer_state = 801
+				transfer_state = 1265
+				transfer_state = 591
+				transfer_state = 813
+				transfer_state = 812
+				transfer_state = 1022
+				transfer_state = 811
+				transfer_state = 810
+				transfer_state = 524
+
+				add_state_core = 591
+				add_state_core = 813
+				add_state_core = 812
+				add_state_core = 1022
+				add_state_core = 811
+				add_state_core = 810
+				add_state_core = 524
+			}
+		}
+	}
+
+	tnoub_debug_skip_sichuan = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = CHI_WI_Sichuan_tick
+				days = -111
+			}
+			set_variable = { global.GUI_SIC_RGOC_Influence = 100 }
+			set_variable = { global.GUI_SIC_NPA_Influence = -1 }
+		}
+	}
+
+	tnoub_debug_tech_edu_mil_modern = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = { edu_efficiency = 5 }
+			set_variable = { edu_modernisation = 1 }
+			set_variable = { tech_self_sufficiency = 5 }
+		}
+	}
+	tnoub_debug_secret_army_skip = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = { has_country_flag = tnoub_hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_temp_variable = { tempSARecruitment = 100 }
+			CHI_change_sa_recruitment = yes
+			set_temp_variable = { tempSAWeaponry = 100 }
+			CHI_change_sa_weaponry = yes
+			set_temp_variable = { tempSATraining = 100 }
+			CHI_change_sa_training = yes
+		}
+	}
+}

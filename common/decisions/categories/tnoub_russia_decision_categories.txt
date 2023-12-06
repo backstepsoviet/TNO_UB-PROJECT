@@ -1,0 +1,12 @@
+RUS_SWRW_category = {	#2ND RUS-GER WAR
+	icon = GFX_decision_
+	
+	available = {
+		#tag = RUS
+	}
+
+	visible = {
+		#date > 1974.01.01
+		#tag = RUS
+	}
+}

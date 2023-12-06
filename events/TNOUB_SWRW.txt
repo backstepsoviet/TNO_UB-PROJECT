@@ -1,0 +1,892 @@
+############################################
+###   TNOUB 2nd West Russia War Events   ###
+############################################
+
+add_namespace = tnoub_swrw
+
+#ids: 
+
+country_event = { #RUS want to talk
+	id = tnoub_swrw.1
+	title = tnoub_swrw.1.t
+	desc = tnoub_swrw.1.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.1.a
+		GER = {
+			country_event = {
+    			id = tnoub_swrw.2
+    			days = 2
+    			random_hours = 12
+			}
+		}
+	}
+}
+
+country_event = { #German and RUS talk
+	id = tnoub_swrw.2
+	title = tnoub_swrw.2.t
+	desc = tnoub_swrw.2.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {	#GER GIVE CAU AND MCW
+		name = tnoub_swrw.2.a
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.10
+				days = 1
+    			random_hours = 6
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				has_government = paternalism
+			}
+		}
+	}
+	option = {	#GER GIVE MCW and CAU BUT demilitarized BORDER
+		name = tnoub_swrw.2.b
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.11
+				days = 1
+    			random_hours = 6
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 7
+				has_government = paternalism
+			}
+		}
+	}
+	option = {	#GER GIVE MCW
+		name = tnoub_swrw.2.c
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.12
+				days = 1
+    			random_hours = 6
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 2
+				has_government = fascism
+			}
+		}
+	}
+	option = {	#GER GIVE MCW BUT demilitarized BORDER
+		name = tnoub_swrw.2.d
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.13
+				days = 1
+    			random_hours = 6
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 20
+				has_government = fascism
+			}
+		}
+	}
+	option = {	#GER don't want peace
+		name = tnoub_swrw.2.e
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.30
+    			days = 10
+    			random_hours = 6
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				NOT = {
+					has_government = paternalism
+				}
+			}
+		}
+	}
+}
+
+country_event = { #WHAT ABOUT THE ARMY IN MCW
+	id = tnoub_swrw.3
+	title = tnoub_swrw.3.t
+	desc = tnoub_swrw.3.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.3.a
+		MCW = {	
+			transfer_units_fraction= {
+				target = GER
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 10
+				has_government = national_socialism
+			}
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.b
+		MCW = {	
+			transfer_units_fraction= {
+				target = UKR
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.c
+		MCW = {	
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.d
+		MCW = {
+			transfer_units_fraction= {
+				target = CAU
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.e
+		MCW = {
+			transfer_units_fraction= {
+				target = UKR
+				size = 0.4
+				stockpile_ratio = 0.4
+				army_ratio = 0.4
+				navy_ratio = 0.4
+				air_ratio = 0.4
+			}
+			transfer_units_fraction= {
+				target = CAU
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			}
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 4
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.f
+		MCW = {
+			transfer_units_fraction= {
+				target = UKR
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			}
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = {
+		name = tnoub_swrw.3.g
+		MCW = {
+			transfer_units_fraction= {
+				target = UKR
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			}
+			transfer_units_fraction= {
+				target = CAU
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 4
+		}
+	}
+}
+country_event = { #WHAT ABOUT THE ARMY IN MCW,IF WE GIVE RUS CAU
+	id = tnoub_swrw.4
+	title = tnoub_swrw.4.t
+	desc = tnoub_swrw.4.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.4.a
+		MCW = {	
+			transfer_units_fraction= {
+				target = GER
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 10
+				has_government = national_socialism
+			}
+		}
+	}
+	option = {
+		name = tnoub_swrw.4.b
+		MCW = {	
+			transfer_units_fraction= {
+				target = UKR
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = tnoub_swrw.4.c
+		MCW = {	
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = tnoub_swrw.4.d
+		MCW = {
+			transfer_units_fraction= {
+				target = UKR
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			}
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.20
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+
+country_event = { #WHAT ABOUT THE ARMY IN CAU
+	id = tnoub_swrw.5
+	title = tnoub_swrw.5.t
+	desc = tnoub_swrw.5.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.5.a
+		CAU = {	
+			transfer_units_fraction= {
+				target = GER
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.25
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 10
+				has_government = national_socialism
+			}
+		}
+	}
+	option = {
+		name = tnoub_swrw.5.b
+		CAU = {	
+			transfer_units_fraction= {
+				target = UKR
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.25
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = tnoub_swrw.5.c
+		CAU = {	
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.25
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = tnoub_swrw.5.d
+		CAU = {
+			transfer_units_fraction= {
+				target = UKR
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.5
+				air_ratio = 0.5
+			}
+			transfer_units_fraction= {
+				target = OST
+				size = 1
+				stockpile_ratio = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+			}
+		}
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.25
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+country_event = { #HOW ABOUT GER GIVE CAU AND MCW
+	id = tnoub_swrw.10
+	title = tnoub_swrw.10.t
+	desc = tnoub_swrw.10.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.10.a
+		GER = {
+			country_event = {
+    			id = tnoub_swrw.4
+    			days = 1
+    			random_hours = 12
+			}
+			country_event = {
+    			id = tnoub_swrw.5
+    			days = 1
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {	#NO
+		name = tnoub_swrw.10.b
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.30
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #HOW ABOUT GER GIVE CAU AND MCW BUT demilitarized BORDER
+	id = tnoub_swrw.11
+	title = tnoub_swrw.11.t
+	desc = tnoub_swrw.11.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.11.a
+		GER = {
+			country_event = {
+    			id = tnoub_swrw.4
+    			days = 1
+    			random_hours = 12
+			}
+			country_event = {
+    			id = tnoub_swrw.5
+    			days = 1
+    			random_hours = 12
+			}
+		}
+		
+		#MOS-RK BORDER
+		1421 = {
+			set_demilitarized_zone = yes
+		}
+		209 = {
+			set_demilitarized_zone = yes
+		}
+		257 = {
+			set_demilitarized_zone = yes
+		}
+		242 = {
+			set_demilitarized_zone = yes
+		}
+		223 = {
+			set_demilitarized_zone = yes
+		}
+		241 = {
+			set_demilitarized_zone = yes
+		}
+		1444 = {
+			set_demilitarized_zone = yes
+		}
+		1435 = {
+			set_demilitarized_zone = yes
+		}
+		240 = {
+			set_demilitarized_zone = yes
+		}
+		224 = {
+			set_demilitarized_zone = yes
+		}
+		265 = {
+			set_demilitarized_zone = yes
+		}
+		237 = {
+			set_demilitarized_zone = yes
+		}
+		244 = {
+			set_demilitarized_zone = yes
+		}
+		#CAU-RK BORDER
+		234 = {
+			set_demilitarized_zone = yes
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {	#NO
+		name = tnoub_swrw.11.b
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.30
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #HOW ABOUT GER GIVE MCW
+	id = tnoub_swrw.12
+	title = tnoub_swrw.12.t
+	desc = tnoub_swrw.12.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.12.a
+		GER = {
+			country_event = {
+    			id = tnoub_swrw.3
+    			days = 1
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = {	#NO
+		name = tnoub_swrw.12.b
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.30
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #HOW ABOUT GER GIVE MCW BUT demilitarized BORDER
+	id = tnoub_swrw.13
+	title = tnoub_swrw.13.t
+	desc = tnoub_swrw.13.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.13.a
+		GER = {
+			country_event = {
+    			id = tnoub_swrw.3
+    			days = 1
+    			random_hours = 12
+			}
+		}
+		
+		#MOS-RK BORDER
+		1421 = {
+			set_demilitarized_zone = yes
+		}
+		209 = {
+			set_demilitarized_zone = yes
+		}
+		257 = {
+			set_demilitarized_zone = yes
+		}
+		242 = {
+			set_demilitarized_zone = yes
+		}
+		223 = {
+			set_demilitarized_zone = yes
+		}
+		241 = {
+			set_demilitarized_zone = yes
+		}
+		1444 = {
+			set_demilitarized_zone = yes
+		}
+		1435 = {
+			set_demilitarized_zone = yes
+		}
+		240 = {
+			set_demilitarized_zone = yes
+		}
+		224 = {
+			set_demilitarized_zone = yes
+		}
+		265 = {
+			set_demilitarized_zone = yes
+		}
+		237 = {
+			set_demilitarized_zone = yes
+		}
+		244 = {
+			set_demilitarized_zone = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {	#NO
+		name = tnoub_swrw.13.b
+		RUS = {
+			country_event = {
+    			id = tnoub_swrw.30
+    			days = 5
+    			random_hours = 12
+			}
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+country_event = { #NOW WE CAN INTO MOSCOW
+	id = tnoub_swrw.20
+	title = tnoub_swrw.20.t
+	desc = tnoub_swrw.20.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.20.a
+		RUS = {
+			annex_country = {
+				target = MCW
+				transfer_troops = no
+			}
+		}
+	}
+}
+
+country_event = { #NOW WE CAN INTO CAU
+	id = tnoub_swrw.25
+	title = tnoub_swrw.25.t
+	desc = tnoub_swrw.25.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.25.a
+		RUS = {
+			annex_country = {
+				target = CAU
+				transfer_troops = no
+			}
+		}
+	}
+}
+
+country_event = { #GER DON'T WANT PEACE
+	id = tnoub_swrw.30
+	title = tnoub_swrw.30.t
+	desc = tnoub_swrw.30.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.30.a
+		declare_war_on = {
+			target = MCW
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CAU
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_FALL_ROT }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+
+country_event = { #German Win
+	id = tnoub_swrw.35
+	title = tnoub_swrw.35.t
+	desc = tnoub_swrw.35.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.35.a
+        TNOUB_GER_SWRW_Partial_Victory_Effects = yes
+	}
+}
+
+country_event = { #German Toatl Win
+	id = tnoub_swrw.40
+	title = tnoub_swrw.40.t
+	desc = tnoub_swrw.40.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_swrw.40.a
+        TNOUB_GER_SWRW_Total_Victory_Effects = yes
+	}
+}

@@ -1,0 +1,877 @@
+ideas = {
+	country = {
+		CHI_japan_on_alert = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_japan_on_alert"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				
+			}
+		}
+
+		CHI_new_theory_1 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_theory_1"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_artillery_attack_factor = 0.05
+			}
+		}
+		CHI_new_theory_2 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_theory_2"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				initiative_factor = 0.05
+				land_reinforce_rate = 0.02
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				armor = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+		CHI_new_theory_3 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_theory_3"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				initiative_factor = 0.05
+				land_reinforce_rate = 0.02
+				air_cas_present_factor = 0.1
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				armor = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+		CHI_new_theory_4 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_theory_4"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				initiative_factor = 0.1
+				land_reinforce_rate = 0.05
+				air_cas_present_factor = 0.1
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				armor = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+		CHI_new_theory_5 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_theory_5"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				initiative_factor = 0.1
+				land_reinforce_rate = 0.05
+				air_cas_present_factor = 0.1
+				#lengthy practice
+				command_power_gain = 0.2
+				experience_gain_factor = 0.15
+			}
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+				}
+				armor = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+		CHI_wisdom_of_the_past_1 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_wisdom_of_the_past_1"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_wisdom_of_the_past
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+			}
+		}
+		CHI_wisdom_of_the_past_2 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_wisdom_of_the_past_2"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_wisdom_of_the_past
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+				no_supply_grace = 72
+				max_dig_in = 5
+			}
+		}
+		CHI_wisdom_of_the_past_3 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_wisdom_of_the_past_3"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_wisdom_of_the_past
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+				no_supply_grace = 72
+				max_dig_in = 5
+				army_org = 5
+				breakthrough_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				initiative_factor = 0.05
+			}
+		}
+		CHI_wisdom_of_the_past_4 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_wisdom_of_the_past_4"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_wisdom_of_the_past
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+				no_supply_grace = 72
+				max_dig_in = 5
+				army_org = 5
+				breakthrough_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				initiative_factor = 0.05
+			}
+		}
+		CHI_wisdom_of_the_past_5 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_wisdom_of_the_past_4"
+			}
+
+			removal_cost = -1
+
+			picture = CHI_wisdom_of_the_past
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning_factor = 0.1
+				no_supply_grace = 72
+				max_dig_in = 5
+				army_org = 5
+				breakthrough_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				initiative_factor = 0.05
+				command_power_gain = 0.2
+				experience_gain_factor = 0.15
+			}
+		}
+		CHI_military_industrial_standard_design_idea = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_military_industrial_standard_design_idea"
+			}
+			cancel = {
+				has_war = yes
+			}
+			on_remove = {
+				set_temp_variable = { pus_temp = 5 }
+				econ_pus_change = yes
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		CHI_purchase_air_defense_systems_idea = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_purchase_air_defense_systems_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				air_defence_factor = 0.15
+				air_intercept_efficiency = 0.15
+				air_attack_factor = 0.1
+			}
+		}
+		CHI_bloody_sweat_not_shed_tears_idea = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_bloody_sweat_not_shed_tears_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_org_regain = 0.05
+			}
+		}
+		CHI_guangxi_arsenal_idea = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_guangxi_arsenal_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CHI_military_administration_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_military_administration_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				stability_factor = 0.35
+			}
+		}
+		CHI_Attach_Importance_To_Technical_Officers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Attach_Importance_To_Technical_Officers_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		CHI_Aviation_Academy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Aviation_Academy_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				air_ace_generation_chance_factor = 0.5
+				experience_gain_air = 0.05
+			}
+			equipment_bonus = {
+				fighter = {
+					instant = yes
+					air_attack = 0.05
+					air_defence = 0.05
+				}
+				scout_helicopter_equipment = {
+					instant = yes
+					recon = 0.1
+					breakthrough = 0.05
+				}
+			}
+		}
+		CHI_Naval_Academy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Naval_Academy_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				naval_speed_factor = 0.05
+				navy_org_factor = 0.05
+				experience_gain_navy = 0.05
+			}
+			equipment_bonus = {
+				screen_ship = {
+					instant = yes
+					lg_attack = 0.1
+					defense = 0.1
+				}
+			}
+		}
+		CHI_Revive_The_Whampoa_Spirit_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Revive_The_Whampoa_Spirit_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		CHI_Patriotic_Propaganda_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Patriotic_Propaganda_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.15
+			}
+		}
+		CHI_General_Political_Warfare_Department_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_General_Political_Warfare_Department_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				encryption_factor = 0.15
+				surrender_limit = 0.1
+				breakthrough_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		CHI_Crack_Down_Corrupt_Officers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Crack_Down_Corrupt_Officers_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				political_power_gain = -0.10
+			}
+		}
+		CHI_new_national_army_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_new_national_army_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				research_speed_factor = 0.10
+				air_ace_generation_chance_factor = 0.5
+				experience_gain_air = 0.05
+				naval_speed_factor = 0.05
+				navy_org_factor = 0.05
+				experience_gain_navy = 0.05
+				army_org_factor = 0.10
+				stability_factor = 0.10
+				war_support_factor = 0.15
+				encryption_factor = 0.15
+				surrender_limit = 0.1
+				breakthrough_factor = 0.05
+			}
+			equipment_bonus = {
+				screen_ship = {
+					instant = yes
+					lg_attack = 0.1
+					defense = 0.1
+				}
+				fighter = {
+					instant = yes
+					air_attack = 0.05
+					air_defence = 0.05
+				}
+				scout_helicopter_equipment = {
+					instant = yes
+					recon = 0.1
+					breakthrough = 0.05
+				}
+			}
+		}
+		CHI_Cycle_the_Reserves_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Cycle_the_Reserves_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				no_supply_grace = 24
+				minimum_training_level = -0.05
+			}
+		}
+		QIN_chinese_advisors_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea QIN_chinese_advisors_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				experience_gain_army_factor = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		GAN_agents_infiltrate_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea QIN_agents_infiltrate_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				supply_consumption_factor = 0.1
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				forced_surrender_limit = -0.4
+			}
+		}
+		CHI_Camouflage_Volunteers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Camouflage_Volunteers_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				send_volunteer_size = 1
+			}
+		}
+		CHI_war_zone_plan_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_war_zone_plan_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				max_planning_factor = 0.05
+			}
+		}
+		CHI_Transfer_Officer_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Transfer_Officer_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				command_power_gain_mult = -0.5
+				experience_gain_army_factor = -0.5
+			}
+		}
+		CHI_Autonomous_Tibet_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Autonomous_Tibet_idea"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		CHI_Victims_of_diplomatic_games = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea CHI_Victims_of_diplomatic_games"
+			}
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {	
+				encryption_factor = -0.25
+				max_surrender_limit_offset = -0.1
+				stability_factor = -0.25
+				army_attack_factor = 0.5
+			}
+		}
+    }
+}

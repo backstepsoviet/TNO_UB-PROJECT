@@ -1,0 +1,117 @@
+
+###Scripted Effects for 2nd West Russia War###
+
+TNOUB_GER_SWRW_Partial_Victory_Effects = {
+    MCW = {
+        #A-A Line
+        transfer_state = 214
+        transfer_state = 861
+        transfer_state = 860
+        transfer_state = 857
+        transfer_state = 351
+        transfer_state = 856
+        transfer_state = 855
+        transfer_state = 252
+        transfer_state = 256
+        transfer_state = 250
+    }
+
+    ONG = {
+        transfer_state = 858
+        transfer_state = 859
+    }
+}
+
+
+TNOUB_GER_SWRW_Total_Victory_Effects = {
+    MCW = {
+        #A-A Line
+        transfer_state = 214
+        transfer_state = 861
+        transfer_state = 860
+        transfer_state = 857
+        transfer_state = 351
+        transfer_state = 856
+        transfer_state = 855
+        transfer_state = 252
+        transfer_state = 256
+        transfer_state = 250
+
+        #Ural
+        transfer_state = 862
+        transfer_state = 870
+        transfer_state = 868
+        transfer_state = 397
+        transfer_state = 400
+        transfer_state = 399
+        transfer_state = 752
+        transfer_state = 865
+        transfer_state = 867
+        transfer_state = 854
+        transfer_state = 249
+        transfer_state = 851
+        transfer_state = 850
+        transfer_state = 755
+        transfer_state = 251
+        transfer_state = 262
+        transfer_state = 869
+        transfer_state = 866
+        transfer_state = 398
+        transfer_state = 864
+        transfer_state = 753
+        transfer_state = 651
+        transfer_state = 853
+        transfer_state = 852
+        transfer_state = 849
+        transfer_state = 652
+        transfer_state = 262
+        transfer_state = 869
+        transfer_state = 866
+        transfer_state = 863
+    }
+}
+
+TNOUB_RUS_SWRW_Partial_Victory_Effects = {
+    annex_country = {
+		target = MCW
+		transfer_troops = no
+	}
+    annex_country = {
+		target = CAU
+		transfer_troops = no
+	}
+}
+
+TNOUB_RUS_SWRW_Total_Victory_Effects = {
+    annex_country = {
+		target = MCW
+		transfer_troops = no
+	}
+    annex_country = {
+		target = CAU
+		transfer_troops = no
+	}
+}
+
+TNOUB_SOV_SWRW_Total_Victory_Effects = {
+    annex_country = {
+		target = MCW
+		transfer_troops = no
+	}
+    annex_country = {
+		target = CAU
+		transfer_troops = no
+	}
+    annex_country = {
+		target = UKR
+		transfer_troops = no
+	}
+    annex_country = {
+		target = BLR
+		transfer_troops = no
+	}
+	annex_country = {
+		target = OST
+		transfer_troops = no
+	}
+}

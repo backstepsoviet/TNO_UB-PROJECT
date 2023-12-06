@@ -1,0 +1,3206 @@
+##############################
+###   TNOUB China Events   ###
+##############################
+
+add_namespace = tnoub_chi
+add_namespace = tnoub_chi_flavor
+
+add_namespace = tnoub_chi_renli
+
+add_namespace = tnoub_chi_add
+
+# tnoub_chi ids: 
+# 1-9 - After The Conference Events | 大会后衔接事件
+# 10-49 - Taipei Summit Event Chain | 台北峰会事件链
+# 100-199 - Military Modernization Events | 军事现代化事件
+# 200-299 - Reunification Events | 主权统一事件
+# 300-399 - Oil Crisis Event Chain | 石油危机事件
+# 400-449 - Nanjing Summit Event Chain | 南京峰会事件链
+# 500-599 - GAW Warm Up Event | GAW预热事件
+# 600-699 - GAW Event | GAW事件
+# 700-799 - After GAW Event | GAW后事件
+
+# 1100-1199 - 临时用于存放GUI驱动事件
+
+# tnoub_chi_flavor ids: 
+# 1-199 - Military Modernization Events | 军事现代化事件
+# 200-299 - Reunification Events | 主权统一事件
+# 300-399 - Oil Crisis Event Chain | 石油危机事件
+# 400-449 - Nanjing Summit Event Chain | 南京峰会事件链
+# 500-599 - GAW Warm Up Event | GAW预热事件
+# 600-699 - GAW Event | GAW事件
+
+
+#    id填的乱七八糟了（悲）		嘤嘤嘤
+#    整理中，勿动
+
+country_event = { #TNOUB Start
+	id = tnoub_chi.1
+	title = tnoub_chi.1.t
+	desc = tnoub_chi.1.d
+	picture = GFX_TNOUB_report_event_office_of_the_president_gao
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.2
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = tnoub_chi.2
+	title = tnoub_chi.2.t
+	desc = tnoub_chi.2.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.2.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.10
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { #get idea
+	id = tnoub_chi.4
+	title = tnoub_chi.4.t
+	desc = tnoub_chi.4.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4.a
+		custom_effect_tooltip = tnoub_chi.4.a.tt
+		hidden_effect = {
+			add_ideas = CHI_japan_on_alert
+		}
+	}
+}
+
+country_event = { #Hiding Our Interests Decisions
+	id = tnoub_chi.5
+	title = tnoub_chi.5.t
+	desc = tnoub_chi.5.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.5.a
+		custom_effect_tooltip = tnoub_chi.5.a.tt
+		hidden_effect = {
+			set_country_flag = TNOUB_CHI_Hiding_Our_Interests
+			set_country_flag = CHI_jiangsu_point_unbuild
+			set_country_flag = CHI_jiangxi_point_unbuild
+			set_country_flag = CHI_chengde_point_unbuild
+			set_country_flag = CHI_shijiazhuang_point_unbuild
+			set_country_flag = CHI_wuhan_point_unbuild
+			set_country_flag = CHI_chongqing_point_unbuild
+			set_country_flag = CHI_yunnan_point_unbuild
+			set_country_flag = CHI_fujian_point_unbuild
+			add_to_variable = { ija_alert = -0.05 }
+		}
+	}
+}
+
+country_event = { #Taipei Summit Event Chain Start
+	id = tnoub_chi.10
+	title = tnoub_chi.10.t
+	desc = tnoub_chi.10.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.10.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.11
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.11
+	title = tnoub_chi.11.t
+	desc = tnoub_chi.11.d
+	picture = GFX_TNOUB_report_event_taoxisheng_and_gaozongwu
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.11.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.12
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.12
+	title = tnoub_chi.12.t
+	desc = tnoub_chi.12.d
+	picture = GFX_TNOUB_report_event_patriotic_student
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.12.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.13
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.13
+	title = tnoub_chi.13.t
+	desc = tnoub_chi.13.d
+	picture = GFX_TNOUB_report_event_photo_of_the_puppet_government
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.13.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.14
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.14
+	title = tnoub_chi.14.t
+	desc = tnoub_chi.14.d
+	picture = GFX_TNOUB_report_event_student_representatives_in_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.14.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.15
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.15
+	title = tnoub_chi.15.t
+	desc = tnoub_chi.15.d
+	picture = GFX_TNOUB_report_event_Looking_out_from_airplane
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.15.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.16
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.16
+	title = tnoub_chi.16.t
+	desc = tnoub_chi.16.d
+	picture = GFX_TNOUB_report_event_Reporters_at_the_Taipei_Summit
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.16.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.17
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.17
+	title = tnoub_chi.17.t
+	desc = tnoub_chi.17.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.17.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.18
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.18
+	title = tnoub_chi.18.t
+	desc = tnoub_chi.18.d
+	picture = GFX_TNOUB_report_event_Minutes_to_Gao_Zongwu
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.18.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.19
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.19
+	title = tnoub_chi.19.t
+	desc = tnoub_chi.19.d
+	picture = GFX_TNOUB_report_event_scene_from_the_Taipei_summit
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.19.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.20
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.20
+	title = tnoub_chi.20.t
+	desc = tnoub_chi.20.d
+	picture = GFX_TNOUB_report_event_protest_against_Japan_in_Nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.20.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.21
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.21
+	title = tnoub_chi.21.t
+	desc = tnoub_chi.21.d
+	picture = GFX_TNOUB_report_event_Flag_of_the_Republic_of_China_stamp
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.21.a
+		delete_unit_template_and_units = {
+			division_template = "Bubing Juntuán"
+			disband = yes #will refund equipment and manpower
+		}
+		delete_unit_template_and_units = {
+			division_template = "Zhujun"
+			disband = yes #will refund equipment and manpower
+		}
+		every_state = {	
+			teleport_armies = {
+				limit = {
+					original_tag = CHI
+				}
+				to_state = 613
+			}
+		}
+		delete_unit = {
+			state = 613
+			disband = yes
+		}
+		send_equipment_fraction = {
+    		value = 1.0
+    		target = JAP
+		}
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.22
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.22
+	title = tnoub_chi.22.t
+	desc = tnoub_chi.22.d
+	picture = GFX_TNOUB_report_event_scene_from_the_Taipei_summit
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.22.a
+		hidden_effect = {
+			load_focus_tree = tnoub_china_remaining_modernization
+			set_country_flag = CHI_Remaining_Modernization
+			load_oob = TNOUB_CHI_reorganized
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.100
+	title = tnoub_chi.100.t
+	desc = tnoub_chi.100.d
+	picture = GFX_TNOUB_report_event_Remilitarization
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.100.a
+		add_dynamic_modifier = {
+			modifier = CHI_remilitarization_status_dynamic_modifier
+		}
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_research_speed_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_air_ace_generation_chance_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_experience_gain_air = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_naval_speed_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_navy_org_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_experience_gain_navy = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_army_org_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_army_org_regain = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_stability_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_war_support_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_encryption_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_surrender_limit = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_breakthrough_factor = 0 }
+		set_variable = { CHI_remilitarization_status_dynamic_modifier_misc_costs_modifier = 0 }
+	}
+}
+
+country_event = {
+	id = tnoub_chi.101
+	title = tnoub_chi.101.t
+	desc = tnoub_chi.101.d
+	picture = GFX_TNOUB_report_event_Japanese_invade_Shanghai
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.101.a
+		
+		hidden_effect = {
+			#set_country_flag = TNOUB_CHI_Hiding_Our_Interests
+			#set_country_flag = CHI_jiangsu_point_unbuild
+			#set_country_flag = CHI_jiangxi_point_unbuild
+			#set_country_flag = CHI_chengde_point_unbuild
+			#set_country_flag = CHI_shijiazhuang_point_unbuild
+			#set_country_flag = CHI_wuhan_point_unbuild
+			#set_country_flag = CHI_chongqing_point_unbuild
+			#set_country_flag = CHI_yunnan_point_unbuild
+			#set_country_flag = CHI_fujian_point_unbuild
+			#add_to_variable = { ija_alert = -0.05 }
+			#add_ideas = CHI_japan_on_alert
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.102
+	title = tnoub_chi.102.t
+	desc = tnoub_chi.102.d
+	picture = GFX_TNOUB_report_event_secret_warehouse
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.102.a
+
+		custom_effect_tooltip = tnoub_chi.101.a.tt
+		
+		hidden_effect = {
+			#set_country_flag = TNOUB_CHI_Hiding_Our_Interests
+			#set_country_flag = CHI_jiangsu_point_unbuild
+			#set_country_flag = CHI_jiangxi_point_unbuild
+			#set_country_flag = CHI_chengde_point_unbuild
+			#set_country_flag = CHI_shijiazhuang_point_unbuild
+			#set_country_flag = CHI_wuhan_point_unbuild
+			#set_country_flag = CHI_chongqing_point_unbuild
+			#set_country_flag = CHI_yunnan_point_unbuild
+			#set_country_flag = CHI_fujian_point_unbuild
+			add_to_variable = { ija_alert = -0.05 }
+			add_ideas = CHI_japan_on_alert
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.103
+	title = tnoub_chi.103.t
+	desc = tnoub_chi.103.d
+	picture = GFX_TNOUB_report_event_another_secret_warehouse
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.103.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.104
+	title = tnoub_chi.104.t
+	desc = tnoub_chi.104.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.104.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.105
+	title = tnoub_chi.105.t
+	desc = tnoub_chi.105.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.105.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.106
+	title = tnoub_chi.106.t
+	desc = tnoub_chi.106.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.106.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.107
+	title = tnoub_chi.107.t
+	desc = tnoub_chi.107.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.107.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.108
+	title = tnoub_chi.108.t
+	desc = tnoub_chi.108.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.108.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.109
+	title = tnoub_chi.109.t
+	desc = tnoub_chi.109.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.109.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.110
+	title = tnoub_chi.110.t
+	desc = tnoub_chi.110.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.110.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.111
+	title = tnoub_chi.111.t
+	desc = tnoub_chi.111.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.111.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.112
+	title = tnoub_chi.112.t
+	desc = tnoub_chi.112.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.112.a
+
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.113
+				days = 28
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.113
+	title = tnoub_chi.113.t
+	desc = tnoub_chi.113.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.113.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.114
+	title = tnoub_chi.114.t
+	desc = tnoub_chi.114.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.114.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.115
+	title = tnoub_chi.115.t
+	desc = tnoub_chi.115.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.115.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.116
+	title = tnoub_chi.116.t
+	desc = tnoub_chi.116.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.116.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.117
+	title = tnoub_chi.117.t
+	desc = tnoub_chi.117.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.117.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.118
+	title = tnoub_chi.118.t
+	desc = tnoub_chi.118.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.118.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.119
+	title = tnoub_chi.119.t
+	desc = tnoub_chi.119.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.119.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.120
+	title = tnoub_chi.120.t
+	desc = tnoub_chi.120.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.120.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.121
+	title = tnoub_chi.121.t
+	desc = tnoub_chi.121.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.121.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.122
+	title = tnoub_chi.122.t
+	desc = tnoub_chi.122.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.122.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.123
+	title = tnoub_chi.123.t
+	desc = tnoub_chi.123.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.123.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.124
+	title = tnoub_chi.124.t
+	desc = tnoub_chi.124.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.124.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.125
+	title = tnoub_chi.125.t
+	desc = tnoub_chi.125.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.125.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.126
+	title = tnoub_chi.126.t
+	desc = tnoub_chi.126.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.126.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.127
+	title = tnoub_chi.127.t
+	desc = tnoub_chi.127.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.127.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.128
+	title = tnoub_chi.128.t
+	desc = tnoub_chi.128.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.128.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.129
+	title = tnoub_chi.129.t
+	desc = tnoub_chi.129.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.129.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.130
+	title = tnoub_chi.130.t
+	desc = tnoub_chi.130.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.130.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.131
+	title = tnoub_chi.131.t
+	desc = tnoub_chi.131.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.131.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.132
+	title = tnoub_chi.132.t
+	desc = tnoub_chi.132.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.132.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.133
+	title = tnoub_chi.133.t
+	desc = tnoub_chi.133.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.133.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.134
+	title = tnoub_chi.134.t
+	desc = tnoub_chi.134.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.134.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.135
+	title = tnoub_chi.135.t
+	desc = tnoub_chi.135.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.135.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.136
+	title = tnoub_chi.136.t
+	desc = tnoub_chi.136.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.136.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.137
+	title = tnoub_chi.137.t
+	desc = tnoub_chi.137.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.137.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.138
+	title = tnoub_chi.138.t
+	desc = tnoub_chi.138.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.138.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.139
+	title = tnoub_chi.139.t
+	desc = tnoub_chi.139.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.139.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.140
+	title = tnoub_chi.140.t
+	desc = tnoub_chi.140.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.140.a
+	}
+}
+
+
+country_event = {
+	id = tnoub_chi.200
+	title = tnoub_chi.200.t
+	desc = tnoub_chi.200.d
+	picture = GFX_TNOUB_report_event_Reunification
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.200.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.201
+	title = tnoub_chi.201.t
+	desc = tnoub_chi.201.d
+	picture = GFX_TNOUB_report_event_night_car
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			XIK = {
+				is_puppet_of = CHI
+			}
+		}
+	}
+	option = {
+		name = tnoub_chi.201.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.202
+	title = tnoub_chi.202.t
+	desc = tnoub_chi.202.d
+	picture = GFX_TNOUB_report_event_sunset
+	is_triggered_only = yes
+	trigger = {
+		XIK = {
+			is_puppet_of = CHI
+		}
+	}
+	option = {
+		name = tnoub_chi.202.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.203
+	title = tnoub_chi.203.t
+	desc = tnoub_chi.203.d
+	picture = GFX_TNOUB_report_event_mother_and_child
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			XIK = {
+				is_puppet_of = CHI
+			}
+		}
+	}
+	option = {
+		name = tnoub_chi.203.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.204
+	title = tnoub_chi.204.t
+	desc = tnoub_chi.204.d
+	picture = GFX_TNOUB_report_event_Nanjing_Massacre
+	is_triggered_only = yes
+	trigger = {
+		XIK = {
+			is_puppet_of = CHI
+		}
+	}
+	option = {
+		name = tnoub_chi.204.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.205
+	title = tnoub_chi.205.t
+	desc = tnoub_chi.205.d
+	picture = GFX_TNOUB_report_event_Letter_from_Guangxi
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.205.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.206
+	title = tnoub_chi.206.t
+	desc = tnoub_chi.206.d
+	picture = GFX_TNOUB_report_event_Map_of_tibet
+
+	is_triggered_only = yes
+	trigger = {
+		XIK = {
+			is_puppet_of = CHI
+		}
+	}
+	option = {
+		name = tnoub_chi.206.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.207
+	title = tnoub_chi.207.t
+	desc = tnoub_chi.207.d
+	picture = GFX_
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			XIK = {
+				is_puppet_of = CHI
+			}
+		}
+	}
+	option = {
+		name = tnoub_chi.207.a
+	}
+}
+
+country_event = { #打消质疑
+	id = tnoub_chi.208
+	title = tnoub_chi.208.t
+	desc = tnoub_chi.208.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.208.a
+	}
+}
+
+country_event = { #重启战争机器
+	id = tnoub_chi.209
+	title = tnoub_chi.209.t
+	desc = tnoub_chi.209.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.209.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.210
+	title = tnoub_chi.210.t
+	desc = tnoub_chi.210.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.210.a
+	}
+}
+
+country_event = { #炙热的爱
+	id = tnoub_chi.211
+	title = tnoub_chi.211.t
+	desc = tnoub_chi.211.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.211.a
+	}
+}
+
+country_event = { #不死不休
+	id = tnoub_chi.212
+	title = tnoub_chi.212.t
+	desc = tnoub_chi.212.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.212.a
+	}
+}
+
+country_event = { #稍安勿躁
+	id = tnoub_chi.213
+	title = tnoub_chi.213.t
+	desc = tnoub_chi.213.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.213.a
+	}
+}
+
+country_event = { #狼兵
+	id = tnoub_chi.214
+	title = tnoub_chi.214.t
+	desc = tnoub_chi.214.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.214.a
+	}
+}
+
+country_event = { #忠诚的广西
+	id = tnoub_chi.215
+	title = tnoub_chi.215.t
+	desc = tnoub_chi.215.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.215.a
+	}
+}
+
+country_event = { 
+	id = tnoub_chi.216
+	title = tnoub_chi.216.t
+	desc = tnoub_chi.216.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.216.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.217
+	title = tnoub_chi.217.t
+	desc = tnoub_chi.217.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.217.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.218
+	title = tnoub_chi.218.t
+	desc = tnoub_chi.218.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.218.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.219
+	title = tnoub_chi.219.t
+	desc = tnoub_chi.219.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.219.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.220
+	title = tnoub_chi.220.t
+	desc = tnoub_chi.220.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.220.a
+		country_event = {
+    		id = tnoub_chi.221
+    		days = 7
+		}
+	}
+}
+country_event = { 
+	id = tnoub_chi.221
+	title = tnoub_chi.221.t
+	desc = tnoub_chi.221.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.221.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.222
+	title = tnoub_chi.222.t
+	desc = tnoub_chi.222.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.222.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.223
+	title = tnoub_chi.223.t
+	desc = tnoub_chi.223.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.223.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.224
+	title = tnoub_chi.224.t
+	desc = tnoub_chi.224.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.224.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.225
+	title = tnoub_chi.225.t
+	desc = tnoub_chi.225.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.225.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.226
+	title = tnoub_chi.226.t
+	desc = tnoub_chi.226.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.226.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.227
+	title = tnoub_chi.227.t
+	desc = tnoub_chi.227.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.227.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.228
+	title = tnoub_chi.228.t
+	desc = tnoub_chi.228.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.228.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.230
+	title = tnoub_chi.230.t
+	desc = tnoub_chi.230.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.230.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.231
+	title = tnoub_chi.231.t
+	desc = tnoub_chi.231.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.231.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.232
+	title = tnoub_chi.232.t
+	desc = tnoub_chi.232.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.232.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.233
+	title = tnoub_chi.233.t
+	desc = tnoub_chi.233.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.233.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.234
+	title = tnoub_chi.234.t
+	desc = tnoub_chi.234.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.234.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.235
+	title = tnoub_chi.235.t
+	desc = tnoub_chi.235.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.235.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.236
+	title = tnoub_chi.236.t
+	desc = tnoub_chi.236.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.236.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.237
+	title = tnoub_chi.237.t
+	desc = tnoub_chi.237.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.237.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.238
+	title = tnoub_chi.238.t
+	desc = tnoub_chi.238.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.238.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.239
+	title = tnoub_chi.239.t
+	desc = tnoub_chi.239.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.239.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.240
+	title = tnoub_chi.240.t
+	desc = tnoub_chi.240.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.240.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.251
+	title = tnoub_chi.251.t
+	desc = tnoub_chi.251.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.251.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.252
+	title = tnoub_chi.252.t
+	desc = tnoub_chi.252.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.252.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.253
+	title = tnoub_chi.253.t
+	desc = tnoub_chi.253.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.253.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.254
+	title = tnoub_chi.254.t
+	desc = tnoub_chi.254.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.254.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.255
+	title = tnoub_chi.255.t
+	desc = tnoub_chi.255.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.255.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.256
+	title = tnoub_chi.256.t
+	desc = tnoub_chi.256.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.256.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.257
+	title = tnoub_chi.257.t
+	desc = tnoub_chi.257.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.257.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.258
+	title = tnoub_chi.258.t
+	desc = tnoub_chi.258.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.258.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.259
+	title = tnoub_chi.259.t
+	desc = tnoub_chi.259.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.259.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.260
+	title = tnoub_chi.260.t
+	desc = tnoub_chi.260.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.260.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.261
+	title = tnoub_chi.261.t
+	desc = tnoub_chi.261.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.261.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.262
+	title = tnoub_chi.262.t
+	desc = tnoub_chi.262.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.262.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.263
+	title = tnoub_chi.263.t
+	desc = tnoub_chi.263.d
+	picture = GFX_
+	is_triggered_only = yes
+	trigger = {
+        GAN = {
+			has_war_with = QIN
+		}
+	}
+	option = {
+		name = tnoub_chi.263.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.264
+	title = tnoub_chi.264.t
+	desc = tnoub_chi.264.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.264.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.265
+	title = tnoub_chi.265.t
+	desc = tnoub_chi.265.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.265.a
+		custom_effect_tooltip = tnoub_chi.265.a.tt
+		country_event = {
+    		id = tnoub_chi.282
+    		days = 3
+		}
+	}
+}
+country_event = { 
+	id = tnoub_chi.266
+	title = tnoub_chi.266.t
+	desc = tnoub_chi.266.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.266.a
+		custom_effect_tooltip = tnoub_chi.266.a.tt
+		country_event = {
+    		id = tnoub_chi.282
+    		days = 3
+		}
+	}
+}
+country_event = { 
+	id = tnoub_chi.267
+	title = tnoub_chi.267.t
+	desc = tnoub_chi.267.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.267.a
+		country_event = {
+    		id = tnoub_chi.268
+    		days = 1
+		}
+	}
+}
+country_event = { 
+	id = tnoub_chi.268
+	title = tnoub_chi.268.t
+	desc = tnoub_chi.268.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.268.a
+		add_manpower = -1
+	}
+}
+country_event = { 
+	id = tnoub_chi.269
+	title = tnoub_chi.269.t
+	desc = tnoub_chi.269.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.269.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.270
+	title = tnoub_chi.270.t
+	desc = tnoub_chi.270.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.270.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.271
+	title = tnoub_chi.271.t
+	desc = tnoub_chi.271.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.271.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.272
+	title = tnoub_chi.272.t
+	desc = tnoub_chi.272.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.272.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.273
+	title = tnoub_chi.273.t
+	desc = tnoub_chi.273.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.273.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.274
+	title = tnoub_chi.274.t
+	desc = tnoub_chi.274.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.274.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.275
+	title = tnoub_chi.275.t
+	desc = tnoub_chi.275.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.275.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.276
+	title = tnoub_chi.276.t
+	desc = tnoub_chi.276.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.276.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.280
+	title = tnoub_chi.280.t
+	desc = tnoub_chi.280.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.280.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.281
+	title = tnoub_chi.281.t
+	desc = tnoub_chi.281.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.281.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.282
+	title = tnoub_chi.282.t
+	desc = tnoub_chi.282.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.282.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.283
+	title = tnoub_chi.283.t
+	desc = tnoub_chi.283.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.283.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.284
+	title = tnoub_chi.284.t
+	desc = tnoub_chi.284.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.284.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.285
+	title = tnoub_chi.285.t
+	desc = tnoub_chi.285.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.285.a
+	}
+}
+country_event = { 
+	id = tnoub_chi.290
+	title = tnoub_chi.290.t
+	desc = tnoub_chi.290.d
+	picture = GFX_
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.290.a
+		declare_war_on = {
+			target = TIB
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = tnoub_chi.400
+	title = tnoub_chi.400.t
+	desc = tnoub_chi.400.d
+	picture = GFX_TNOUB_report_event_Northwest_War
+	immediate = {
+		GAN = {
+			declare_war_on = {
+				target = QIN
+				type = annex_everything
+			}
+		}
+		country_event = {
+    		id = tnoub_chi.401
+    		hours = 2
+		}
+	}
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.400.a
+		hidden_effect = {
+			country_event = {
+    			id = tnoub_chi.251
+				days=1
+			}
+			country_event = {
+    			id = tnoub_chi.257
+				days=1
+			}
+			country_event = {
+    			id = tnoub_chi.258
+				days=8
+			}
+			country_event = {
+    			id = tnoub_chi.259
+				days=15
+			}
+			country_event = {
+    			id = tnoub_chi.260
+				days=22
+			}
+			country_event = {
+    			id = tnoub_chi.261
+				days=29
+			}
+			country_event = {
+    			id = tnoub_chi.262
+				days=36
+			}
+			country_event = {
+    			id = tnoub_chi.263
+				days=43
+			}
+		}
+	}
+}
+
+country_event = { #Northwest War
+	id = tnoub_chi.401
+	title = tnoub_chi.401.t
+	desc = tnoub_chi.401.d
+	picture = GFX_TNOUB_report_event_Northwest_War
+	
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.401.a
+		custom_effect_tooltip = tnoub_chi.401.a.tt
+		complete_national_focus = CHI_Support_Ma_Jiyuan
+	}
+}
+
+country_event = {
+	id = tnoub_chi.402
+	title = tnoub_chi.402.t
+	desc = tnoub_chi.402.d
+	picture = GFX_TNOUB_report_event_NRA_Enters_Northwest
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.402.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.497
+	title = tnoub_chi.497.t
+	desc = tnoub_chi.497.d
+	picture = GFX_TNOUB_report_event_Northwest_War_lose
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.497.a
+		clear_variable = CHI_Northwest_War_GUI_progressbar_var
+		clear_variable = Northwest_War_timeleft
+		clear_variable = CHI_current_number_volunteers
+		clear_variable = CHI_NWW_EQ_firearms
+		clear_variable = CHI_NWW_EQ_artillery
+		clear_variable = CHI_NWW_EQ_armor
+		clr_country_flag = CHI_Northwest_War
+		clr_country_flag = CHI_sharpen_the_weapon_decisions
+		clr_country_flag = CHI_lend_helping_hand_decisions
+		clr_country_flag = CHI_diplomatic_mediation_decisions
+		set_country_flag = CHI_northwestwar_has_resolved
+	}
+}
+
+country_event = {
+	id = tnoub_chi.498
+	title = tnoub_chi.498.t
+	desc = tnoub_chi.498.d
+	picture = GFX_TNOUB_report_event_Northwest_War_win
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.498.a
+		clear_variable = CHI_Northwest_War_GUI_progressbar_var
+		clear_variable = Northwest_War_timeleft
+		clear_variable = CHI_current_number_volunteers
+		clear_variable = CHI_NWW_EQ_firearms
+		clear_variable = CHI_NWW_EQ_artillery
+		clear_variable = CHI_NWW_EQ_armor
+		clr_country_flag = CHI_Northwest_War
+		clr_country_flag = CHI_sharpen_the_weapon_decisions
+		clr_country_flag = CHI_lend_helping_hand_decisions
+		clr_country_flag = CHI_diplomatic_mediation_decisions
+		set_country_flag = CHI_northwestwar_has_resolved
+	}
+}
+
+country_event = {
+	id = tnoub_chi.499
+	title = tnoub_chi.499.t
+	desc = tnoub_chi.499.d
+	picture = GFX_TNOUB_report_event_Northwest_War_draw
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.499.a
+		clear_variable = CHI_Northwest_War_GUI_progressbar_var
+		clear_variable = Northwest_War_timeleft
+		clear_variable = CHI_current_number_volunteers
+		clear_variable = CHI_NWW_EQ_firearms
+		clear_variable = CHI_NWW_EQ_artillery
+		clear_variable = CHI_NWW_EQ_armor
+		clr_country_flag = CHI_Northwest_War
+		clr_country_flag = CHI_sharpen_the_weapon_decisions
+		clr_country_flag = CHI_lend_helping_hand_decisions
+		clr_country_flag = CHI_diplomatic_mediation_decisions
+		set_country_flag = CHI_northwestwar_has_resolved
+	}
+}
+
+country_event = {
+	id = tnoub_chi.500
+	title = tnoub_chi.500.t
+	desc = tnoub_chi.500.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.500.a
+		country_event = {
+			id = tnoub_chi.501
+			days = 7
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.501
+	title = tnoub_chi.501.t
+	desc = tnoub_chi.501.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.501.a
+		country_event = {
+			id = tnoub_chi.502
+			days = 7
+		}
+		add_manpower = -1
+		add_popularity = {
+    		ideology = fascism
+    		popularity = -0.1
+		}
+		#add_popularity = {
+    	#	ideology = despotism
+    	#	popularity = 0.1
+		#}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.502
+	title = tnoub_chi.502.t
+	desc = tnoub_chi.502.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.502.a
+		country_event = {
+			id = tnoub_chi.506
+			days = 7
+		}
+		add_manpower = -1
+		add_popularity = {
+    		ideology = fascism
+    		popularity = -0.05
+		}
+		add_popularity = {
+    		ideology = despotism
+    		popularity = 0.02
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.506
+	title = tnoub_chi.506.t
+	desc = tnoub_chi.506.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.506.a
+		country_event = {
+			id = tnoub_chi.507
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.507
+	title = tnoub_chi.507.t
+	desc = tnoub_chi.507.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.507.a
+		add_manpower = -1
+		add_popularity = {
+    		ideology = fascism
+    		popularity = -0.15
+		}
+		add_popularity = {
+    		ideology = despotism
+    		popularity = 0.05
+		}
+		set_country_flag = TNOUB_CHI_LegYuan_locked
+		
+		custom_effect_tooltip = tnoub_chi.507.a.tt
+	}
+}
+
+country_event = { #
+	id = tnoub_chi.510
+	title = tnoub_chi.510.t
+	desc = tnoub_chi.510.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.510.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.511
+	title = tnoub_chi.511.t
+	desc = tnoub_chi.511.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.511.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.512
+	title = tnoub_chi.512.t
+	desc = tnoub_chi.512.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.512.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.513
+	title = tnoub_chi.513.t
+	desc = tnoub_chi.513.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.513.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.514
+	title = tnoub_chi.514.t
+	desc = tnoub_chi.514.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.514.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.515
+	title = tnoub_chi.515.t
+	desc = tnoub_chi.515.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.515.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.516
+	title = tnoub_chi.516.t
+	desc = tnoub_chi.516.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.516.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.517
+	title = tnoub_chi.517.t
+	desc = tnoub_chi.517.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.517.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.518
+	title = tnoub_chi.518.t
+	desc = tnoub_chi.518.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.518.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.519
+	title = tnoub_chi.519.t
+	desc = tnoub_chi.519.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.519.a
+		country_event = {
+			id = tnoub_chi.520
+			days = 21
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.520
+	title = tnoub_chi.520.t
+	desc = tnoub_chi.520.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.520.a
+		country_event = {
+			id = tnoub_chi.521
+			days = 21
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.521
+	title = tnoub_chi.521.t
+	desc = tnoub_chi.521.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.521.a
+		country_event = {
+			id = tnoub_chi.522
+			days = 21
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.522
+	title = tnoub_chi.522.t
+	desc = tnoub_chi.522.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.522.a
+		country_event = {
+			id = tnoub_chi.523
+			days = 21
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.523
+	title = tnoub_chi.523.t
+	desc = tnoub_chi.523.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.523.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.524
+	title = tnoub_chi.524.t
+	desc = tnoub_chi.524.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.524.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.525
+	title = tnoub_chi.525.t
+	desc = tnoub_chi.525.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.525.a
+		country_event = {
+			id = tnoub_chi.526
+			days = 7
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.526
+	title = tnoub_chi.526.t
+	desc = tnoub_chi.526.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.526.a
+		country_event = {
+			id = tnoub_chi.527
+			days = 7
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.527
+	title = tnoub_chi.527.t
+	desc = tnoub_chi.527.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.527.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.528
+	title = tnoub_chi.528.t
+	desc = tnoub_chi.528.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.528.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.529
+	title = tnoub_chi.529.t
+	desc = tnoub_chi.529.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.529.a
+		country_event = {
+			id = tnoub_chi.530
+			days = 7
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.530
+	title = tnoub_chi.530.t
+	desc = tnoub_chi.530.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.530.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.531
+	title = tnoub_chi.531.t
+	desc = tnoub_chi.531.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.531.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.532
+	title = tnoub_chi.532.t
+	desc = tnoub_chi.532.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.532.a
+		country_event = {
+			id = tnoub_chi.535
+			days = 7
+		}
+	}
+}
+country_event = { #
+	id = tnoub_chi.533
+	title = tnoub_chi.533.t
+	desc = tnoub_chi.533.d
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.533.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.534
+	title = tnoub_chi.534.t
+	desc = tnoub_chi.534.d
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.534.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.535
+	title = tnoub_chi.535.t
+	desc = tnoub_chi.535.d
+	is_triggered_only = yes
+	option = {
+		name = tnoub_chi.535.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.536
+	title = tnoub_chi.536.t
+	desc = tnoub_chi.536.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.536.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.537
+	title = tnoub_chi.537.t
+	desc = tnoub_chi.537.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.537.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.538
+	title = tnoub_chi.538.t
+	desc = tnoub_chi.538.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.538.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.539
+	title = tnoub_chi.539.t
+	desc = tnoub_chi.539.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.539.a
+	}
+}
+country_event = { #
+	id = tnoub_chi.540
+	title = tnoub_chi.540.t
+	desc = tnoub_chi.540.d
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.540.a
+	}
+}
+
+country_event = { #
+	id = tnoub_chi.600
+	title = tnoub_chi.600.t
+	desc = tnoub_chi.600.d
+	picture = GFX_report_event_YUN_Chinese_Troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.600.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.601
+	title = tnoub_chi.601.t
+	desc = tnoub_chi.601.d
+	picture = GFX_TNOUB_report_event_fireworks_burnt
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.601.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.602
+	title = tnoub_chi.602.t
+	desc = tnoub_chi.602.d
+	picture = GFX_TNOUB_report_event_69G_Tank
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.602.a
+	}
+}
+
+
+
+country_event = {
+	id = tnoub_chi.700
+	title = tnoub_chi.700.t
+	desc = tnoub_chi.700.d
+	picture = GFX_TNOUB_report_event_Japanese_flag_lowered
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.700.a
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+				every_controlled_state = {
+					set_state_owner_to = PREV
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+				every_enemy_country = {
+					white_peace = PREV
+				}
+			}
+
+			JAP = {
+				add_to_faction = AZH
+			}
+			
+			every_country = {
+				country_event = {
+					id = TNOUB_WORLD.11
+				}
+			}
+			country_event = {
+				id = tnoub_chi.701
+				days = 2
+    			random_hours = 24
+			}
+			country_event = {
+				id = tnoub_chi.702
+				days = 3
+    			random_hours = 12
+			}
+			country_event = {
+				id = tnoub_chi.703
+				days = 4
+    			random_hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.701
+	title = tnoub_chi.701.t
+	desc = tnoub_chi.701.d
+	picture = GFX_TNOUB_report_event_Japanese_flag_lowered
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.701.a
+
+	}
+}
+
+country_event = {
+	id = tnoub_chi.702
+	title = tnoub_chi.702.t
+	desc = tnoub_chi.702.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.702.a
+
+	}
+}
+
+country_event = {
+	id = tnoub_chi.703
+	title = tnoub_chi.703.t
+	desc = tnoub_chi.703.d
+	picture = GFX_TNOUB_report_event_Chinese_youth_celebrate
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.703.a
+		
+		country_event = {
+			id = tnoub_chi.704
+			days = 2
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.704
+	title = tnoub_chi.704.t
+	desc = tnoub_chi.704.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.704.a
+	
+		country_event = {
+			id = tnoub_chi.705
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.705
+	title = tnoub_chi.705.t
+	desc = tnoub_chi.705.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.705.a
+
+		set_country_flag = CHI_gaw_success_ending
+		TNOUB_Country_Closing_Screen_Show = yes
+	}
+}
+
+
+country_event = {
+	id = tnoub_chi.2000
+	title = tnoub_chi.2000.t
+	desc = tnoub_chi.2000.d
+	picture = GFX_TNOUB_report_event_White_Lily
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.2000.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.2001
+	title = tnoub_chi.2001.t
+	desc = tnoub_chi.2001.d
+	picture = GFX_TNOUB_report_event_sunset
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.2001.a
+	}
+}
+
+#country_event = { #Ministry Chinese Affairs GUI start
+#	id = tnoub_chi.1100
+#	title = tnoub_chi.1100.t
+#	desc = tnoub_chi.1100.d
+#	picture = GFX_
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = tnoub_chi.1100.a
+#	}
+#}
+
+country_event = { #通用开始事件-平等成员
+	id = tnoub_chi.1101
+	title = tnoub_chi.1101.t
+	desc = tnoub_chi.1101.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1101.a
+	}
+}
+
+country_event = { #通用开始事件-经济依附
+	id = tnoub_chi.1102
+	title = tnoub_chi.1102.t
+	desc = tnoub_chi.1102.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1102.a
+	}
+}
+
+country_event = { #通用开始事件-政治傀儡
+	id = tnoub_chi.1103
+	title = tnoub_chi.1103.t
+	desc = tnoub_chi.1103.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1103.a
+	}
+}
+
+country_event = { #通用开始事件-军事占领
+	id = tnoub_chi.1104
+	title = tnoub_chi.1104.t
+	desc = tnoub_chi.1104.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1104.a
+	}
+}
+
+country_event = { #开始事件-广东国
+	id = tnoub_chi.1105
+	title = tnoub_chi.1105.t
+	desc = tnoub_chi.1105.d
+	picture = GFX_TNOUB_report_event_cargo_list
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1105.a
+		custom_effect_tooltip = tnoub_chi.1105.a.tt
+	}
+}
+
+country_event = { #进行事件-通用-回合开始
+	id = tnoub_chi.1120
+	title = tnoub_chi.1120.t
+	desc = tnoub_chi.1120.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1120.a
+	}
+}
+
+country_event = { #进行事件-通用-地区争夺-胜利
+	id = tnoub_chi.1121
+	title = tnoub_chi.1121.t
+	desc = tnoub_chi.1121.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1121.a
+	}
+}
+
+country_event = { #进行事件-通用-地区争夺-失败
+	id = tnoub_chi.1122
+	title = tnoub_chi.1122.t
+	desc = tnoub_chi.1122.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1122.a
+	}
+}
+
+country_event = { #进行事件-通用-地区争夺-平局
+	id = tnoub_chi.1123
+	title = tnoub_chi.1123.t
+	desc = tnoub_chi.1123.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1123.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.1128
+	title = tnoub_chi.1128.t
+	desc = tnoub_chi.1128.d
+	picture = GFX_TNOUB_report_event_newsstand
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1128.a
+		custom_effect_tooltip = tnoub_chi.1128.a.tt
+	}
+}
+
+country_event = {
+	id = tnoub_chi.1129
+	title = tnoub_chi.1129.t
+	desc = tnoub_chi.1129.d
+	picture = GFX_TNOUB_report_event_timebomb
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1129.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.1199
+	title = tnoub_chi.1199.t
+	desc = tnoub_chi.1199.d
+	picture = GFX_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.1199.a
+		#此处填写关闭GUI效果
+		clr_country_flag = TNOUB_country_has_gui
+		clear_variable = CHI_The_Ministry_Chinese_Affairs_Table_GUI_VS_progressbar_var
+	}
+}
+
+
+#Renli(Gongbo) Focus Tree Events
+
+
+country_event = {#Gao Zongwu Failed
+	id = tnoub_chi_renli.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.1"}
+	title = tnoub_chi_renli.1.t
+	desc = tnoub_chi_renli.1.d
+	picture = GFX_report_event_CHI_dontbelievehislies
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_chi_renli.1.a
+		country_event = {
+			id = tnoub_chi_renli.2
+			days = 2
+		}
+	}
+}
+
+country_event = {#impeachment of Gao Zongwu - Jap
+	id = tnoub_chi_renli.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.2"}
+	title = tnoub_chi_renli.2.t
+	desc = tnoub_chi_renli.2.d
+	picture = GFX_report_event_CHI_dontbelievehislies
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_chi_renli.2.a
+		country_event = {
+			id = tnoub_chi_renli.3
+			days = 4
+		}
+	}
+}
+
+country_event = {#rise of president renli
+	id = tnoub_chi_renli.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.3"}
+	title = tnoub_chi_renli.3.t
+	desc = tnoub_chi_renli.3.d
+	picture = GFX_report_event_CHI_dontbelievehislies
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_chi_renli.3.a
+		custom_effect_tooltip = CHI_Renli_Tree_tt
+		hidden_effect = {
+			load_focus_tree = { tree = tnoub_china_renli }
+			set_country_flag = CHI_The_New_Modernization
+		}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1960.11.11"
+			election_frequency = 36
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+    		popularity = 0.2
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = CHI_despotism_zhou_party_long
+			name = CHI_despotism_zhou_party
+		}
+		CHI_zhou_fohai = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = despotism_aristocratic_conservatism_subtype
+					traits = { }
+					expire = "1999.1.1.1"
+					id = -1
+				}
+			}
+		}
+		#retire_country_leader = yes
+		#CHI_chen_gongbo = {
+		#	add_country_leader_role = {
+		#		country_leader = {
+		#			desc = "POLITICS_CHEN_GONGBO_DESC"
+		#			ideology = despotism_aristocratic_conservatism_subtype
+		#			traits = {  }
+		#			expire = "1999.1.1.1"
+		#			id = -1
+		#		}
+		#		promote_leader = yes
+		#	}
+		#}
+		country_event = {
+			id = tnoub_chi_renli.4
+			days = 2
+		}
+	}
+}
+
+country_event = {#morning walk redux
+	id = tnoub_chi_renli.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.4"}
+	title = tnoub_chi_renli.4.t
+	desc = tnoub_chi_renli.4.d
+	picture = GFX_report_event_CHI_nanjing2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tnoub_chi_renli.4.a
+		set_country_flag = CHI_modernization_failure_ending
+		TNOUB_Country_Closing_Screen_Show = yes
+	}
+}
+
+country_event = {#Gongbo Tree - New Order
+	id = tnoub_chi_renli.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.5"}
+	title = tnoub_chi_renli.5.t
+	desc = tnoub_chi_renli.5.d
+	picture = GFX_report_event_novel
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi_renli.5.a
+	}
+}
+
+country_event = {#Gongbo Tree - Heal the Nation
+	id = tnoub_chi_renli.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.6"}
+	title = tnoub_chi_renli.6.t
+	desc = tnoub_chi_renli.6.d
+	picture = GFX_report_event_novel
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi_renli.6.a
+	}
+}
+
+country_event = {#Gongbo Tree - Re-Educate the Nation
+	id = tnoub_chi_renli.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event tnoub_chi_renli.7"}
+	title = tnoub_chi_renli.7.t
+	desc = tnoub_chi_renli.7.d
+	picture = GFX_report_event_novel
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi_renli.7.a
+		hidden_effect = {
+			#country_event = {
+			#	id = tnoub_chi_renli.503
+			#	days = 2
+			#}
+		}
+	}
+}
+
+
+#Legislative Yuan
+country_event = {#Faction 1 gains too much power (Japanese)
+	id = chi.2000
+	immediate = {log = "[GetDateText]: [Root.GetName]: event chi.2000"}
+	title = chi.2000.t
+	desc = chi.2000.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = chi.2000.a
+	}
+}
+
+country_event = {#Faction 2 gains too much power (Old Guard)
+	id = chi.2001
+	immediate = {log = "[GetDateText]: [Root.GetName]: event chi.2001"}
+	title = chi.2001.t
+	desc = chi.2001.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = chi.2001.a
+	}
+}
+
+country_event = {#Faction 3 gains too much power (Reformists)
+	id = chi.2002
+	immediate = {log = "[GetDateText]: [Root.GetName]: event chi.2002"}
+	title = chi.2002.t
+	desc = chi.2002.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = chi.2002.a
+	}
+}
+
+
+
+
+
+country_event = {
+	id = tnoub_chi.4000
+	title = tnoub_chi.4000.t
+	desc = tnoub_chi.4000.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4000.a
+		country_event = {
+			id = tnoub_chi.4001
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.4001
+	title = tnoub_chi.4001.t
+	desc = tnoub_chi.4001.d
+	picture = GFX_TNOUB_report_event_sunset
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4001.a
+		country_event = {
+			id = tnoub_chi.4002
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.4002
+	title = tnoub_chi.4002.t
+	desc = tnoub_chi.4002.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4002.a
+		country_event = {
+			id = tnoub_chi.4003
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.4003
+	title = tnoub_chi.4003.t
+	desc = tnoub_chi.4003.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4003.a
+		retire_character = CHI_xiao_shuxuan
+		add_ideas = {
+			CHI_Sun_Liren_sec
+		}
+		country_event = {
+			id = tnoub_chi.4004
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.4004
+	title = tnoub_chi.4004.t
+	desc = tnoub_chi.4004.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.4004.a
+		country_event = {
+			id = tnoub_chi.591
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = tnoub_chi.591
+	title = tnoub_chi.591.t
+	desc = tnoub_chi.591.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.591.a
+		end_puppet = MEN
+
+		leave_faction = yes
+		create_faction = CHI_GAOZONGWU_FACTION_NAME
+		remove_ideas = Sphere_Core_Member
+
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = CHI_FIVE
+
+		load_focus_tree = tnoub_china_war_prepare_tree
+		set_country_flag = CHI_war_prepare
+		set_global_flag = TNOUB_GAW_Crisis
+		clr_country_flag = CHI_Remaining_Modernization
+		clr_country_flag = CHI_Polio
+		clr_country_flag = CHI_Modernization
+		clr_global_flag = CHI_Western_Insurrection_Crisis
+		clr_country_flag = CHI_show_western_tree_hidden_middle
+		clr_country_flag = CHI_show_western_tree_hidden_japan
+		clr_country_flag = CHI_Nanjing_Crisis
+		clr_country_flag = CHI_war_with_japan
+		
+		custom_effect_tooltip = tnoub_chi.591.a.tt
+		CHI = {
+			clr_country_flag = TNOUB_CHI_Hiding_Our_Interests
+			clr_country_flag = TNOUB_CHI_Remilitarization
+		}
+		
+		remove_ideas = {
+    		CHI_japans_breadbasket_0
+    		CHI_japans_breadbasket_1
+    		CHI_japans_breadbasket_2
+			CHI_slave_of_the_samurai_0
+			CHI_slave_of_the_samurai_1
+			CHI_slave_of_the_samurai_2
+			CHI_slave_of_the_samurai_3
+			CHI_slave_of_the_samurai_4
+			CHI_small_army
+			CHI_surrounded_by_enemies
+		}
+		country_lock_all_division_template = no
+
+		JAP = {
+			remove_resource_rights = 608
+			remove_resource_rights = 614
+			remove_resource_rights = 1020
+			remove_resource_rights = 1021
+			remove_resource_rights = 1022
+			remove_resource_rights = 813
+			remove_resource_rights = 600
+		}
+
+		complete_national_focus = CHI_The_Of_Summit
+	}
+}

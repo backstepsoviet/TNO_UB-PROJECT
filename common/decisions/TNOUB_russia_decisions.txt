@@ -1,0 +1,71 @@
+RUS_SWRW_category = {	#2ND RUS-GER WAR
+	tnoub_SWRW_RUS_declare_war_on_GER = {
+		icon = GFX_decision_generic_industry
+
+		available = {
+			tag = RUS
+		}
+		visible = {
+			date > 1974.01.01
+			tag = RUS
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_government = communist
+					has_government = ultranationalism
+				}
+			}
+		}
+		complete_effect = {
+			#declare_war_on = {
+			#    target = MCW
+			#    type = annex_everything
+		    #}
+			#set_global_flag = RUS_SWRW_Crisis
+			#if = {
+			#	limit = {
+			#		is_ai = no
+			#	}
+			#	set_temp_variable = { TNO_temp_super_event = token:SE_FALL_ROT }
+			#	TNO_fire_super_event = yes
+			#}
+		}
+	}
+
+	tnoub_SWRW_RUS_talk_with_GER = {    #WE WANT TO TALK
+		icon = GFX_decision_generic_industry
+
+		available = {
+			tag = RUS
+		}
+		visible = {
+			date > 1974.01.01
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				AND = {
+					NOT = {
+						has_government = communist
+					}
+					NOT = {
+						has_government = ultranationalism
+					}
+				}
+			}
+		}
+		complete_effect = {
+			#GER = {
+			#	country_event = {
+    		#		id = tnoub_swrw.1
+    		#		days = 10
+    		#		random_hours = 12
+			#	}
+			#}
+		}
+	}
+}

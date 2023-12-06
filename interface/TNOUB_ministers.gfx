@@ -1,0 +1,12 @@
+spriteTypes = {
+	### CHI ###
+	spriteType = {
+		name = "GFX_YUN_Deng_Xiaoping_portrait"
+		texturefile = "gfx/leaders/CHI/Portrait_Funny_Deng_Xiaoping.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHI_minister_Sun_Liren"
+		texturefile = "gfx/interface/ideas/ministers/CHI/CHI_minister_Sun_Liren.dds"
+	}
+}

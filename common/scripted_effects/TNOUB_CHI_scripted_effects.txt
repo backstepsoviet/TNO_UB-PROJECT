@@ -1,0 +1,1704 @@
+
+###Scripted Effects for China###
+
+CHI_GUI_Mil_Modernisation_setup = {
+	set_variable = { CHI_GUI_mil_modernisation = CHI_GUI_military_modernisation }
+	multiply_variable = { CHI_GUI_mil_modernisation = 100 }
+	clamp_variable = {
+		var = CHI_GUI_mil_modernisation
+		min = 0
+		max = 100
+	}
+	add_to_variable = { TNO_CHI_Military_GUI_dirty = 1 }
+}
+
+CHI_GUI_Hiding_Our_Interests_update_cache_condition = {
+	if = {
+		if = {
+			limit = {
+				has_country_flag = CHI_jiangsu_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu = 75 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu < 75 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu > 50 }
+			}
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu = temp1 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CHI_jiangsu_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu = 50 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu < 50 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu > 25 }
+			}
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu = temp1 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CHI_jiangsu_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu = 25 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu < 25 }
+				}
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu > 0 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu = 0 }
+				}
+			}
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu = temp1 }
+
+			set_temp_variable = { temp1 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu }
+            multiply_temp_variable = { temp1 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu = temp1 }
+		}
+
+		if = {
+			limit = {
+				has_country_flag = CHI_jiangxi_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi = 75 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi < 75 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi > 50 }
+			}
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi = temp2 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CHI_jiangxi_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi = 50 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi < 50 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi > 25 }
+			}
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi }
+        	multiply_temp_variable = { temp2 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi = temp2 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CHI_jiangxi_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi < 25 }
+				}
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi > 0 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi = 0 }
+				}
+			}
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi }
+    		multiply_temp_variable = { temp2 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi }
+    		multiply_temp_variable = { temp2 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi = temp2 }
+
+			set_temp_variable = { temp2 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi }
+            multiply_temp_variable = { temp2 = 0.07 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi = temp2 }
+		}
+
+		if = {
+			limit = {
+				has_country_flag = CHI_changde_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde = 75 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde < 75 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde > 50 }
+			}
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.01 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde = temp3 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = CHI_changde_point_build
+				OR = {
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde = 50 }
+					check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chandge < 50 }
+				}
+				check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chandge > 25 }
+			}
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde = temp3 }
+
+			set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde }
+            multiply_temp_variable = { temp3 = 0.03 }
+			subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde = temp3 }
+		}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_changde_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde = 0 }
+						}
+					}
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde }
+            		multiply_temp_variable = { temp3 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde }
+            		multiply_temp_variable = { temp3 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde }
+            		multiply_temp_variable = { temp3 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde }
+            		multiply_temp_variable = { temp3 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde }
+            		multiply_temp_variable = { temp3 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde = temp3 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_shijiazhuang_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang = 75 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang < 75 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang > 50 }
+					}
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi }
+            		multiply_temp_variable = { temp3 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi }
+            		multiply_temp_variable = { temp3 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi }
+            		multiply_temp_variable = { temp3 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi }
+            		multiply_temp_variable = { temp3 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi = temp3 }
+
+					set_temp_variable = { temp3 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi }
+            		multiply_temp_variable = { temp3 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi = temp3 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_shijiazhuang_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang = 50 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang < 50 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang > 25 }
+					}
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuang = temp4 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_shijiazhuang_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang = 0 }
+						}
+					}
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang = temp4 }
+
+					set_temp_variable = { temp4 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuang }
+            		multiply_temp_variable = { temp4 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuang = temp4 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_wuhan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan = 75 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan < 75 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan > 50 }
+					}
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan = temp5 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_wuhan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan = 50 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan < 50 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan > 25 }
+					}
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan = temp5 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_wuhan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan = 0 }
+						}
+					}
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan = temp5 }
+
+					set_temp_variable = { temp5 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan }
+            		multiply_temp_variable = { temp5 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan = temp5 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_chongqing_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing = 75 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing < 75 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing > 50 }
+					}
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing = temp6 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_chongqing_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing = 50 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing < 50 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing > 25 }
+					}
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing = temp6 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_chongqing_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing = 0 }
+						}
+					}
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing = temp6 }
+
+					set_temp_variable = { temp6 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing }
+            		multiply_temp_variable = { temp6 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing = temp6 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_yunnan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan = 75 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan < 75 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan > 50 }
+					}
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan = temp7 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_yunnan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan = 50 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan < 50 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan > 25 }
+					}
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan = temp7 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_yunnan_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan = 0 }
+						}
+					}
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan = temp7 }
+
+					set_temp_variable = { temp7 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan }
+            		multiply_temp_variable = { temp7 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan = temp7 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_fujian_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian = 75 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian < 75 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian > 50 }
+					}
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.01 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian = temp8 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_fujian_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian = 50 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian < 50 }
+						}
+						check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian > 25 }
+					}
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.03 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian = temp8 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = CHI_fujian_point_build
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian = 25 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian < 25 }
+						}
+						OR = {
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian > 0 }
+							check_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian = 0 }
+						}
+					}
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian = temp8 }
+
+					set_temp_variable = { temp8 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian }
+            		multiply_temp_variable = { temp8 = 0.07 }
+					subtract_from_variable = { CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian = temp8 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_jiangsu_point_build
+						NOT = {
+							has_country_flag = CHI_jiangsu_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangsu = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_jiangxi_point_build
+						NOT = {
+							has_country_flag = CHI_jiangxi_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_jiangxi = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_changde_point_build
+						NOT = {
+							has_country_flag = CHI_changde_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_changde = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_shijiazhuang_point_build
+						NOT = {
+							has_country_flag = CHI_shijiazhuang_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_shijiazhuang = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_wuhan_point_build
+						NOT = {
+							has_country_flag = CHI_wuhan_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_wuhan = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_chongqing_point_build
+						NOT = {
+							has_country_flag = CHI_chongqing_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_chongqing = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_yunnan_point_build
+						NOT = {
+							has_country_flag = CHI_yunnan_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_yunnan = -1 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_fujian_point_build
+						NOT = {
+							has_country_flag = CHI_fujian_cache_in_maintain
+						}
+					}
+					add_to_variable = { CHI_Hiding_Our_Interests_GUI_point_condition_fujian = -1 }
+				}
+
+				if = {
+					limit = {
+						has_country_flag = CHI_jiangsu_point_build
+					}
+					set_temp_variable = { temp9 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangsu }
+            		add_to_temp_variable = { temp9 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangsu }
+            		add_to_temp_variable = { temp9 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangsu }
+            		add_to_temp_variable = { temp9 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangsu }
+            		add_to_temp_variable = { temp9 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangsu }
+					set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_jiangsu = temp9 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_jiangxi_point_build
+					}
+					set_temp_variable = { temp10 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_jiangxi }
+            		add_to_temp_variable = { temp10 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_jiangxi }
+            		add_to_temp_variable = { temp10 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_jiangxi }
+            		add_to_temp_variable = { temp10 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_jiangxi }
+            		add_to_temp_variable = { temp10 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_jiangxi }
+					set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_jiangxi = temp10 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_changde_point_build
+					}
+					set_temp_variable = { temp11 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_changde }
+            		add_to_temp_variable = { temp11 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_changde }
+            		add_to_temp_variable = { temp11 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_changde }
+            		add_to_temp_variable = { temp11 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_changde }
+            		add_to_temp_variable = { temp11 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_changde }
+					set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_changde = temp11 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_shijiazhuang_point_build
+					}
+					set_temp_variable = { temp12 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_shijiazhuang }
+            		add_to_temp_variable = { temp12 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_shijiazhuang }
+            		add_to_temp_variable = { temp12 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_shijiazhuang }
+            		add_to_temp_variable = { temp12 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_shijiazhuang }
+            		add_to_temp_variable = { temp12 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_shijiazhuag }
+					set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_shijiazhuang = temp12 }
+				}
+				if = {
+					limit = {
+						has_country_flag = CHI_wuhan_point_build
+					}
+					set_temp_variable = { temp13 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_wuhan }
+            		add_to_temp_variable = { temp13 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_wuhan }
+            		add_to_temp_variable = { temp13 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_wuhan }
+            		add_to_temp_variable = { temp13 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_wuhan }
+            		add_to_temp_variable = { temp13 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_wuhan }
+					set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_wuhan = temp13 }
+				}
+		if = {
+			limit = {
+				has_country_flag = CHI_chongqing_point_build
+			}
+			set_temp_variable = { temp14 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_chongqing }
+        	add_to_temp_variable = { temp14 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_chongqing }
+        	add_to_temp_variable = { temp14 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_chongqing }
+        	add_to_temp_variable = { temp14 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_chongqing }
+        	add_to_temp_variable = { temp14 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_chongqing }
+			set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_chongqing = temp14 }
+		}
+		if = {
+			limit = {
+				has_country_flag = CHI_yunnan_point_build
+			}
+			set_temp_variable = { temp15 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_yunnan }
+        	add_to_temp_variable = { temp15 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_yunnan }
+        	add_to_temp_variable = { temp15 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_yunnan }
+        	add_to_temp_variable = { temp15 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_yunnan }
+        	add_to_temp_variable = { temp15 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_yunnan }
+			set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_yunnan = temp15 }
+		}
+		if = {
+			limit = {
+				has_country_flag = CHI_fujian_point_build
+			}
+			set_temp_variable = { temp16 = CHI_Hiding_Our_Interests_GUI_point_available_infantry_equipment_fujian }
+        	add_to_temp_variable = { temp16 = CHI_Hiding_Our_Interests_GUI_point_available_support_equipment_fujian }
+        	add_to_temp_variable = { temp16 = CHI_Hiding_Our_Interests_GUI_point_available_artillery_equipment_fujian }
+        	add_to_temp_variable = { temp16 = CHI_Hiding_Our_Interests_GUI_point_available_anti_air_equipment_fujian }
+        	add_to_temp_variable = { temp16 = CHI_Hiding_Our_Interests_GUI_point_available_anti_tank_equipment_fujian }
+			set_variable = { CHI_Hiding_Our_Interests_GUI_point_available_fujian = temp16 }
+		}
+	}
+}
+
+CHI_Oil_Crisis_upload_agriculture_effects_var = {
+	set_variable = { CHI_oil_crisis_agriculture_dynamic_modifiers_var = CHI_Oil_Crisis_GUI_agriculture_progressbar_var }
+	multiply_variable = { CHI_oil_crisis_agriculture_dynamic_modifiers_var = -0.005 }
+	clamp_variable = {
+		var = CHI_oil_crisis_agriculture_dynamic_modifiers_var
+		min = -0.5
+		max = 0
+	}
+}
+CHI_Oil_Crisis_upload_industry_effects_var = {
+	set_variable = { CHI_oil_crisis_industry_dynamic_modifiers_var = CHI_Oil_Crisis_GUI_industry_progressbar_var }
+	multiply_variable = { CHI_oil_crisis_industry_dynamic_modifiers_var = -0.005 }
+	clamp_variable = {
+		var = CHI_oil_crisis_industry_dynamic_modifiers_var
+		min = -0.5
+		max = 0
+	}
+}
+
+CHI_TMCAT_reset_jap_points = { #重设日本分数
+	if = {
+        limit = {
+            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 6 }
+        }
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 14
+            max = 33
+            integer = yes
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 5 }
+        }
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 11
+            max = 30
+            integer = yes
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 4 }
+        }
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 8
+            max = 17
+            integer = yes
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 3 }
+        }
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 5
+            max = 24
+            integer = yes
+        }
+    }
+    else_if = {
+        limit = {
+            check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var = 2 }
+        }
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 2
+            max = 21
+            integer = yes
+        }
+    }
+    else = {
+        set_variable_to_random = {
+            var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_points
+            min = 2
+            max = 18
+            integer = yes
+        }
+    }
+}
+
+CHI_TMCAT_reset_gamebutton = {
+	#随机化游戏按钮显示
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 3 }
+
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_var = 3 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_var = 3 }
+
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points = 0 }
+	set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points = 0 }
+
+	random_list = {
+		70 = {
+			modifier = {
+				factor = 1.5
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var }
+			}
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 1 }
+		}
+		30 = {
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_var = 1 }
+		}
+	}
+	random_list = {
+		70 = {
+			modifier = {
+				factor = 1.5
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var }
+			}
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 1 }
+		}
+		30 = {
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_var = 1 }
+		}
+	}
+	random_list = {
+		70 = {
+			modifier = {
+				factor = 1.5
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var }
+			}
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 1 }
+		}
+		30 = {
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_var = 1 }
+		}
+	}
+	random_list = {
+		70 = {
+			modifier = {
+				factor = 1.5
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var }
+			}
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 1 }
+		}
+		30 = {
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_var = 1 }
+		}
+	}
+	random_list = {
+		70 = {
+			modifier = {
+				factor = 1.5
+				check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_cn_attitude_var > CHI_The_Ministry_Chinese_Affairs_Table_GUI_jp_attitude_var }
+			}
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 1 }
+		}
+		30 = {
+			set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_var = 1 }
+		}
+	}
+
+	#生成点数
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 1 }
+		}
+		set_variable_to_random = {
+    		var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_1_points
+			min = 2
+    		max = 9
+    		integer = yes
+		}
+	}
+	else = {
+		set_variable_to_random = {
+    		var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_1_points
+			min = 2
+    		max = 9
+    		integer = yes
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 1 }
+		}
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_2_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+	else = {
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_2_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 1 }
+		}
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_3_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+	else = {
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_3_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 1 }
+		}
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_4_points
+			min = 2
+    		max = 9
+			integer = yes
+		}
+	}
+	else = {
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_4_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 1 }
+		}
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_B_5_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+	else = {
+		set_variable_to_random = {
+			var = CHI_The_Ministry_Chinese_Affairs_Table_GUI_button_R_5_points
+			min = 2
+			max = 9
+			integer = yes
+		}
+	}
+}
+
+CHI_TMCAT_reset_selected_gamebutton = {
+	fixed_random_seed = no
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_1_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_2_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_3_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_4_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_B_5_var = 1 }
+	}
+
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_1_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_2_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_3_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_4_var = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_var = 2 }
+		}
+		set_variable = { CHI_The_Ministry_Chinese_Affairs_Table_GUI_game_button_R_5_var = 1 }
+	}
+}
+
+TNOUB_GAW_failed = {
+	every_state = {
+		limit = { is_core_of = CHI }
+		NCC = { transfer_state = PREV }
+	}
+	JAP = {
+		transfer_state = 591
+		transfer_state = 810
+		transfer_state = 811
+		transfer_state = 812
+		transfer_state = 813
+		transfer_state = 1464
+	}
+
+	YUN = {
+		transfer_state = 325
+		transfer_state = 603
+		transfer_state = 960
+		set_cosmetic_tag = YUN_JAP
+		YUN_he_yingqin = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = "POLITICS_HE_YINGQIN_JAP_DESC"
+					expire = "8000.1.1"
+					ideology = despotism_warlordism_subtype
+					traits = {}
+					id = -1
+				}
+				promote_leader = yes
+			}
+		}
+		set_popularities = {
+			communist = 0
+			ultranationalism = 0
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			conservatism = 0
+			paternalism = 30
+			despotism = 70
+			fascism = 0
+			national_socialism = 0
+
+		}
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1960.11.11"
+			election_frequency = 36
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = YUN_JAP_despotism_party_long
+			name = YUN_JAP_despotism_party
+		}
+		add_ideas = Sphere_Chinese_Warlord
+		econ_join_sphere_JAP = yes
+		TNO_startup_nation = yes
+	}
+
+	HUU = {
+		transfer_state = 600
+		transfer_state = 602
+		transfer_state = 620
+		transfer_state = 961
+		transfer_state = 1016
+		every_owned_state = {
+			limit = { NOT = { is_core_of = HUU } }
+			add_core_of = PREV
+		}
+		add_ideas = Sphere_Fully_Dependent
+		econ_join_sphere_JAP = yes
+		TNO_startup_nation = yes
+	}
+
+	SCC = {
+		transfer_state = 595
+		transfer_state = 596
+		transfer_state = 959
+		transfer_state = 1019
+		every_owned_state = {
+			limit = {NOT = {is_core_of = SCC}}
+			add_core_of = PREV
+		}
+		SCC_zhang_renli = { promote_character = yes }
+		add_ideas = Sphere_Fully_Dependent
+		econ_join_sphere_JAP = yes
+		TNO_startup_nation = yes
+	}
+	if = {
+		limit = {
+			NOT = { country_exists = QIN }
+		}
+		if = {
+			limit = {NOT = { country_exists = GAN } }
+			every_state = {
+				limit = { is_core_of = GAN }
+				GAN = { transfer_state = PREV }
+			}
+			GAN = {
+				transfer_state = 604
+				transfer_state = 906
+				transfer_state = 906
+				add_ideas = Sphere_Imp_Protectorate
+				econ_join_sphere_JAP = yes
+				TNO_startup_nation = yes
+			}
+		}
+		else = {
+			GAN = {
+				transfer_state = 604
+				transfer_state = 906
+				transfer_state = 906
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {NOT = {country_exists = GAN}}
+			every_state = {
+				limit = { is_core_of = GAN }
+				GAN = { transfer_state = PREV }
+			}
+			GAN = {
+				econ_join_sphere_JAP = yes
+				TNO_startup_nation = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = GNG}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = GNG
+				}
+			}
+			GNG = { transfer_state = PREV }
+		}
+		JAP = {
+			transfer_state = 591
+			transfer_state = 1464
+		}
+		GNG = {
+			add_ideas = Sphere_Corporate_Dependency
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = GUX}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = GUX
+				}
+			}
+			GUX = { transfer_state = PREV }
+		}
+		GUX = {
+			set_cosmetic_tag = GUX_IJA
+			add_ideas = Sphere_Imp_Protectorate
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 0
+				progressivism = 0
+				liberalism = 0
+				conservatism = 0
+				paternalism = 0
+				despotism = 100
+				fascism = 0
+				national_socialism = 0
+			}
+			set_party_name = {
+				ideology = despotism
+				long_name = GUX_JAP_despotism_party_long
+				name = GUX_JAP_depotism_party
+			}
+			set_politics = {
+				ruling_party = despotism
+				last_election = "1960.11.11"
+				election_frequency = 36
+				elections_allowed = no
+			}
+			remove_all_ministers = yes
+			retire_country_leader = yes
+			promote_character = GUX_takeda_goro
+			add_ideas = GUX_Watanabe_Keitaro_hog
+			add_ideas = GUX_Takashima_Masuo_for
+			add_ideas = GUX_Murai_Sumio_eco
+			add_ideas = GUX_Miyazaki_Kiyotaka_sec
+		}
+	}
+	else = {
+		GUX = {
+			set_cosmetic_tag = GUX_IJA
+			add_ideas = Sphere_Imp_Protectorate
+			econ_join_sphere_JAP = yes
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 0
+				progressivism = 0
+				liberalism = 0
+				conservatism = 0
+				paternalism = 0
+				despotism = 100
+				fascism = 0
+				national_socialism = 0
+			}
+			set_party_name = {
+				ideology = despotism
+				long_name = GUX_JAP_despotism_party_long
+				name = GUX_JAP_despotism_party
+			}
+			set_politics = {
+				ruling_party = despotism
+				last_election = "1960.11.11"
+				election_frequency = 36
+				elections_allowed = no
+			}
+			remove_all_ministers = yes
+			retire_country_leader = yes
+			promote_character = GUX_takeda_goro
+			add_ideas = GUX_Watanabe_Keitaro_hog
+			add_ideas = GUX_Takashima_Masuo_for
+			add_ideas = GUX_Murai_Sumio_eco
+			add_ideas = GUX_Miyazaki_Kiyotaka_sec
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = MAN}
+		}
+		every_state = {
+			limit = {is_core_of = MAN}
+			MAN = { transfer_state = PREV }
+		}
+		MAN = {
+			add_ideas = Sphere_Fully_Dependent
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = MEN}
+		}
+		every_state = {
+			limit = { is_core_of = MEN }
+			MEN = { transfer_state = PREV }
+		}
+		MEN = {
+			add_ideas = Sphere_Fully_Dependent
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = SHX}
+		}
+		every_state = {
+			limit = { is_core_of = SHX }
+			SHX = { transfer_state = PREV }
+		}
+		SHX = {
+			set_cosmetic_tag = SHX_JAP
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 0
+				progressivism = 0
+				liberalism = 0
+				conservatism = 0
+				paternalism = 0
+				despotism = 30
+				fascism = 70
+				national_socialism = 0
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = SHX_JAP_fascism_party_long
+				name = SHX_JAP_fascism_party
+			}
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1960.11.11"
+				election_frequency = 36
+				elections_allowed = no
+			}
+			add_ideas = Sphere_Fully_Dependent
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	else = {
+		SHX = {
+			set_cosmetic_tag = SHX_JAP
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 0
+				progressivism = 0
+				liberalism = 0
+				conservatism = 0
+				paternalism = 0
+				despotism = 30
+				fascism = 70
+				national_socialism = 0
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = SHX_JAP_fascism_party_long
+				name = SHX_JAP_fascism_party
+			}
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1960.11.11"
+				election_frequency = 36
+				elections_allowed = no
+			}
+			add_ideas = Sphere_Fully_Dependent
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = XIK}
+		}
+		SIC = {
+			transfer_state = 605
+			transfer_state = 905
+			transfer_state = 964
+			transfer_state = 1537
+			transfer_state = 1538
+			transfer_state = 1963
+			set_cosmetic_tag = SIC_IJA
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+			every_state = {
+				limit = { is_owned_by = SIC }
+				add_core_of = SIC
+			}
+		}
+	}
+	else = {
+		SIC = {
+			transfer_state = 605
+			transfer_state = 1537
+			transfer_state = 1538
+			annex_country = {
+				target = XIK
+				transfer_troops = no
+			}
+			set_cosmetic_tag = SIC_IJA
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+			every_state = {
+				limit = { is_owned_by = SIC }
+				add_core_of = SIC
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { country_exists = XIN }
+		}
+		every_state = {
+			limit = { is_core_of = XIN }
+			GAN = { transfer_state = PREV }
+		}
+	}
+	if = {
+		limit = {
+			NOT = {country_exists = TIB}
+		}
+		every_state = {
+			limit = { is_core_of = TIB }
+			TIB = { transfer_state = PREV }
+		}
+		TIB = {
+			add_ideas = Sphere_Observer
+			econ_join_sphere_JAP = yes
+			TNO_startup_nation = yes
+		}
+	}
+	else = {
+		TIB = {
+			add_ideas = Sphere_Observer
+			econ_join_sphere_JAP = yes
+		}
+	}
+	NCC = {
+		set_cosmetic_tag = CHI_JAP_PUP
+		every_owned_state = {
+			limit = { NOT = { is_core_of = NCC } }
+			add_core_of = PREV
+		}
+		add_ideas = Sphere_Fully_Dependent
+		econ_join_sphere_JAP = yes
+		set_party_name = {
+			ideology = fascism
+			long_name = CHI_JAP_PUP_fascism_party_long
+			name = CHI_JAP_PUP_fascism_party
+		}
+		TNO_startup_nation = yes
+	}
+	every_country = {
+		limit = { has_idea = NLF_Member }
+		remove_ideas = NLF_Member
+	}
+	JAP = {
+		add_to_faction = NCC
+		add_to_faction = SCC
+		add_to_faction = HUU
+		add_to_faction = SHX
+		add_to_faction = SIC
+		add_to_faction = GAN
+		add_to_faction = YUN
+		add_to_faction = MEN
+		add_to_faction = GUX
+		add_to_faction = AZH
+	}
+}
+CHI_ija_alert_lower_low = {
+	add_to_variable = { ija_alert = -0.05 }
+	custom_effect_tooltip = CHI_IJA_Alert_Slightdown_tt
+}
+CHI_ija_alert_lower_med = {
+	add_to_variable = { ija_alert = -0.10 }
+	custom_effect_tooltip = CHI_IJA_Alert_Significantdown_tt
+}
+CHI_ija_alert_lower_high = {
+	add_to_variable = { ija_alert = -0.15 }
+	custom_effect_tooltip = CHI_ija_alert_lower_high_tt
+}
+CHI_ija_alert_upper_low = {
+	add_to_variable = { ija_alert = 0.05 }
+	custom_effect_tooltip = CHI_IJAAlert_Slightup_tt
+}
+CHI_ija_alert_upper_med = {
+	add_to_variable = { ija_alert = 0.10 }
+	custom_effect_tooltip = CHI_IJAAlert_Significantup_tt
+}
+CHI_ija_alert_upper_high = {
+	add_to_variable = { ija_alert = 0.15 }
+	custom_effect_tooltip = CHI_IJAAlert_big_increase_tt
+}

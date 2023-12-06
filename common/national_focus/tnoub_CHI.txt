@@ -1,0 +1,72 @@
+#############################
+##China Focus Tree in TNOUB##
+######By JamesRavenlake######
+#############################
+focus_tree = {
+	id = tnoub_china_remaining_modernization
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	default = no
+	# Modernizations Main Tree
+	shared_focus = CHI_Military
+	shared_focus = CHI_Sovereignty
+
+	# Sovereignty Subtree
+	shared_focus = CHI_Manage_Chuanbian    #Xikang
+	shared_focus = CHI_Abundant_Minerals    #Shanxi
+	shared_focus = CHI_Governed_Land    #Guangxi
+	shared_focus = CHI_The_Star_of_Northwest    #Ma Clique
+	shared_focus = CHI_Restructuring_The_Government    #Xinjiang
+	shared_focus = CHI_Uncertain_Government    #Tibet
+
+	# Oil Crisis / Social Reform
+	shared_focus = CHI_The_Oil_Crisis
+	shared_focus = CHI_The_Urgent_Reform
+
+	shared_focus = CHI_Unrest_West	#UNUSE
+}
+
+focus_tree = {
+	id = tnoub_china_renli
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = CHI
+		}
+	}
+	default = no
+	# The New Modernization
+	shared_focus = CHI_New_Modernization
+}
+
+focus_tree = {
+	id = tnoub_china_war_prepare_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	default = no
+	shared_focus = CHI_The_Of_Summit
+}
+
+focus_tree = {
+	id = china_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	default = no
+	shared_focus = CHI_War
+}

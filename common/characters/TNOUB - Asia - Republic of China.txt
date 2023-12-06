@@ -1,0 +1,72 @@
+characters = {
+	###########################################################
+	###########			REPUBLIC OF CHINA 			###########
+	###########################################################
+	CHI_chen_gongbo = {
+		name = CHI_chen_gongbo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/Portrait_China_Chen_Gongbo.tga"
+				small = "GFX_idea_CHI_minister_Chen_Gongbo"
+			}
+		}
+	}
+	CHI_sun_liren = {
+		name = CHI_sun_liren
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/CHI_Sun_Liren.dds"
+				small = "GFX_idea_CHI_minister_Sun_Liren"
+			}
+			army = {
+				large = "gfx/leaders/CHI/CHI_Sun_Liren.dds"
+				small = "GFX_idea_CHI_minister_Sun_Liren"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = CHI_Sun_Liren_sec
+			allowed = { original_tag = CHI }
+			traits = {
+				security_minister
+				sec_army_instructor
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	ONM_military_council = {
+		name = ONM_military_council
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ONM/ONM_Military_Council.dds" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ONM_MILITARY_COUNCIL_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+
+	###########################################################
+	###########			SEIHOKU GUNSEIKAN 			###########
+	###########################################################
+	GAN_seihoku_council = {
+		name = "GAN_seihoku_council"
+		portraits = {
+			civilian = { large = "gfx/leaders/GAN/GAN_seihoku_council.dds" }
+		}
+		country_leader = {
+			desc = "POLITICS_SEIHOKU_COUNCIL_DESC_XIBEI"
+			ideology = despotism_colonial_government_subtype
+			expire = "1999.1.1"
+			id = -1
+		}
+	}
+}

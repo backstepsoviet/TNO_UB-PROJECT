@@ -1,0 +1,120 @@
+CHI_remilitarization_status_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_dynamic_modifier_CHI_remilitarization_status
+
+	research_speed_factor = CHI_remilitarization_status_dynamic_modifier_research_speed_factor
+	air_ace_generation_chance_factor = CHI_remilitarization_status_dynamic_modifier_air_ace_generation_chance_factor
+	experience_gain_air = CHI_remilitarization_status_dynamic_modifier_experience_gain_air
+	naval_speed_factor = CHI_remilitarization_status_dynamic_modifier_naval_speed_factor
+	navy_org_factor = CHI_remilitarization_status_dynamic_modifier_navy_org_factor
+	experience_gain_navy = CHI_remilitarization_status_dynamic_modifier_experience_gain_navy
+	army_org_factor = CHI_remilitarization_status_dynamic_modifier_army_org_factor
+	army_org_regain = CHI_remilitarization_status_dynamic_modifier_army_org_regain
+	stability_factor = CHI_remilitarization_status_dynamic_modifier_stability_factor
+	war_support_factor = CHI_remilitarization_status_dynamic_modifier_war_support_factor
+	encryption_factor = CHI_remilitarization_status_dynamic_modifier_encryption_factor
+	surrender_limit = CHI_remilitarization_status_dynamic_modifier_surrender_limit
+	breakthrough_factor = CHI_remilitarization_status_dynamic_modifier_breakthrough_factor
+	misc_costs_modifier = CHI_remilitarization_status_dynamic_modifier_misc_costs_modifier
+	
+	equipment_bonus = {
+		fighter = {
+			instant = yes
+			air_attack = 0.05
+			air_defence = 0.05
+		}
+		scout_helicopter_equipment = {
+			instant = yes
+			recon = 0.1
+			breakthrough = 0.05
+		}
+		screen_ship = {
+			instant = yes
+			lg_attack = 0.1
+			defense = 0.1
+		}
+	}
+}
+
+CHI_oil_crisis_agriculture_dynamic_modifier = {
+	enable = { always = yes }
+
+	political_power_factor = CHI_oil_crisis_agriculture_dynamic_modifiers_var
+	stability_factor = CHI_oil_crisis_agriculture_dynamic_modifiers_var
+}
+CHI_oil_crisis_industry_dynamic_modifier = {
+	enable = { always = yes }
+
+	production_factory_max_efficiency_factor = CHI_oil_crisis_industry_dynamic_modifiers_var
+}
+
+CHI_prepare_for_total_war_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_
+
+	production_speed_buildings_factor = CHI_prepare_for_total_war_dynamic_modifiers_production_speed_buildings_factor
+	max_surrender_limit_offset = CHI_prepare_for_total_war_dynamic_modifiers_max_surrender_limit_offset
+	surrender_limit = CHI_prepare_for_total_war_dynamic_modifiers_surrender_limit
+	war_stability_factor = CHI_prepare_for_total_war_dynamic_modifiers_war_stability_factor
+	line_change_production_efficiency_factor = CHI_prepare_for_total_war_dynamic_modifiers_line_change_production_efficiency_factor
+	industry_air_damage_factor = CHI_prepare_for_total_war_dynamic_modifiers_industry_air_damage_factor
+	army_core_defence_factor = CHI_prepare_for_total_war_dynamic_modifiers_army_core_defence_factor
+	supply_factor = CHI_prepare_for_total_war_dynamic_modifiers_supply_factor
+	supply_node_range = CHI_prepare_for_total_war_dynamic_modifiers_supply_node_range
+}
+
+CHI_flame_of_revenge_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_
+
+	targeted_modifier = {
+    	tag = JAP
+    	attack_bonus_against = CHI_flame_of_revenge_dynamic_modifier_attack_bonus_against
+    	defense_bonus_against = CHI_flame_of_revenge_dynamic_modifier_defense_bonus_against
+	}
+}
+
+
+CHI_GAW_buff_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_
+
+	army_org_factor = global.CHI_GAW_buff_dynamic_modifier_army_org_factor
+	army_org_regain = global.CHI_GAW_buff_dynamic_modifier_army_org_regain
+	stability_factor = global.CHI_GAW_buff_dynamic_modifier_stability_factor
+	war_support_factor = global.CHI_GAW_buff_dynamic_modifier_war_support_factor
+	breakthrough_factor = global.CHI_GAW_buff_dynamic_modifier_breakthrough_factor
+	army_attack_factor = global.CHI_GAW_buff_dynamic_modifier_army_attack_factor
+	army_defence_factor = global.CHI_GAW_buff_dynamic_modifier_army_defence_factor
+	army_speed_factor = global.CHI_GAW_buff_dynamic_modifier_army_speed_factor
+}
+
+JAP_GAW_buff_dynamic_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_
+
+	army_org_factor = global.JAP_GAW_buff_dynamic_modifier_army_org_factor
+	army_org_regain = global.JAP_GAW_buff_dynamic_modifier_army_org_regain
+	stability_factor = global.JAP_GAW_buff_dynamic_modifier_stability_factor
+	war_support_factor = global.JAP_GAW_buff_dynamic_modifier_war_support_factor
+	breakthrough_factor = global.JAP_GAW_buff_dynamic_modifier_breakthrough_factor
+	army_attack_factor = global.JAP_GAW_buff_dynamic_modifier_army_attack_factor
+	army_defence_factor = global.JAP_GAW_buff_dynamic_modifier_army_defence_factor
+	army_speed_factor = global.JAP_GAW_buff_dynamic_modifier_army_speed_factor
+}
+
+JAP_GAW_state_buff_dynamic_modifier = {
+	icon = GFX_idea_unknown
+	enable = { 
+		controller = {
+			is_ally_with = JAP
+		}
+	}
+	remove_trigger = {
+		controller = {
+			has_war = no
+		}
+	}
+	attacker_modifier = yes
+	army_attack_factor = -0.25
+}

@@ -570,6 +570,14 @@ tnoub_global_debug_decisions = {
 				transfer_state = 811
 				transfer_state = 810
 				transfer_state = 524
+				transfer_state = 1640
+				transfer_state = 1641
+				transfer_state = 1642
+				transfer_state = 1643
+				transfer_state = 1636
+				transfer_state = 1637
+				transfer_state = 1638
+				transfer_state = 1639
 
 				add_state_core = 591
 				add_state_core = 813
@@ -626,6 +634,11 @@ tnoub_global_debug_decisions = {
 				transfer_state = 963
 				transfer_state = 1018
 				transfer_state = 1024
+				transfer_state = 1817
+				transfer_state = 1820
+				transfer_state = 1818
+				transfer_state = 1816
+				transfer_state = 1819
 			}
 
 			#load_focus_tree = 

@@ -634,11 +634,11 @@ tnoub_global_debug_decisions = {
 				transfer_state = 963
 				transfer_state = 1018
 				transfer_state = 1024
-				transfer_state = 1817
-				transfer_state = 1820
-				transfer_state = 1818
 				transfer_state = 1816
+				transfer_state = 1817
+				transfer_state = 1818
 				transfer_state = 1819
+				transfer_state = 1820
 			}
 
 			#load_focus_tree = 

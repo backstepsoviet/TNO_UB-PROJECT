@@ -1,0 +1,27 @@
+#############################
+##China (End War) Focus Tree in TNOUB##
+######By backstepsoviet######
+#############################
+shared_focus = {
+	id = CHI_our_victory
+	icon = GFX_
+	cost = 1.00
+	x = 8
+	y = 0
+	allow_branch = { has_country_flag =  GAW_CHI_victory }
+
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = CHI_war_has_end_but
+	icon = GFX_
+	cost = 1.00
+	x = 8
+	y = 1
+	prerequisite = {
+		focus = CHI_our_victory
+	}
+	completion_reward = {
+	}
+}

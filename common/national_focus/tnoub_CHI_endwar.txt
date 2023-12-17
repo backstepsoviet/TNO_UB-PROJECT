@@ -1,0 +1,16 @@
+#############################
+##China (End War) Focus Tree in TNOUB##
+######By backstepsoviet######
+#############################
+focus_tree = {
+	id = tnoub_china_end_of_war
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CHI
+		}
+	}
+	default = no
+	shared_focus = CHI_our_victory
+}

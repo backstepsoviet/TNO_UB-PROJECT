@@ -2549,6 +2549,15 @@ country_event = {
 				days = 4
     			random_hours = 12
 			}
+			ONM = {
+				transfer_state = 408
+				transfer_state = 1644
+				transfer_state = 1645
+				transfer_state = 1647
+				transfer_state = 1646
+				transfer_state = 657
+				transfer_state = 1364
+			}
 			CHI = {
 				leave_faction = yes
 				set_cosmetic_tag = CHI_FIVE
@@ -2628,6 +2637,8 @@ country_event = {
 				transfer_state = 1637
 				transfer_state = 1638
 				transfer_state = 1639
+				transfer_state = 330
+				transfer_state = 809
 
 				add_state_core = 591
 				add_state_core = 813
@@ -2636,7 +2647,13 @@ country_event = {
 				add_state_core = 811
 				add_state_core = 810
 				add_state_core = 524
-
+				add_state_core =1853
+				add_state_core =1852
+				add_state_core =1855
+				add_state_core =1850
+				add_state_core =1851
+				add_state_core =1854
+				add_state_core =1856
 				#set_autonomy = {
 				#	target = TIB
 				#	autonomy_state = autonomy_dominion

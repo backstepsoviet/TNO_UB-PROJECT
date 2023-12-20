@@ -1989,7 +1989,10 @@ shared_focus = {
 	x = -4
 	y = 3
 	completion_reward = {
-		
+		add_stability = 0.1
+		add_political_power	= 50
+		add_manpower = 1000
+	
 	}
 }
 
@@ -2229,7 +2232,7 @@ shared_focus = {
 		custom_effect_tooltip = CHI_Appointment_With_Liu_Wenhui_tt
 		custom_effect_tooltip = CHI_supply_route_smooth_rate_increase_tooltip
 	}
-}
+}8
 
 shared_focus = {
 	id = CHI_Connect_Road
@@ -2920,6 +2923,7 @@ shared_focus = {
 	x = 8
 	y = 5
 	completion_reward = {
+		add_stability = 0.1 
 		add_to_variable = {
 			CHI_flame_of_revenge_dynamic_modifier_attack_bonus_against = 0.025
 		}
@@ -3390,6 +3394,8 @@ shared_focus = {
 	x = 50
 	y = 0
 	completion_reward = {
+		add_stability = 0.1
+		add_political_power = 100
 		
 	}
 }
@@ -3409,6 +3415,9 @@ shared_focus = {
 	x = -1
 	y = 1
 	completion_reward = {
+		add_political_power	= 30
+		set_stability = 0.5
+		add_manpower = 50000
 		
 	}
 }
@@ -3428,6 +3437,8 @@ shared_focus = {
 	x = 1
 	y = 1
 	completion_reward = {
+		add_political_power	= 100
+		add_war_support	= 10
 		
 	}
 }
@@ -3479,6 +3490,8 @@ shared_focus = {
 	x = 45
 	y = 5
 	completion_reward = {
+		add_stability = 0.2
+		add_command_power = 100
 		
 	}
 }
@@ -3498,7 +3511,9 @@ shared_focus = {
 	x = -1
 	y = 1
 	completion_reward = {
-		
+		add_manpower = 10000
+		add_political_power = 100
+
 	}
 }
 
@@ -3517,6 +3532,11 @@ shared_focus = {
 	x = 1
 	y = 1
 	completion_reward = {
+		add_resource = {
+        type = oil
+        amount = 50
+        state = 599
+        }
 		
 	}
 }
@@ -3565,6 +3585,11 @@ shared_focus = {
 	x = 50
 	y = 5
 	completion_reward = {
+		add_resource = {
+        type = Tungsten
+        amount = 50
+        state = 599
+        }
 		
 	}
 }
@@ -3584,6 +3609,16 @@ shared_focus = {
 	x = -1
 	y = 1
 	completion_reward = {
+		add_stability = 0.1
+		add_resource = {
+        type = Steel	
+        amount = 50
+        state = 906
+        }
+		CHI = {
+		    set_temp_variable = { temp_econ_GDP_boost_percentage = 0.02 }
+		    econ_GDP_boost_once_percentage = yes
+		}
 		
 	}
 }
@@ -3603,7 +3638,11 @@ shared_focus = {
 	x = 1
 	y = 1
 	completion_reward = {
-		
+		CHI = {
+		    set_temp_variable = { temp_econ_GDP_boost_percentage = 0.003 }
+		    econ_GDP_boost_once_percentage = yes
+		}
+
 	}
 }
 

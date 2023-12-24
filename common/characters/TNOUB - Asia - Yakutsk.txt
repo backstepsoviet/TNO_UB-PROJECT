@@ -1,0 +1,16 @@
+characters = {
+	YAK_Kim_byeongwha = {
+		name = YAK_Kim_byeongwha
+		portraits = {
+			civilian = { large = "gfx/leaders/YAK/Portrait_kim_byeong_wha.dds" }
+		}
+		country_leader = {
+			desc = "POLITICS_kim_byeong_wha_DESC"
+			expire = "2000.1.1"
+			ideology = communist_national_communism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

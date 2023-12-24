@@ -1127,8 +1127,8 @@ OMO = {
 	color_ui = rgb { 210 213 219 }
 }
 YAK = {
-	color = rgb { 79 99 101 }
-	color_ui = rgb { 79 99 101 }
+	color = rgb { 155 15 28 }
+	color_ui = rgb { 155 15 28 }
 }
 VIL = {
 	color = rgb { 195 198 204 }

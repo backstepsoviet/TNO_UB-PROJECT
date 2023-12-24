@@ -501,6 +501,7 @@ tnoub_global_debug_decisions = {
 		complete_effect = {
 			ONM = {
 				transfer_state = 408
+				transfer_state = 409
 				transfer_state = 1644
 				transfer_state = 1645
 				transfer_state = 1647
@@ -508,11 +509,21 @@ tnoub_global_debug_decisions = {
 				transfer_state = 657
 				transfer_state = 1364
 			}
+			605 = {
+				set_demilitarized_zone = no
+			}
+			960 = {
+				set_demilitarized_zone = yes
+			}
 			CHI = {
 				leave_faction = yes
 				set_cosmetic_tag = CHI_FIVE
 				annex_country = {
 					target = GNG
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = MEN
 					transfer_troops = yes
 				}
 				annex_country = {
@@ -578,7 +589,6 @@ tnoub_global_debug_decisions = {
 				transfer_state = 1022
 				transfer_state = 811
 				transfer_state = 810
-				transfer_state = 524
 				transfer_state = 1640
 				transfer_state = 1641
 				transfer_state = 1642
@@ -587,33 +597,23 @@ tnoub_global_debug_decisions = {
 				transfer_state = 1637
 				transfer_state = 1638
 				transfer_state = 1639
-				transfer_state = 330
+
 				transfer_state = 809
 
-				add_state_core = 591
-				add_state_core = 813
-				add_state_core = 812
-				add_state_core = 1022
-				add_state_core = 811
-				add_state_core = 810
-				add_state_core = 524
-				add_state_core = 1853
-				add_state_core = 1852
-				add_state_core = 1855
-				add_state_core = 1850
-				add_state_core = 1851
-				add_state_core = 1854
-				add_state_core = 1856
+				transfer_state = 524
+				transfer_state = 1853
+				transfer_state = 1852
+				transfer_state = 1855
+				transfer_state = 1850
+				transfer_state = 1851
+				transfer_state = 1854
+				transfer_state = 1856
+	
 				#set_autonomy = {
 				#	target = TIB
 				#	autonomy_state = autonomy_dominion
 				#	end_wars = yes
 				#}
-				set_autonomy = {
-					target = MON
-					autonomy_state = autonomy_dominion
-					end_wars = yes
-				}
 				set_autonomy = {
 					target = KOR
 					autonomy_state = autonomy_client_state
@@ -624,22 +624,6 @@ tnoub_global_debug_decisions = {
 			#	leave_faction = yes
 			#	set_cosmetic_tag = TIB_CHI_autonomous_region
 			#}
-			MON = {
-				leave_faction = yes
-				set_cosmetic_tag = MON_CHI_military_occupation_zone
-				annex_country = {
-					target = MEN
-					transfer_troops = yes
-				}
-				annex_country = {
-					target = PRC
-					transfer_troops = yes
-				}
-			}
-			MAN = {
-				leave_faction = yes
-				set_cosmetic_tag = MAN_CHI_military_occupation_zone
-			}
 			KOR = {
 				leave_faction = yes
 				set_cosmetic_tag = KOR_CHI_military_occupation_zone

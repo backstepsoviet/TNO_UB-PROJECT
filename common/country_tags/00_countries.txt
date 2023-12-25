@@ -664,6 +664,7 @@ TRI = "countries/Caribbean.txt"					# Trinidad and Tobago
 
 ###UNFINISHED BUSINESSES###
 ONM = "countries/Outer Northeast Military Occupation Zone.txt"
+IDC = "countries/Indochina.txt"
 
 
 # // Misc // #

@@ -2320,3 +2320,7 @@ ONM = {
 	color = rgb { 193 131 86 }
 	color_ui = rgb { 193 131 86 }
 }
+IDC = {
+	color = rgb { 193 131 86 }
+	color_ui = rgb { 193 131 86 }
+}

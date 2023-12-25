@@ -37,23 +37,6 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-
-	ONM_military_council = {
-		name = ONM_military_council
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/ONM/ONM_Military_Council.dds" 
-			}
-		}
-		country_leader = {
-			desc = "POLITICS_ONM_MILITARY_COUNCIL_DESC"
-			ideology = despotism_military_junta_subtype
-			traits = { }
-			expire = "1999.1.1.1"
-			id = -1
-		}
-	}
-
 	###########################################################
 	###########			SEIHOKU GUNSEIKAN 			###########
 	###########################################################

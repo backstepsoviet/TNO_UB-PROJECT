@@ -1,0 +1,17 @@
+characters = {
+	IDC_Ye_Peng = {
+		name = CHI_Ye_Peng
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/Portrait_China_Ye_Peng.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IDC_Ye_Peng_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+}

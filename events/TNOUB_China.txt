@@ -2565,6 +2565,12 @@ country_event = {
 				transfer_state = 657
 				transfer_state = 1364
 			}
+			605 = {
+				set_demilitarized_zone = no
+			}
+			960 = {
+				set_demilitarized_zone = yes
+			}
 			CHI = {
 				leave_faction = yes
 				set_cosmetic_tag = CHI_FIVE
@@ -2669,6 +2675,11 @@ country_event = {
 					autonomy_state = autonomy_client_state
 					end_wars = yes
 				}
+				set_autonomy = {
+					target = IDC
+					autonomy_state = autonomy_client_state
+					end_wars = yes
+				}
 			}
 			#TIB = {
 			#	leave_faction = yes
@@ -2702,6 +2713,24 @@ country_event = {
 			clr_country_flag = CHI_war_with_japan
 			clr_country_flag = CHI_CHI_Polio
 			clr_country_flag = CHI_Remaining_Modernization
+			IDC = {
+				annex_country = {
+					target = VIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = LAO
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CAM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = VIC
+					transfer_troops = yes
+				}
+			}
 		}
 	}
 }

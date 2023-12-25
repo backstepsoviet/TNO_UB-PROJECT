@@ -1,0 +1,32 @@
+characters = {
+	ONM_military_council = {
+		name = ONM_military_council
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ONM/ONM_Military_Council.dds" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ONM_MILITARY_COUNCIL_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+	ONM_Bao_Wenyue = {
+		name = CHI_Bao_Wenyue
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/Portrait_China_Bao_Wenyue.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_ONM_Bao_Wenyue_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+}

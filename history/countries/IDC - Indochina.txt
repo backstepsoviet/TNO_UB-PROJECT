@@ -1,16 +1,13 @@
 capital = 328
 
 # Vacant
-recruit_character = MAN_Generic_Vacant
-
+recruit_character = IDC_Generic_Vacant
+recruit_character = IDC_Ye_Peng
 
 
 ### History
 
-
-recruit_character = ONM_Bao_Wenyue
-
-set_war_support = 0.75
+set_war_support = 0.55
 set_stability = 0.30
 add_manpower = 1000000
 
@@ -22,10 +19,10 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 1
-	conservatism = 6
-	paternalism = 18
-	despotism = 75
+	communist = 15
+	conservatism = 0
+	paternalism = 15
+	despotism = 70
 }
 
 set_technology = {

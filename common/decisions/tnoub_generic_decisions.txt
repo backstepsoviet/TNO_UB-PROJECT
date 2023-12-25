@@ -619,6 +619,11 @@ tnoub_global_debug_decisions = {
 					autonomy_state = autonomy_client_state
 					end_wars = yes
 				}
+				set_autonomy = {
+					target = IDC
+					autonomy_state = autonomy_client_state
+					end_wars = yes
+				}
 			}
 			#TIB = {
 			#	leave_faction = yes
@@ -652,6 +657,24 @@ tnoub_global_debug_decisions = {
 			clr_country_flag = CHI_war_with_japan
 			clr_country_flag = CHI_CHI_Polio
 			clr_country_flag = CHI_Remaining_Modernization
+			IDC = {
+				annex_country = {
+					target = VIN
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = LAO
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CAM
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = VIC
+					transfer_troops = yes
+				}
+			}
 		}
 	}
 

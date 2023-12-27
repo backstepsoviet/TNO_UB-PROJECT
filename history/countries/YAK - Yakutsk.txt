@@ -37,6 +37,9 @@ recruit_character = YAK_Kim_byeongwha
 # Commanders
 
 add_ideas = {
+	YAK_our_mission
+
+
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism

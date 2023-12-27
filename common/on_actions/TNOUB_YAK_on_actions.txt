@@ -1,0 +1,12 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            YAK = { country_event = 
+                { 
+                id = tnoub_yak.1
+		days = 15
+                }
+            }
+        }
+    }
+}

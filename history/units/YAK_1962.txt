@@ -1,0 +1,39 @@
+division_template = {
+	name = "일반 소총병사단"
+	division_names_group = YAK_Infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "제1독립사단"
+		location = "4795"
+		division_template = "일반 소총병사단"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "제2독립사단"
+		location = "4855"
+		division_template = "일반 소총병사단"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "제3독립사단"
+		location = "4795"
+		division_template = "일반 소총병사단"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "제4독립사단"
+		location = "4855"
+		division_template = "일반 소총병사단"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}

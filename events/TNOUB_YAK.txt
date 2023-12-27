@@ -1,0 +1,47 @@
+##############################
+###   TNOUB YAK Events   ###
+##############################
+
+add_namespace = tnoub_yak
+
+country_event = { #TNOUB Start
+	id = tnoub_yak.1
+	title = tnoub_yak.1.t
+	desc = tnoub_yak.1.d
+	picture = GFX_TNOUB_report_event_office_of_the_president_gao
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_yak.1.a
+		add_to_war = {
+			targeted_alliance = BRY
+			enemy = IRK
+			hostility_reason = asked_to_join
+		}
+		BRY = {
+			create_faction = BRY_YAK_FAC
+			add_to_faction = YAK
+			give_military_access = YAK
+		}
+		IRK = {
+			create_faction = IRK_YAK_FAC
+		}
+	}
+	option = {
+		name = tnoub_yak.1.b
+		add_to_war = {
+			targeted_alliance = IRK
+			enemy = BRY
+			hostility_reason = asked_to_join
+		}
+		IRK = {
+			create_faction = IRK_YAK_FAC
+			add_to_faction = YAK
+			give_military_access = YAK
+		}
+		BRY = {
+			create_faction = BRY_YAK_FAC
+		}
+	}
+}

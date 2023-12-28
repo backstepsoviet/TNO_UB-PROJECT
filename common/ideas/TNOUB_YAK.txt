@@ -9,9 +9,25 @@ ideas = {
 			removal_cost = -1
 
 			picture = BRY_army_soldiers
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+			}
+		}
+		YAK_arduous_march = {
+
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: added idea YAK_arduous_march"
+			}
+
+			removal_cost = -1
+
+			picture = SVR_Increased_Rations
+
 
 			modifier = {
-				
+				no_supply_grace = 24
+				minimum_training_level = -0.05
 			}
 		}
 	}

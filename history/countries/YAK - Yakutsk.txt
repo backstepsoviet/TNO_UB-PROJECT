@@ -40,7 +40,7 @@ recruit_character = YAK_Kim_byeongwha
 
 add_ideas = {
 	YAK_our_mission
-
+	YAK_arduous_march
 
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state

@@ -1,0 +1,16 @@
+characters = {
+	KOR_Tao_Xisheng = {
+		name = KOR_Tao_Xisheng
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_China_Tao_Xisheng.dds" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_TAO_XISHENG_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}

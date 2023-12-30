@@ -3,9 +3,9 @@
 ######By JamesRavenlake######
 #############################
 focus_tree = {
-	id = tnoub_china_remaining_modernization
+	id = tnoub_CHI_Pre-modernization
 	country = {
-		factor = 0
+		factor = 0 
 		modifier = {
 			add = 11
 			tag = CHI
@@ -17,7 +17,7 @@ focus_tree = {
 		id = 1962_legislative_session
 		icon = icon_goes_here
 		cost = 10
-		x = 5
+		x = 9
 		y = 0
 		available = {}
 		bypass = {}
@@ -33,7 +33,7 @@ focus_tree = {
 		id = meet_consul_general_of_japan
 		icon = icon_goes_here
 		cost = 10
-		x = 3
+		x = 7
 		y = 1
 		available = {}
 		bypass = {}
@@ -51,7 +51,7 @@ focus_tree = {
 		id = requesting_investment
 		icon = icon_goes_here
 		cost = 10
-		x = 3
+		x = 7
 		y = 2
 		available = {}
 		bypass = {}
@@ -78,7 +78,7 @@ focus_tree = {
 		id = approve_secret_budgets
 		icon = icon_goes_here
 		cost = 10
-		x = 7
+		x = 11
 		y = 1
 		available = {}
 		bypass = {}
@@ -98,7 +98,7 @@ focus_tree = {
 		id = meet_the_farmers
 		icon = icon_goes_here
 		cost = 10
-		x = 7
+		x = 11
 		y = 2
 		available = {}
 		bypass = {}
@@ -116,7 +116,7 @@ focus_tree = {
 		id = nanjing_speech
 		icon = icon_goes_here
 		cost = 10
-		x = 5
+		x = 9
 		y = 3
 		available = {}
 		bypass = {}
@@ -129,7 +129,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			country_event = { id = chi.593 }
+			country_event = { id = tnoub_chi.596 }
 		}
 	}
 }

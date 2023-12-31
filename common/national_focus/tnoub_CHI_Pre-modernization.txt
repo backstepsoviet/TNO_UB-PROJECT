@@ -25,7 +25,7 @@ focus_tree = {
 		prerequisite = {}
 	
 		completion_reward = {
-			country_event = { id = tnoub_chi.592 }
+			country_event = { id = tnoub_chi.593 }
 		}
 	}
 
@@ -43,7 +43,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			country_event = { id = tnoub_chi.593 }
+			country_event = { id = tnoub_chi.594 }
 		}
 	}
 
@@ -61,7 +61,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			country_event = { id = tnoub_chi.594 }
+			country_event = { id = tnoub_chi.595 }
 			add_tech_bonus = {
 				bonus = 1
 				uses = 2
@@ -108,7 +108,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			country_event = { id = tnoub_chi.595 }
+			country_event = { id = tnoub_chi.596 }
 		}
 	}
 
@@ -129,7 +129,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			country_event = { id = tnoub_chi.596 }
+			country_event = { id = tnoub_chi.597 }
 		}
 	}
 }

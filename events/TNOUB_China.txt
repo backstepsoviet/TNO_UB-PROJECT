@@ -3391,23 +3391,6 @@ country_event = {
 }
 
 country_event = {
-	id = tnoub_chi.592
-	title = tnoub_chi.592.t
-	desc = tnoub_chi.592.d
-	picture = GFX_TNOUB_
-
-	is_triggered_only = yes
-
-	option = {
-		name = tnoub_chi.592.a
-		add_stability = 0.1
-		set_temp_variable = { gdp_growth_temp = 0.7 }
-		econ_GDP_growth_change = yes
-		custom_effect_tooltip = tnoub_chi.592.a.tt
-	}
-}
-
-country_event = {
 	id = tnoub_chi.593
 	title = tnoub_chi.593.t
 	desc = tnoub_chi.593.d
@@ -3417,8 +3400,9 @@ country_event = {
 
 	option = {
 		name = tnoub_chi.593.a
-		TNO_improve_admin_efficiency_med = yes
-		TNO_improve_industrial_expertise_med = yes
+		add_stability = 0.1
+		set_temp_variable = { gdp_growth_temp = 0.7 }
+		econ_GDP_growth_change = yes
 		custom_effect_tooltip = tnoub_chi.593.a.tt
 	}
 }
@@ -3433,6 +3417,9 @@ country_event = {
 
 	option = {
 		name = tnoub_chi.594.a
+		TNO_improve_admin_efficiency_med = yes
+		TNO_improve_industrial_expertise_med = yes
+		custom_effect_tooltip = tnoub_chi.594.a.tt
 	}
 }
 
@@ -3459,12 +3446,25 @@ country_event = {
 
 	option = {
 		name = tnoub_chi.596.a
+	}
+}
+
+country_event = {
+	id = tnoub_chi.597
+	title = tnoub_chi.597.t
+	desc = tnoub_chi.597.d
+	picture = GFX_TNOUB_
+
+	is_triggered_only = yes
+
+	option = {
+		name = tnoub_chi.597.a
 		country_event = {
 			id = chi.3
 			hours = 48
 		}
 		load_focus_tree = china_modernization
 		set_country_flag = CHI_Modernization
-		custom_effect_tooltip = tnoub_chi.596.a.tt
+		custom_effect_tooltip = tnoub_chi.597.a.tt
 	}
 }

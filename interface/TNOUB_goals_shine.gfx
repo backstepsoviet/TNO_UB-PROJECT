@@ -128,7 +128,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_requesting_investment_shine"
+		name = "GFX_approve_secret_budgets_shine"
 		texturefile = "gfx/interface/goals/approve_secret_budgets.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -192,7 +192,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_nanjing_speech"
+		name = "GFX_nanjing_speech_shine"
 		texturefile = "gfx/interface/goals/nanjing_speech.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

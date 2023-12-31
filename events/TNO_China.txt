@@ -67,9 +67,6 @@ country_event = { #Five Modernization Tree
 	option = {
 		name = chi.3.a
 		custom_effect_tooltip = CHI_five_modernisations_tooltip
-		hidden_effect = {
-			country_event = { id = chi.5 days = 1}
-		}
 	}
 }
 

@@ -15,7 +15,7 @@ focus_tree = {
 
 	focus = {
 		id = 1962_legislative_session
-		icon = icon_goes_here
+		icon = GFX_1962_legislative_session
 		cost = 10
 		x = 9
 		y = 0
@@ -31,7 +31,7 @@ focus_tree = {
 
 	focus = {
 		id = meet_consul_general_of_japan
-		icon = icon_goes_here
+		icon = GFX_meet_the_farmers
 		cost = 10
 		x = 7
 		y = 1
@@ -49,7 +49,7 @@ focus_tree = {
 
 	focus = {
 		id = requesting_investment
-		icon = icon_goes_here
+		icon = GFX_requesting_investment
 		cost = 10
 		x = 7
 		y = 2
@@ -76,7 +76,7 @@ focus_tree = {
 
 	focus = {
 		id = approve_secret_budgets
-		icon = icon_goes_here
+		icon = GFX_approve_secret_budgets
 		cost = 10
 		x = 11
 		y = 1
@@ -96,7 +96,7 @@ focus_tree = {
 
 	focus = {
 		id = meet_the_farmers
-		icon = icon_goes_here
+		icon = GFX_meet_the_farmers
 		cost = 10
 		x = 11
 		y = 2
@@ -114,7 +114,7 @@ focus_tree = {
 
 	focus = {
 		id = nanjing_speech
-		icon = icon_goes_here
+		icon = GFX_nanjing_speech
 		cost = 10
 		x = 9
 		y = 3

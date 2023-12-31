@@ -1,5 +1,29 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_1962_legislative_session"
+		texturefile = "gfx/interface/goals/1962_legislative_session.png"
+	}
+	SpriteType = {
+		name = "GFX_meet_consul_general_of_japan"
+		texturefile = "gfx/interface/goals/meet_consul_general_of_japan.png"
+	}
+	SpriteType = {
+		name = "GFX_requesting_investment"
+		texturefile = "gfx/interface/goals/requesting_investment.png"
+	}
+	SpriteType = {
+		name = "GFX_approve_secret_budgets"
+		texturefile = "gfx/interface/goals/approve_secret_budgets.png"
+	}
+	SpriteType = {
+		name = "GFX_meet_the_farmers"
+		texturefile = "gfx/interface/goals/meet_the_farmers.png"
+	}
+	SpriteType = {
+		name = "GFX_nanjing_speech"
+		texturefile = "gfx/interface/goals/nanjing_speech.png"
+	}
+	SpriteType = {
 		name = "GFX_CHI_Military"
 		texturefile = "gfx/interface/goals/CHI_Military.dds"
 	}

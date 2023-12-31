@@ -89,8 +89,8 @@ focus_tree = {
 	
 		completion_reward = {
 			country_event = { id = tnoub_chi.598 }
-			set_temp_variable = { debt_temp = 2.0 }
-			econ_national_debt_change = yes
+			set_temp_variable = { money_reserves_temp = 2.0 }
+			econ_money_reserves_change_raw_money = yes
 		}
 	}
 

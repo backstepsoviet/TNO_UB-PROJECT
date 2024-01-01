@@ -22,10 +22,10 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 1
-	conservatism = 6
-	paternalism = 18
-	despotism = 75
+	fascism_1 = 5
+	fascism_2 = 10
+	paternalism = 20
+	despotism = 65
 }
 
 set_technology = {
@@ -206,7 +206,10 @@ add_ideas = {
 	#Country#
 	#Sphere_Fully_Dependent
 	CHI_military_administration_idea
-	
+
+	ONM_badlands
+	ONM_kwantung_army
+
 	#Ministers
 	#MAN_Ruan_Zhenduo_hog
 	#MAN_Yu_Jingyuan_eco
@@ -269,6 +272,8 @@ add_ideas = {
 	#Economy - #construction Spending
 	##construction_level_8
 }
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
 set_research_slots = 2
 
 ### Policy Effectiveness

@@ -3,9 +3,11 @@ capital = 525
 # Vacant
 recruit_character = KOR_Generic_Vacant
 fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
-recruit_character = KOR_Mr_Korea
+recruit_character = KOR_Kim_Hyun_chul
 recruit_character = KOR_Tao_Xisheng
-
+recruit_character = KOR_Park_Chung_hee
+recruit_character = KOR_Ho_Chong
+recruit_character = KOR_Choi_Kyu_hah
 
 add_ideas = {
 	#political#
@@ -55,6 +57,8 @@ add_ideas = {
 	tno_agriculture_basic_mechanized
 	tno_research_facilities_outdated
 	tno_academic_base_basic_literacy
+
+	KOR_military_government
 }
 
 set_research_slots = 3

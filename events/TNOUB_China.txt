@@ -3483,5 +3483,8 @@ country_event = {
 			id = chi.5
 			hours = 48
 		}
+		load_focus_tree = china_modernization
+		set_country_flag = CHI_Modernization
+		custom_effect_tooltip = tnoub_chi.597.a.tt
 	}
 }

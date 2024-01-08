@@ -1,0 +1,57 @@
+add_namespace = KOR
+
+
+# 따흐흑 박정희 각하
+
+
+country_event = { #Who to lead again?
+	id = KOR.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PHI_Blitz.6"}
+	title = KOR.0.t
+	desc = KOR.0.desc
+	option = { #ho
+		name = KOR.0.a
+		set_politics = {
+			ruling_party = liberal_conservatism
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = TNOUB_WORLD.13 }
+			set_cosmetic_tag = KOR_REPUBLIC
+		}
+}
+	option = { #kim
+		name = KOR.0.b
+		set_politics = {
+			ruling_party = conservatism
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = TNOUB_WORLD.12 }
+			set_cosmetic_tag = KOR_REPUBLIC
+		}
+}
+	option = { #choi
+		name = KOR.0.c
+		set_politics = {
+			ruling_party = paternalism
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = TNOUB_WORLD.15 }
+			set_cosmetic_tag = KOR_REPUBLIC
+		}
+}
+	option = { #park
+		name = KOR.0.d
+		set_politics = {
+			ruling_party = fascism
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = TNOUB_WORLD.14 }
+			set_cosmetic_tag = KOR_REPUBLIC
+		}
+	}
+}
+

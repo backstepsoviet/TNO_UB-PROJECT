@@ -74,20 +74,20 @@ RNW = {
 	color_ui = rgb { 68 37 16 }
 }
 CZE = {
-	color = rgb { 54 167 156 }
-	color_ui = rgb { 70 217 203 }
+	color = rgb { 113 106 107 }
+	color_ui = rgb { 113 106 107 }
 }
 CRN = {
 	color = rgb { 58 49 45 }
 	color_ui = rgb { 51 51 51 }
 }
 HOL = {
-	color = rgb { 112 112 112 }
-	color_ui = rgb { 112 112 112 }
+	color = rgb { 114 100 89 }
+	color_ui = rgb { 114 100 89 }
 }
 DEN = {
-	color = rgb { 61 61 61 }
-	color_ui = rgb { 61 61 61 }
+	color = rgb { 112 97 89 }
+	color_ui = rgb { 112 97 89 }
 }
 NOR = {
 	color = rgb { 150 150 150 }
@@ -244,8 +244,8 @@ OKB = {
 }
 
 OST = {
-	color = rgb { 79 79 81 }
-	color_ui = rgb { 79 79 81 }
+	color = rgb { 102 100 86 }
+	color_ui = rgb { 102 100 86 }
 }
 BLR = {
 	color = rgb { 136 10 65 }
@@ -285,8 +285,8 @@ LIT = {
 }
 
 UKR = {
-	color = rgb { 89 120 135 }
-	color_ui = rgb { 89 120 135 }
+	color = rgb { 88 94 101 }
+	color_ui = rgb { 88 94 101 }
 }
 FUK = {
 	color = rgb { 89 120 135 }
@@ -306,8 +306,8 @@ HEE = {
 }
 
 MCW = {
-	color = rgb { 122 80 84 }
-	color_ui = rgb { 122 80 84 }
+	color = rgb { 118 124 94 }
+	color_ui = rgb { 118 124 94 }
 }
 TVR = {
 	color = rgb { 140 120 90 }
@@ -395,8 +395,8 @@ PAU = {
 }
 
 CAU = {
-	color = rgb { 77 83 99 }
-	color_ui = rgb { 77 83 99 }
+	color = rgb { 107 92 87 }
+	color_ui = rgb { 107 92 87 }
 }
 GEO = {
 	color = rgb { 160 102 69 }
@@ -1127,8 +1127,8 @@ OMO = {
 	color_ui = rgb { 210 213 219 }
 }
 YAK = {
-	color = rgb { 155 15 28 }
-	color_ui = rgb { 155 15 28 }
+	color = rgb { 79 99 101 }
+	color_ui = rgb { 79 99 101 }
 }
 VIL = {
 	color = rgb { 195 198 204 }
@@ -1776,8 +1776,8 @@ UAR = {
 	color_ui = rgb { 76 173 74 }
 }
 SYR = {
-	color = rgb { 100 100 150 }
-	color_ui = rgb { 100 100 150 }
+	color = rgb { 200 200 150 }
+	color_ui = rgb { 200 200 150 }
 }
 LEB = {
 	color = rgb { 173 117 97 }
@@ -2310,10 +2310,6 @@ CME = {
 	color = rgb { 0 0 0 }
 	color_ui = rgb { 0 0 0 }
 }
-ZZZ = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
-}
 
 #	Unfinished Businesses	#
 ONM = {
@@ -2324,3 +2320,9 @@ IDC = {
 	color = rgb { 193 131 86 }
 	color_ui = rgb { 193 131 86 }
 }
+
+ZZZ = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+

@@ -1,18 +1,3 @@
-OST_GER = {
-	color = rgb { 102 100 86 }
-	color_ui = rgb { 102 100 86 }
-}
-
-UKR_GER = {
-	color = rgb { 88 94 101 }
-	color_ui = rgb { 88 94 101 }
-}
-
-FUK_GER = {
-	color = rgb { 88 94 101 }
-	color_ui = rgb { 88 94 101 }
-}
-
 COG_GER = {
 	color = rgb { 118 124 94 }
 	color_ui = rgb { 118 124 94 }
@@ -228,34 +213,9 @@ KAZ_1776 = {
 	color_ui = rgb { 216 188 123 }
 }
 
-MCW_GER = {
-	color = rgb { 118 124 94 }
-	color_ui = rgb { 118 124 94 }
-}
-
-DEN_GER = {
-	color = rgb { 112 97 89 }
-	color_ui = rgb { 112 97 89 }
-}
-
-SLO_GER = {
-	color = rgb { 214 208 196 }
-	color_ui = rgb { 214 208 196 }
-}
-
-HOL_GER = {
-	color = rgb { 114 100 89 }
-	color_ui = rgb { 114 100 89 }
-}
-
 SGR_HOL_provisional_government = {
 	color = rgb { 114 100 89 }
 	color_ui = rgb { 114 100 89 }
-}
-
-CAU_GER = {
-	color = rgb { 107 92 87 }
-	color_ui = rgb { 107 92 87 }
 }
 
 SGR_CAU_provisional_government = {
@@ -328,11 +288,6 @@ SGR_fash1 = {
 SGR_fash2 = {
 	color = rgb { 69 69 69 }
 	color_ui = rgb { 102 90 86 }
-}
-
-CZE_GER = {
-	color = rgb { 113 106 107 }
-	color_ui = rgb { 113 106 107 }
 }
 
 CAF_CPR_puppet = {
@@ -2246,16 +2201,6 @@ GMS_COLLAB = {
 	color_ui = rgb { 60 90 138 }
 }
 
-SER_POST_WAR = {
-	color = rgb { 94 114 119 }
-	color_ui = rgb { 94 114 119 }
-}
-
-SER_KINGDOM = {
-	color = rgb { 20 30 110 }
-	color_ui = rgb { 20 30 110 }
-}
-
 SER_BALKAN = {
 	color = rgb { 178 0 0 }
 	color_ui = rgb { 178 0 0 }
@@ -2599,6 +2544,36 @@ KAZ_Fitin_2 = {
 	color_ui = rgb { 135 30 45 }
 }
 
+KAZ_Tashenev = {
+	color = rgb { 214 66 93 }
+	color_ui = rgb { 214 66 93 }
+}
+
+KAZ_Nurmagambetov_1 = {
+	color = rgb { 111 135 153 }
+	color_ui = rgb { 111 135 153 }
+}
+
+KAZ_Nurmagambetov_2 = {
+	color = rgb { 111 135 153 }
+	color_ui = rgb { 111 135 153 }
+}
+
+KZR_Shchelokov_1 = {
+	color = rgb { 130 153 135 }
+	color_ui = rgb { 130 143 135 }
+}
+
+KZR_Shchelokov_2 = {
+	color = rgb { 130 153 135 }
+	color_ui = rgb { 130 143 135 }
+}
+
+KZR_Solomentsev = {
+	color = rgb { 143 85 93 }
+	color_ui = rgb { 143 85 93 }
+}
+
 TNS_Republic = {
 	color = rgb { 192 216 219 }
 	color_ui = rgb { 192 216 219 }
@@ -2614,6 +2589,7 @@ TNS_German = {
 	color_ui = rgb { 131 129 114 }
 }
 
+####
 
 #### UNFINISHED BUSINESSES ####
 
@@ -2695,19 +2671,4 @@ GAN_seihoku_gunseikan = {
 GAN_neinatsu_gunseikan = {
 	color = rgb { 150 72 92 }
 	color_ui = rgb { 150 72 92 }
-}
-
-MCW_GER_speer_paternalist = {
-	color = rgb { 80 110 120 }
-	color_ui = rgb { 80 110 120 }
-}
-
-MCW_GER_speer_fascist = {
-	color = rgb { 95 115 100 }
-	color_ui = rgb { 95 115 100 }
-}
-
-MCW_GER_speer_natsoc = {
-	color = rgb { 118 124 94 }
-	color_ui = rgb { 118 124 94 }
 }

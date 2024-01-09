@@ -1,0 +1,77 @@
+﻿characters = {
+	KOR_Tao_Xisheng = {
+		name = KOR_Tao_Xisheng
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_China_Tao_Xisheng.dds" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_TAO_XISHENG_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+ 	KOR_Park_Chung_hee = {
+		name = KOR_Park_Chung_hee
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_korea_Park_Chung_Hee.png" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_PARK_CHUNG_HEE_DESC"
+			ideology = fascism_revolutionary_nationalism_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+	KOR_Ho_Chong = {
+		name = KOR_Ho_Chong
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_korea_Ho_Chong.png" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_HO_CHONG_DESC"
+			ideology = liberal_conservatism_market_liberalism_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+	KOR_Kim_Hyun_chul = {
+		name = KOR_Kim_Hyun_chul
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_korea_Kim_Hyun_chul.png" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_KIM_HYUN_CHUL_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+	KOR_Choi_Kyu_hah = {
+		name = KOR_Choi_Kyu_hah
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KOR/Portrait_korea_KOR_Choi_Kyu_hah.png" 
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOR_CHOI_KYU_HAH_DESC"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { }
+			expire = "1999.1.1.1"
+			id = -1
+		}
+	}
+}

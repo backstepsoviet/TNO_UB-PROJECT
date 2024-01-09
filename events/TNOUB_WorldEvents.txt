@@ -286,56 +286,56 @@ news_event = {
 news_event = {
 	id = TNOUB_WORLD.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.12"}
-	title = WORLD.12.t
-	desc = WORLD.12.d
+	title = TNOUB_WORLD.12.t
+	desc = TNOUB_WORLD.12.d
 	picture = GFX_TNOUB_news_event_KOR_Kim_hyun_chul
 
 	is_triggered_only = yes
 
 	option = {
-		name = WORLD.12.a
+		name = TNOUB_WORLD.12.a
 	}
 }
 
 news_event = {
 	id = TNOUB_WORLD.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.13"}
-	title = WORLD.13.t
-	desc = WORLD.13.d
+	title = TNOUB_WORLD.13.t
+	desc = TNOUB_WORLD.13.d
 	picture = GFX_TNOUB_news_event_KOR_Ho_chong
 
 	is_triggered_only = yes
 
 	option = {
-		name = WORLD.13.a
+		name = TNOUB_WORLD.13.a
 	}
 }
 
 news_event = {
 	id = TNOUB_WORLD.14
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.14"}
-	title = WORLD.14.t
-	desc = WORLD.14.d
+	title = TNOUB_WORLD.14.t
+	desc = TNOUB_WORLD.14.d
 	picture = GFX_TNOUB_news_event_KOR_dakaki
 
 	is_triggered_only = yes
 
 	option = {
-		name = WORLD.14.a
+		name = TNOUB_WORLD.14.a
 	}
 }
 
 news_event = {
 	id = TNOUB_WORLD.15
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.15"}
-	title = WORLD.15.t
-	desc = WORLD.15.d
+	title = TNOUB_WORLD.15.t
+	desc = TNOUB_WORLD.15.d
 	picture = GFX_TNOUB_news_event_KOR_choi_gyu_hah
 
 	is_triggered_only = yes
 
 	option = {
-		name = WORLD.15.a
+		name = TNOUB_WORLD.15.a
 	}
 }
 

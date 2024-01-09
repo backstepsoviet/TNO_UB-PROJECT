@@ -11,21 +11,6 @@ defined_text = {
 		localization_key = "GFX_[?TNO_super_event.GetTokenKey]"
 	}
 }
-
-defined_text = {
-	name = TNOGetSuperEventTitle
-	### SUPERS WITH DYNAMIC TITLES ###
-	text = {
-		trigger = { check_variable = { TNO_super_event = token:SE_KOR_PARK } tag = KOR }
-		localization_key =SE_KOR_PARK_T
-	}
-
-	### DEFAULT ###
-	text = {
-		localization_key = "[?TNO_super_event.GetTokenLocalizedKey]"
-	}
-}
-
 defined_text = {
 	name = TNOGetSuperEventOption
 	### SUPERS WITH DYNAMIC OPTIONS ###

@@ -1,0 +1,52 @@
+defined_text = {
+	name = TNOGetSuperEventImage
+	### SUPERS WITH DYNAMIC GFX ###
+	text = {
+		trigger = { check_variable = { TNO_super_event = token:SE_KOR_PARK} tag = KOR }
+		localization_key = "GFX_SE_KOR_PARK"
+	}
+
+	### DEFAULT ###
+	text = {
+		localization_key = "GFX_[?TNO_super_event.GetTokenKey]"
+	}
+}
+defined_text = {
+	name = TNOGetSuperEventOption
+	### SUPERS WITH DYNAMIC OPTIONS ###
+	text = {
+		trigger = { check_variable = { TNO_super_event = token:SE_KOR_PARK } tag = KOR }
+		localization_key = SE_KOR_PARK_A
+	}
+
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { super_a_var = token:[SUPER]_A } }
+				SUPER = "[?TNO_super_event.GetTokenKey]"
+			}
+		}
+		localization_key = "[?super_a_var.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = TNOGetSuperEventDesc
+	### SUPERS WITH DYNAMIC DESCS ###
+	text = {
+		trigger = { check_variable = { TNO_super_event = token:SE_KOR_PARK} tag = KOR }
+		localization_key = SE_KOR_PARK_D
+	}
+
+	### DEFAULT ###
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = { set_temp_variable = { super_d_var = token:[SUPER]_D } }
+				SUPER = "[?TNO_super_event.GetTokenKey]"
+			}
+		}
+		localization_key = "[?super_d_var.GetTokenLocalizedKey]"
+	}
+}

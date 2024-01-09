@@ -6,9 +6,10 @@ add_namespace = KOR
 
 country_event = { #Who to lead again?
 	id = KOR.0
-	immediate = {log = "[GetDateText]: [Root.GetName]: event PHI_Blitz.6"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.0"}
 	title = KOR.0.t
 	desc = KOR.0.desc
+	is_triggered_only = yes
 	option = { #ho
 		name = KOR.0.a
 		KOR = {

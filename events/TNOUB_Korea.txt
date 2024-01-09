@@ -11,48 +11,56 @@ country_event = { #Who to lead again?
 	desc = KOR.0.desc
 	option = { #ho
 		name = KOR.0.a
-		set_politics = {
-			ruling_party = liberal_conservatism
+		KOR = {
+			set_politics = {
+				ruling_party = liberal_conservatism
+			}
+			set_cosmetic_tag = KOR_REPUBLIC
 		}
 		every_country = {
 			limit = { is_ai = no }
 			news_event = { id = TNOUB_WORLD.13 }
-			set_cosmetic_tag = KOR_REPUBLIC
 		}
-}
+	}
 	option = { #kim
 		name = KOR.0.b
-		set_politics = {
-			ruling_party = conservatism
+		KOR = {
+			set_politics = {
+				ruling_party = conservatism
+			}
+			set_cosmetic_tag = KOR_REPUBLIC
 		}
 		every_country = {
 			limit = { is_ai = no }
 			news_event = { id = TNOUB_WORLD.12 }
-			set_cosmetic_tag = KOR_REPUBLIC
 		}
-}
+	}
 	option = { #choi
 		name = KOR.0.c
-		set_politics = {
-			ruling_party = paternalism
+		KOR = {
+			set_politics = {
+				ruling_party = paternalism
+			}
+			set_cosmetic_tag = KOR_REPUBLIC
 		}
 		every_country = {
 			limit = { is_ai = no }
 			news_event = { id = TNOUB_WORLD.15 }
-			set_cosmetic_tag = KOR_REPUBLIC
 		}
-}
+	}
 	option = { #park
 		name = KOR.0.d
-		set_politics = {
-			ruling_party = fascism
+		KOR = {
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_cosmetic_tag = KOR_REPUBLIC
+			set_temp_variable = { TNO_temp_super_event = token:SE_KOR_PARK }
+			TNO_fire_super_event = yes
 		}
 		every_country = {
 			limit = { is_ai = no }
 			news_event = { id = TNOUB_WORLD.14 }
-			set_cosmetic_tag = KOR_REPUBLIC
-			set_temp_variable = { TNO_temp_super_event = token:SE_KOR_PARK }
-			TNO_fire_super_event = yes
 		}
 	}
 }

@@ -2232,7 +2232,7 @@ shared_focus = {
 		custom_effect_tooltip = CHI_Appointment_With_Liu_Wenhui_tt
 		custom_effect_tooltip = CHI_supply_route_smooth_rate_increase_tooltip
 	}
-}8
+}
 
 shared_focus = {
 	id = CHI_Connect_Road
@@ -5967,6 +5967,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_Focus_On_Domestic"
 	}
+	completion_reward = {
+		add_stability = 0.1
+	}
 }
 
 shared_focus = {
@@ -6393,14 +6396,11 @@ shared_focus = {
 	icon = GFX_CHI_War
 	cost = 0.00
 	allow_branch = { has_country_flag = CHI_war_with_japan }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus CHI_War"
-		add_war_support = 0.2
-	}
 	x = 8
 	y = 0
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_War"
+		add_war_support = 0.2
 	}
 }
 
@@ -6429,6 +6429,38 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_We_Need_ammo"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment 
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = armored_car_chassis
+			amount = 100
+		}
+		add_equipment_to_stockpile = {
+			type = IFV_chassis
+			amount = 100
+		}
+		add_equipment_to_stockpile = {
+			type = MBT_chassis
+			amount = 100
+		}
 	}
 }
 
@@ -6443,6 +6475,8 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_We_Need_Men"
+		TNO_improve_conscription_policy_effectiveness_monthly_med = yes
+		add_ideas = tno_conscription_extensive_conscription
 	}
 }
 

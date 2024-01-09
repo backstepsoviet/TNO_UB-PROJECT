@@ -70,3 +70,16 @@ focus_tree = {
 	default = no
 	shared_focus = CHI_War
 }
+
+focus_tree = {
+	id = tnoub_CHI_Pre-modernization
+	country = {
+		factor = 0 
+		modifier = {
+			add = 11
+			tag = CHI
+		}
+	}
+	default = no
+	shared_focus = 1962_legislative_session
+}

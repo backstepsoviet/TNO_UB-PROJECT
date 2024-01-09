@@ -1,135 +1,123 @@
 #############################
-##China Focus Tree in TNOUB##
+##China shared_focus Tree in TNOUB##
 ######By JamesRavenlake######
 #############################
-focus_tree = {
-	id = tnoub_CHI_Pre-modernization
-	country = {
-		factor = 0 
-		modifier = {
-			add = 11
-			tag = CHI
-		}
-	}
-	default = no
+shared_focus = {
+	id = 1962_legislative_session
+	icon = GFX_1962_legislative_session
+	cost = 1
+	x = 9
+	y = 0
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {}
 
-	focus = {
-		id = 1962_legislative_session
-		icon = GFX_1962_legislative_session
-		cost = 1
-		x = 9
-		y = 0
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.593 }
-		}
+	completion_reward = {
+		country_event = { id = tnoub_chi.593 }
 	}
+}
 
-	focus = {
-		id = meet_consul_general_of_japan
-		icon = GFX_meet_the_farmers
-		cost = 1
-		x = 7
-		y = 1
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {
-			focus = 1962_legislative_session
-		}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.594 }
-		}
+shared_focus = {
+	id = meet_consul_general_of_japan
+	icon = GFX_meet_the_farmers
+	cost = 1
+	x = 7
+	y = 1
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {
+		focus = 1962_legislative_session
 	}
 
-	focus = {
-		id = requesting_investment
-		icon = GFX_requesting_investment
-		cost = 1
-		x = 7
-		y = 2
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {
-			focus = meet_consul_general_of_japan
-		}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.595 }
-			add_tech_bonus = {
-				bonus = 1
-				uses = 2
-				category = industry
-			}
-			608 = {
-				set_temp_variable = { temp_state_value_addition = 5.0 }
-				econ_state_value_change_addition = yes
-			}
-		}
+	completion_reward = {
+		country_event = { id = tnoub_chi.594 }
+	}
+}
+
+shared_focus = {
+	id = requesting_investment
+	icon = GFX_requesting_investment
+	cost = 1
+	x = 7
+	y = 2
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {
+		focus = meet_consul_general_of_japan
 	}
 
-	focus = {
-		id = approve_secret_budgets
-		icon = GFX_approve_secret_budgets
-		cost = 1
-		x = 11
-		y = 1
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {
-			focus = 1962_legislative_session
+	completion_reward = {
+		country_event = { id = tnoub_chi.595 }
+		add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = industry
 		}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.598 }
-			set_temp_variable = { money_reserves_temp = 2.0 }
-			econ_money_reserves_change_raw_money = yes
+		608 = {
+			set_temp_variable = { temp_state_value_addition = 5.0 }
+			econ_state_value_change_addition = yes
 		}
 	}
+}
 
-	focus = {
-		id = meet_the_farmers
-		icon = GFX_meet_the_farmers
-		cost = 1
-		x = 11
-		y = 2
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {
-			focus = approve_secret_budgets
-		}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.596 }
-		}
+shared_focus = {
+	id = approve_secret_budgets
+	icon = GFX_approve_secret_budgets
+	cost = 1
+	x = 11
+	y = 1
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {
+		focus = 1962_legislative_session
 	}
 
-	focus = {
-		id = nanjing_speech
-		icon = GFX_nanjing_speech
-		cost = 1
-		x = 9
-		y = 3
-		available = {}
-		bypass = {}
-		allow_branch = {}
-		prerequisite = {
-			focus = meet_the_farmers
-		}
-		prerequisite = {
-			focus = requesting_investment
-		}
-	
-		completion_reward = {
-			country_event = { id = tnoub_chi.597 }
-		}
+	completion_reward = {
+		country_event = { id = tnoub_chi.598 }
+		set_temp_variable = { money_reserves_temp = 2.0 }
+		econ_money_reserves_change_raw_money = yes
+	}
+}
+
+shared_focus = {
+	id = meet_the_farmers
+	icon = GFX_meet_the_farmers
+	cost = 1
+	x = 11
+	y = 2
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {
+		focus = approve_secret_budgets
+	}
+
+	completion_reward = {
+		country_event = { id = tnoub_chi.596 }
+	}
+}
+
+shared_focus = {
+	id = nanjing_speech
+	icon = GFX_nanjing_speech
+	cost = 1
+	x = 9
+	y = 3
+	available = {}
+	bypass = {}
+	allow_branch = {}
+	prerequisite = {
+		focus = meet_the_farmers
+	}
+	prerequisite = {
+		focus = requesting_investment
+	}
+
+	completion_reward = {
+		country_event = { id = tnoub_chi.597 }
 	}
 }

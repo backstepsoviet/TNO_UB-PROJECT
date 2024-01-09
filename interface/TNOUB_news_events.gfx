@@ -132,5 +132,23 @@ spriteTypes = {
 	### MEME 这地方原来是僵尸的图片，但现在你可以用它来存储彩蛋新闻的图片辣！ ###
 	#######################################################################
 
-	
+
+	### KOREA ###
+	spriteType = {
+		name = "GFX_TNOUB_news_event_KOR_Kim_hyun_chul"
+		textureFile = "gfx/event_pictures/news_event/Asia/Korea/TNOUB_news_event_KOR_Kim_hyun_chul.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_news_event_KOR_Ho_chong"
+		textureFile = "gfx/event_pictures/news_event/Asia/Korea/TNOUB_news_event_KOR_Ho_chong.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_news_event_KOR_dakaki"
+		textureFile = "gfx/event_pictures/news_event/Asia/Korea/TNOUB_news_event_KOR_dakaki.dds"
+	}
+	spriteType = {
+		name = "GFX_TNOUB_news_event_KOR_choi_gyu_hah"
+		textureFile = "gfx/event_pictures/news_event/Asia/Korea/TNOUB_news_event_KOR_choi_gyu_hah.dds"
+	}
+
 }

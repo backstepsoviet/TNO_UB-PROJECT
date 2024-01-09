@@ -1,4 +1,4 @@
-﻿characters = {
+characters = {
 	KOR_Tao_Xisheng = {
 		name = KOR_Tao_Xisheng
 		portraits = {

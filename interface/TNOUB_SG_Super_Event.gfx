@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_SE_GREAT_ASIAN_WAR_RGOC"
 		textureFile = "gfx/superevent_pictures/great_asian_war_rgoc.tga"
 	}
+	spriteType = {
+		name = "GFX_SE_KOR_PARK"
+		textureFile = "gfx/superevent_pictures/SE_KOR_PARK.tga"
+	}
 }

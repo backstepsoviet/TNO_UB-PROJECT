@@ -51,6 +51,8 @@ country_event = { #Who to lead again?
 			limit = { is_ai = no }
 			news_event = { id = TNOUB_WORLD.14 }
 			set_cosmetic_tag = KOR_REPUBLIC
+			set_temp_variable = { TNO_temp_super_event = token:SE_KOR_PARK }
+			TNO_fire_super_event = yes
 		}
 	}
 }

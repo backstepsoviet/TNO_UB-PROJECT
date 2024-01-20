@@ -1,0 +1,73 @@
+ideas = {
+	country = {
+		GNG_false_country = {
+
+			allowed = {
+				original_tag = GNG
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+
+			}
+
+			removal_cost = -1
+
+			picture = GFX_CHI_idea_GNG_the_guangdong_riots
+
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+		GNG_the_survivors = {
+
+			allowed = {
+				original_tag = GNG
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_GNG_matsushita_path
+
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		GNG_rise_of_chungkung = {
+
+			allowed = {
+				original_tag = GNG 
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			on_add = {
+
+			}
+
+			removal_cost = -1
+
+			picture = CHI_
+
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+    }
+}

@@ -9,8 +9,9 @@ set_major = yes
 
 oob = "CHI_1962"
 
-set_country_flag = CHI_Modernization
-load_focus_tree = tnoub_CHI_Pre-modernization
+# set_country_flag = CHI_Modernization
+set_country_flag = CHI_war_with_japan
+load_focus_tree = china_war_tree
 
 ###Playable
 set_country_flag = tno_playable_country

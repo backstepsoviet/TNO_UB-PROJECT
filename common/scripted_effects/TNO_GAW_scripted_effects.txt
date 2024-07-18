@@ -264,8 +264,8 @@ GAW_JAP_surrender_chinese_states = {#Transfers all Japanese owned states back to
 			}
 		}
 
-		MAN = {
-			transfer_state = PREV
+		ONM = {
+			transfer_state = MAN
 		}
 	}
 	KOR = {
@@ -284,5 +284,269 @@ GAW_JAP_surrender_chinese_states = {#Transfers all Japanese owned states back to
 		transfer_state = 1818
 		transfer_state = 1819
 		transfer_state = 1820
+	}
+}
+
+CHI_GAW_Winning = {
+	hidden_effect = {
+		every_country = {
+			#limit = {
+			#	OR = {
+			#		is_in_faction_with = CHI
+			#		is_in_faction_with = JAP
+			#	}
+			#}
+			every_controlled_state = {
+				set_state_owner_to = PREV
+			}
+		}
+
+		every_enemy_country = {
+			white_peace = PREV
+		}
+
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CHI
+					is_in_faction_with = JAP
+				}
+			}
+			every_enemy_country = {
+				white_peace = PREV
+			}
+		}
+
+		JAP = {
+			add_to_faction = AZH
+		}
+		
+		every_country = {
+			country_event = {
+				id = TNOUB_WORLD.11
+			}
+		}
+		country_event = {
+			id = tnoub_chi.701
+			days = 2
+			random_hours = 24
+		}
+		country_event = {
+			id = tnoub_chi.702
+			days = 3
+			random_hours = 12
+		}
+		country_event = {
+			id = tnoub_chi.703
+			days = 4
+			random_hours = 12
+		}
+
+		ONM = {
+			set_capital = {	state = 809 }
+			transfer_state = 408
+			transfer_state = 409
+			transfer_state = 1644
+			transfer_state = 1645
+			transfer_state = 1647
+			transfer_state = 1646
+			transfer_state = 657
+			transfer_state = 1364
+			transfer_state = 809
+		}
+		
+		605 = {
+			set_demilitarized_zone = no
+		}
+		960 = {
+			set_demilitarized_zone = yes
+		}
+		605 = {
+			set_demilitarized_zone = no
+		}
+		960 = {
+			set_demilitarized_zone = yes
+		}
+
+		CHI = {
+			leave_faction = yes
+			set_cosmetic_tag = CHI_FIVE
+			annex_country = {
+				target = GNG
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = MEN
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = GUX
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = YUN
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = GUZ
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = SIC
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = XIK
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = QIN
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = SHX
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = XIN
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = ETR
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = GAN
+				transfer_troops = no
+			}
+
+			annex_country = {
+				target = TIB
+				transfer_troops = no
+			}
+
+			transfer_state = 601
+			transfer_state = 1464
+			transfer_state = 524
+			transfer_state = 328
+			transfer_state = 610
+			transfer_state = 714
+			transfer_state = 715
+			transfer_state = 716
+			transfer_state = 717
+			transfer_state = 801
+			transfer_state = 1265
+			transfer_state = 591
+			transfer_state = 813
+			transfer_state = 812
+			transfer_state = 1022
+			transfer_state = 811
+			transfer_state = 810
+			transfer_state = 1640
+			transfer_state = 1641
+			transfer_state = 1642
+			transfer_state = 1643
+			transfer_state = 1636
+			transfer_state = 1637
+			transfer_state = 1638
+			transfer_state = 1639
+
+			# transfer_state = 809
+
+			transfer_state = 524
+			transfer_state = 1853
+			transfer_state = 1852
+			transfer_state = 1855
+			transfer_state = 1850
+			transfer_state = 1851
+			transfer_state = 1854
+			transfer_state = 1856
+
+			set_autonomy = {
+				target = ONM
+				autonomy_state = autonomy_client_state
+				end_wars = yes
+			}
+			set_autonomy = {
+				target = KOR
+				autonomy_state = autonomy_client_state
+				end_wars = yes
+			}
+			set_autonomy = {
+				target = IDC
+				autonomy_state = autonomy_client_state
+				end_wars = yes
+			}
+		}
+		#TIB = {
+		#	leave_faction = yes
+		#	set_cosmetic_tag = TIB_CHI_autonomous_region
+		#}
+		KOR = {
+			leave_faction = yes
+			set_cosmetic_tag = KOR_CHI_military_occupation_zone
+			set_capital = {
+				state = 962
+				remember_old_capital = no
+			}
+			transfer_state = 525
+			transfer_state = 527
+			transfer_state = 560
+			transfer_state = 655
+			transfer_state = 962
+			transfer_state = 963
+			transfer_state = 1018
+			transfer_state = 1024
+			transfer_state = 1816
+			transfer_state = 1817
+			transfer_state = 1818
+			transfer_state = 1819
+			transfer_state = 1820
+		}
+
+		#load_focus_tree = 
+		#set_country_flag = tnoub_chi_
+		clr_country_flag = CHI_Modernization
+		clr_global_flag = CHI_Western_Insurrection_Crisis
+		clr_country_flag = CHI_show_western_tree_hidden_middle
+		clr_country_flag = CHI_show_western_tree_hidden_japan
+		clr_country_flag = CHI_Nanjing_Crisis
+		clr_country_flag = CHI_war_with_japan
+		clr_country_flag = CHI_CHI_Polio
+		clr_country_flag = CHI_Remaining_Modernization
+		IDC = {
+			annex_country = {
+				target = VIN
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = LAO
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = CAM
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = VIC
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+CHI_GAW_Pus_Reset = {
+	if = {
+		limit = {
+			check_variable = {
+				pus_record > 0
+			}
+		}
+		clear_variable = pus_temp
+		subtract_from_temp_variable = {
+			pus_temp = pus_record
+		}
+		econ_pus_change = yes
+		clear_variable = pus_record
 	}
 }

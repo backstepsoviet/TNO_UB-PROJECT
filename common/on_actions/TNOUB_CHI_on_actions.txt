@@ -1,11 +1,4 @@
 on_actions = {
-    # on_startup = {
-    #     effect = {
-    #         CHI = {
-    #             load_focus_tree = tnoub_CHI_Pre-modernization
-    #         }
-    #     }
-    # }
     on_daily_CHI = { #西北危机GUI脉冲
         effect = {
             CHI = {

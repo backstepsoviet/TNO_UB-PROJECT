@@ -6394,8 +6394,8 @@ shared_focus = {
 shared_focus = {
 	id = CHI_War
 	icon = GFX_CHI_War
-	cost = 0.00
-	allow_branch = { has_country_flag = CHI_war_with_japan }
+	cost = 1.00
+	# allow_branch = { has_country_flag = CHI_war_with_japan }
 	x = 8
 	y = 0
 	completion_reward = {
@@ -6415,6 +6415,10 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_A_War_Cabinet"
+		add_political_power = 100
+		add_ideas = {
+			CHI_A_War_Cabinet_idea
+		}
 	}
 }
 
@@ -6431,23 +6435,23 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_We_Need_ammo"
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
-			amount = 2000
-		}
-		add_equipment_to_stockpile = {
-			type = anti_tank_equipment
-			amount = 300
+			amount = 1000
 		}
 		add_equipment_to_stockpile = {
 			type = motorized_equipment
 			amount = 500
 		}
 		add_equipment_to_stockpile = {
-			type = support_equipment
+			type = artillery_equipment 
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
 			amount = 300
 		}
 		add_equipment_to_stockpile = {
-			type = artillery_equipment 
-			amount = 500
+			type = support_equipment
+			amount = 300
 		}
 		add_equipment_to_stockpile = {
 			type = armored_car_chassis
@@ -6505,6 +6509,23 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_The_Total_War"
+		add_war_support = 0.1
+		add_ideas = CHI_The_Total_War_idea_placeholder
+		add_to_variable = { CHI_GAW_buff_goods = -0.05 }
+		# add_to_variable = { CHI_GAW_buff_fac_eff = 0 }
+		# add_to_variable = { CHI_GAW_buff_fac_max_eff = 0 }
+		# add_to_variable = { CHI_GAW_buff_fac_start_eff = 0 }
+		# add_to_variable = { CHI_GAW_buff_line_change_prd_eff = 0}
+		set_temp_variable = { pus_temp = 2 }
+		add_to_variable = { pus_record = pus_temp }
+		econ_pus_change = yes
+		custom_effect_tooltip = CHI_GAW_Pus_Reset_Tooltip
+
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = CHI_The_Total_War_dynamic_modifier
+			}
+		}
 	}
 }
 
@@ -6536,6 +6557,14 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_Change_Civil_Factories"
+		add_timed_idea = {
+			idea = CHI_Change_Civil_Factories_idea
+			days = 180
+		}
+		set_temp_variable = { pus_temp = 1 }
+		add_to_variable = { pus_record = pus_temp }
+		econ_pus_change = yes
+		custom_effect_tooltip = CHI_GAW_Pus_Reset_Tooltip
 	}
 }
 
@@ -6612,6 +6641,12 @@ shared_focus = {
 	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_Implement_Rationing_System"
+		add_stability = -0.1
+		add_to_variable = { CHI_GAW_buff_goods = -0.05 }
+		add_to_variable = { CHI_GAW_buff_fac_eff = 0.2 }
+		# add_to_variable = { CHI_GAW_buff_fac_max_eff = 0 }
+		# add_to_variable = { CHI_GAW_buff_fac_start_eff = 0 }
+		# add_to_variable = { CHI_GAW_buff_line_change_prd_eff = 0}
 	}
 }
 
@@ -6684,6 +6719,15 @@ shared_focus = {
 	y = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_Work_In_Three_Shifts"
+		if = {
+			limit = { NOT = { has_idea = tno_max_workhours_unlimited_work_day } }
+			tno_max_workhours_worsen = yes
+		}
+		# add_to_variable = { CHI_GAW_buff_goods = -0.1 }
+		# add_to_variable = { CHI_GAW_buff_fac_eff = 0 }
+		add_to_variable = { CHI_GAW_buff_fac_max_eff = 0.1 }
+		add_to_variable = { CHI_GAW_buff_fac_start_eff = 0.05 }
+		add_to_variable = { CHI_GAW_buff_line_change_prd_eff = 0.05 }
 	}
 }
 
@@ -6752,6 +6796,7 @@ shared_focus = {
 	y = 6
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CHI_Work_Brings_Hope"
+		TNO_improve_max_workhours_policy_effectiveness_med = yes
 	}
 }
 

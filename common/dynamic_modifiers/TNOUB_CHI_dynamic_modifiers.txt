@@ -118,3 +118,17 @@ JAP_GAW_state_buff_dynamic_modifier = {
 	attacker_modifier = yes
 	army_attack_factor = -0.25
 }
+
+CHI_The_Total_War_dynamic_modifier = {
+	# icon = GFX_idea_unknown
+	enable = {
+		always = yes
+	}
+
+	consumer_goods_factor = CHI_GAW_buff_goods
+	production_factory_efficiency_gain_factor = CHI_GAW_buff_fac_eff
+	production_factory_max_efficiency_factor = CHI_GAW_buff_fac_max_eff
+	production_factory_start_efficiency_factor = CHI_GAW_buff_fac_start_eff
+	line_change_production_efficiency_factor = CHI_GAW_buff_line_change_prd_eff
+}
+

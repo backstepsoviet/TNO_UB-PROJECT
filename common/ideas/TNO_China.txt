@@ -1369,6 +1369,113 @@ ideas = {
 			modifier = {
 			}
 		}
+		CHI_A_War_Cabinet_idea = {
+			allowed = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_A_War_Cabinet_idea" }
+
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		CHI_Change_Civil_Factories_idea = {
+			allowed = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_Change_Civil_Factories_idea" }
+
+			modifier = {
+				industry_repair_factor = 0.3
+			}
+		}
+		CHI_The_Total_War_idea = {
+			allowed = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_The_Total_War_idea" }
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		CHI_The_Total_War_idea_2 = {
+			allowed = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_The_Total_War_idea_2" }
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		CHI_The_Total_War_idea_3 = {
+			allowed = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_The_Total_War_idea_3" }
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+
+		CHI_The_Total_War_idea_placeholder = {
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX
+
+			allowed_civil_war = { always = yes }
+
+			on_add = { log = "[GetDateText]: [Root.GetName]: added idea CHI_The_Total_War_idea_3" }
+		}
 	}		
 	hidden_ideas = {
 		CHI_chinese_warlords = {

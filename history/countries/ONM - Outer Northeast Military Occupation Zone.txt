@@ -1,4 +1,4 @@
-capital = 328
+capital = 809
 
 # Vacant
 recruit_character = MAN_Generic_Vacant
@@ -6,7 +6,6 @@ recruit_character = MAN_Generic_Vacant
 
 
 ### History
-
 
 recruit_character = ONM_Bao_Wenyue
 
